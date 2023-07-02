@@ -45,36 +45,37 @@ export default function IntroComponent() {
 		stop();
 	}
 
-	return (
-		<div className="fullscreen media__container">
-			{
-				isPlayVideoOnScroll
-					? (<>
-						<div className="audio__container">
-							{
-								isPlayingMusic
-									? (<button className="audio__red" onClick={soundHandlerOff}>
-										<img src={soundOff} alt="soundOff" />
-									</button>)
-									: (<button className="audio__green" onClick={soundHandlerOn}>
-										<img src={soundOn} alt="soundOn" />
-									</button>)
-							}
-						</div>
+	return (<>
+		{
+			isPlayVideoOnScroll
+				? (<div className="fullscreen media__container">
+
+					<div className="audio__container">
+						{
+							isPlayingMusic
+								? (<button className="audio__red" onClick={soundHandlerOff}>
+									<img src={soundOff} alt="soundOff" />
+								</button>)
+								: (<button className="audio__green" onClick={soundHandlerOn}>
+									<img src={soundOn} alt="soundOn" />
+								</button>)
+						}
+					</div>
+					<div className="video__container">
 						<video
 							preload="metadata"
 							loop
 							autoPlay
 							muted
-							className="video__container"
 						>
 
 							<source src={videoWeb} type="video/webm" />
 							<source src={video} type="video/mp4" />
 						</video>
-					</>)
-					: null
-			}
-		</div>
-	)
+					</div>
+				</div>
+				)
+				: null
+		}
+	</>)
 }

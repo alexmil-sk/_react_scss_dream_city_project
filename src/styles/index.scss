@@ -36,9 +36,11 @@ $color: gray;
 }
 
 .first__container {
+	height: 110vh;
 	background: url("/images/dubai-2.jpg") 0 0 / cover no-repeat fixed;
 }
 
+.fourth__container,
 .second__container {
 	@include fontType("Anton", 24px, gray);
 }
