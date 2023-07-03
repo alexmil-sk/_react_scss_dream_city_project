@@ -12,7 +12,7 @@ $color: gray;
 
 //Миксины
 @mixin fontType($family, $fz, $color) {
-	//@include fontz($family, $fz, $color)
+	//@include fontType($family, $fz, $color)
 	font-family: $family;
 	font-size: $fz;
 	color: $color;
@@ -40,11 +40,20 @@ $color: gray;
 	background: url("/images/dubai-2.jpg") 0 0 / cover no-repeat fixed;
 }
 
-.fourth__container,
 .second__container {
 	@include fontType("Anton", 24px, gray);
+	padding: 50px;
 }
 
 .third__container {
 	background: url("/images/dubai-1.jpg") 0 0 / cover no-repeat fixed;
+}
+
+.fifth__container {
+	background: url("/images/dubai-3.jpg") 0 0 / cover no-repeat fixed;
+}
+
+.sixth__container {
+	@include fontType("Anton", 24px, gray);
+	padding: 50px;
 }

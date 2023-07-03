@@ -1,0 +1,56 @@
+@import "/src/styles/index.scss";
+
+.bg {
+	background-color: #3c305a;
+}
+
+.fourth__container {
+	padding: 50px 20px;
+	max-width: 1200px;
+	background: transparent;
+
+	.grid__container {
+		display: grid;
+		gap: 20px;
+		grid-template: 1fr / 1fr;
+
+		.object-item {
+			&__container {
+				display: flex;
+				column-gap: 20px;
+				width: 100%;
+
+				.video__content {
+					position: relative;
+
+					&video {
+						position: absolute;
+						top: 0;
+						left: 0;
+						height: 100%;
+					}
+				}
+				.text__content {
+
+					width: 600px;
+					@include fontType("Anton", 24px, #e26c5a);
+					border: 1px solid gray;
+					padding: 15px;
+					border-radius: 15px;
+					background-color: #b5a5df;
+					line-height: 1.5;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}
+
+
+.items {
+	.items__container{
+		.item {
+			
+		}
+	}
+}

@@ -3,9 +3,9 @@ import useSound from 'use-sound'; //https://reactjsexample.com/a-react-hook-for-
 
 import "./IntroComponent.scss";
 
-import audio from "/videos/observation_outside.mp3";
-import video from "/videos/observation_outside.mp4";
-import videoWeb from "/videos/observation_outside.webm";
+import audio from "/videos/intro/observation_outside.mp3";
+import video from "/videos/intro/observation_outside.mp4";
+import videoWeb from "/videos/intro/observation_outside.webm";
 import soundOn from "/svg/sound_on.svg";
 import soundOff from "/svg/sound_off.svg";
 
@@ -72,6 +72,9 @@ export default function IntroComponent() {
 							<source src={videoWeb} type="video/webm" />
 							<source src={video} type="video/mp4" />
 						</video>
+					</div>
+					<div className="text__container">
+						<h1>Lorem ipsum dolor sit amet.</h1>
 					</div>
 				</div>
 				)

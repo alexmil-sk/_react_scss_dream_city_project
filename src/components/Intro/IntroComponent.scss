@@ -1,3 +1,5 @@
+@import "/src/styles/index.scss";
+
 .media__container {
 	text-align: center;
 	background-color: #011628;
@@ -12,14 +14,14 @@
 			color: white;
 			&.audio__red {
 				background-color: red;
-				transition: all .6s ease 0s;
+				transition: all 0.6s ease 0s;
 				&:hover {
 					box-shadow: 0 0 30px 2px red;
 				}
 			}
 			&.audio__green {
 				background-color: green;
-				transition: all .6s ease 0s;
+				transition: all 0.6s ease 0s;
 				&:hover {
 					box-shadow: 0 0 30px 2px green;
 				}
@@ -33,5 +35,11 @@
 		& video {
 			height: 100vh;
 		}
+	}
+	.text__container {
+		position: fixed;
+		top: 50%;
+		text-transform: uppercase;
+		@include fontType("Anton", 6rem, white);
 	}
 }
