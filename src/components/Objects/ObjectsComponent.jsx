@@ -22,11 +22,19 @@ export default function ObjectsComponent() {
 				</div>
 			</div>
 			<div className="items">
-				<div className="items__container">
-					<div className="item"></div>
-					<div className="item"></div>
-					<div className="item"></div>
-					<div className="item"></div>
+				<div className="items__row">
+					<div className="item__element">
+						<div className="item__block"></div>
+					</div>
+					<div className="item__element">
+						<div className="item__block"></div>
+					</div>
+					<div className="item__element">
+						<div className="item__block"></div>
+					</div>
+					<div className="item__element">
+						<div className="item__block"></div>
+					</div>
 				</div>
 			</div>
 		</div>
