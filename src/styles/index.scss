@@ -35,25 +35,29 @@ $color: gray;
 	justify-content: center;
 }
 
-.first__container {
+.foto__container_1 {
 	height: 110vh;
 	background: url("/images/dubai-2.jpg") 0 0 / cover no-repeat fixed;
 }
 
-.second__container {
+.text__container_2 {
 	@include fontType("Anton", 24px, gray);
 	padding: 50px;
 }
 
-.third__container {
+.foto__container_3 {
 	background: url("/images/dubai-1.jpg") 0 0 / cover no-repeat fixed;
 }
 
-.fifth__container {
+.foto__container_4 {
 	background: url("/images/dubai-3.jpg") 0 0 / cover no-repeat fixed;
 }
 
-.sixth__container {
+.text__container_5 {
 	@include fontType("Anton", 24px, gray);
 	padding: 50px;
+}
+
+.foto__container_6 {
+	background: url("/images/dubai-4.jpg") 0 0 / cover no-repeat fixed;
 }
