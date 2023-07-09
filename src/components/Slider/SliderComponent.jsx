@@ -1,6 +1,9 @@
 import './SliderComponent.scss';
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCards, EffectCube, EffectCoverflow, EffectFlip, EffectCreative } from 'swiper/modules';
+import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCards, EffectCube, EffectCoverflow, EffectFlip, EffectCreative, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+
+
 
 import 'swiper/css';
 import 'swiper/css/effect-fade';
@@ -11,33 +14,39 @@ import 'swiper/css/scrollbar';
 
 function SliderComponent() {
 
+	const params = {
+		modules: [Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay],
+		direction: 'horizontal',
+		effect: 'fade',
+		speed: 2000,
+		simulateTouch: true,
+		grabCursor: true,
+		spaceBetween: 0,
+		slidesPerView: 1,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		loop: true,
+		pagination: {
+			clickable: true,
+			el: '.swiper-pagination',
+			renderBullet: function (idx, className) {
+				return '<span class="' + className + '">' + (idx + 1) + '</span>'
+			}
+		},
+		watchOverflow: true,
+		autoplay: {
+			delay: 2000,
+			stopOnLastSlide: false,
+			disableOnInteraction: false
+		}
+	}
+
+
 	return (
 		<>
-			<Swiper
-				modules={[Navigation, Pagination, Scrollbar, A11y, EffectFade]}
-				direction={'horizontal'}
-				effect={'fade'}
-				speed={1000}
-				simulateTouch={true}
-				grabCursor={true}
-				spaceBetween={0}
-				slidesPerView={1}
-				navigation={
-					{
-						nextEl: '.swiper-button-next',
-						prevEl: '.swiper-button-prev',
-					}
-				}
-				loop={true}
-				pagination={{
-					clickable: true,
-					el: '.swiper-pagination',
-					renderBullet: function (idx, className) {
-						return '<span class="' + className + '">' + (idx + 1) + '</span>'
-					}
-				}}
-				watchOverflow={true}
-			>
+			<Swiper {...params}	>
 				<SwiperSlide >
 					<div className="swiper-slide__image">
 						<img
@@ -74,6 +83,17 @@ function SliderComponent() {
 				<div className="swiper-button-next"></div>
 				<div className="swiper-pagination"></div>
 				<div className="swiper-scrollbar"></div>
+
+				<Swiper>
+					<SwiperSlide>
+						<div className="swiper-slide__image">
+							<img
+								src="/images/dubai-4.jpg"
+								alt="dubai-1"
+							/>
+						</div>
+					</SwiperSlide>
+				</Swiper>
 			</Swiper>
 		</>
 
