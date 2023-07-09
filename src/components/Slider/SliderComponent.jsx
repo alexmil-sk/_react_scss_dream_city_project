@@ -18,7 +18,7 @@ function SliderComponent() {
 		modules: [Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay],
 		direction: 'horizontal',
 		effect: 'fade',
-		speed: 2000,
+		speed: 1500,
 		simulateTouch: true,
 		grabCursor: true,
 		spaceBetween: 0,
@@ -83,17 +83,6 @@ function SliderComponent() {
 				<div className="swiper-button-next"></div>
 				<div className="swiper-pagination"></div>
 				<div className="swiper-scrollbar"></div>
-
-				<Swiper>
-					<SwiperSlide>
-						<div className="swiper-slide__image">
-							<img
-								src="/images/dubai-4.jpg"
-								alt="dubai-1"
-							/>
-						</div>
-					</SwiperSlide>
-				</Swiper>
 			</Swiper>
 		</>
 
