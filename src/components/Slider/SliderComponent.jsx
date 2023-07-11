@@ -41,68 +41,69 @@ function SliderComponent() {
 
 	return (
 		<>
-			<Swiper
-				style={{ "--swiper-navigation-color": "#fff" }}
-				{...main_params}
-				className="mySwiper2"
-			>
-				<SwiperSlide >
-					<img
-						src="/images/dubai-1.jpg"
-						alt="dubai-1"
-					/>
-				</SwiperSlide>
-				<SwiperSlide >
-					<img
-						src="/images/dubai-2.jpg"
-						alt="dubai-1"
-					/>
-				</SwiperSlide>
-				<SwiperSlide >
-					<img
-						src="/images/dubai-3.jpg"
-						alt="dubai-1"
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<img
-						src="/images/dubai-4.jpg"
-						alt="dubai-1"
-					/>
-				</SwiperSlide>
-				<div className="swiper-button-prev"></div>
-				<div className="swiper-button-next"></div>
-			</Swiper>
-
-			<Swiper
-				{...thumbs_params}
-				className="mySwiper"
-			>
-				<SwiperSlide >
+				<Swiper
+					style={{ "--swiper-navigation-color": "#fff" }}
+					{...main_params}
+					className="mySwiper2"
+				>
+					<SwiperSlide >
 						<img
 							src="/images/dubai-1.jpg"
 							alt="dubai-1"
 						/>
-				</SwiperSlide>
-				<SwiperSlide >
+					</SwiperSlide>
+					<SwiperSlide >
 						<img
 							src="/images/dubai-2.jpg"
 							alt="dubai-1"
 						/>
-				</SwiperSlide>
-				<SwiperSlide >
+					</SwiperSlide>
+					<SwiperSlide >
 						<img
 							src="/images/dubai-3.jpg"
 							alt="dubai-1"
 						/>
-				</SwiperSlide>
-				<SwiperSlide>
+					</SwiperSlide>
+					<SwiperSlide>
 						<img
 							src="/images/dubai-4.jpg"
 							alt="dubai-1"
 						/>
-				</SwiperSlide>
-			</Swiper>
+					</SwiperSlide>
+					<div className="swiper-button-prev"></div>
+					<div className="swiper-button-next"></div>
+				</Swiper>
+			
+				<Swiper
+					{...thumbs_params}
+					className="mySwiper"
+				>
+					<SwiperSlide >
+						<img
+							src="/images/dubai-1.jpg"
+							alt="dubai-1"
+						/>
+					</SwiperSlide>
+					<SwiperSlide >
+						<img
+							src="/images/dubai-2.jpg"
+							alt="dubai-1"
+						/>
+					</SwiperSlide>
+					<SwiperSlide >
+						<img
+							src="/images/dubai-3.jpg"
+							alt="dubai-1"
+						/>
+					</SwiperSlide>
+					<SwiperSlide>
+						<img
+							src="/images/dubai-4.jpg"
+							alt="dubai-1"
+						/>
+					</SwiperSlide>
+				</Swiper>
+			
 		</>
 
 	)
