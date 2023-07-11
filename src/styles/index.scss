@@ -1,6 +1,30 @@
 @charset "UTF-8";
 @import "./null.scss";
-@import url("https://fonts.googleapis.com/css2?family=Anton&display=swap");
+
+//== <> =======================================================
+
+@font-face {
+	font-family: "AdventPro Thin";
+	src: url("fonts/AdventPro/AdventPro-Thin.woff2") format("woff2"),
+		url("fonts/AdventPro/AdventPro-Thin.woff") format("woff"),
+		url("fonts/AdventPro/AdventPro-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "AdventPro Black";
+	src: url("fonts/AdventPro/AdventPro-Black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+//== </ FONTS> =======================================================
+
+
+
 
 /*Variables*/
 $color: gray;
@@ -47,7 +71,7 @@ $color: gray;
 }
 
 .text__container_3 {
-	@include fontType("Anton", 24px, gray);
+	@include fontType("AdventPro Thin", 24px, gray);
 	padding: 50px;
 }
 
@@ -60,7 +84,7 @@ $color: gray;
 }
 
 .text__container_6 {
-	@include fontType("Anton", 24px, gray);
+	@include fontType("AdventPro Thin", 24px, gray);
 	padding: 50px;
 }
 
