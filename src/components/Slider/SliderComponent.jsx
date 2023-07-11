@@ -1,88 +1,107 @@
-import './SliderComponent.scss';
-import { Navigation, Pagination, Scrollbar, A11y, EffectFade, EffectCards, EffectCube, EffectCoverflow, EffectFlip, EffectCreative, Autoplay } from 'swiper/modules';
+import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-
+import './SliderComponent.scss';
+import { Navigation, FreeMode, Thumbs, Autoplay } from 'swiper/modules';
 
 
 import 'swiper/css';
-import 'swiper/css/effect-fade';
+import 'swiper/css/thumbs';
+import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
 
 
 function SliderComponent() {
 
-	const params = {
-		modules: [Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay],
-		direction: 'horizontal',
-		effect: 'fade',
-		speed: 1500,
-		simulateTouch: true,
-		grabCursor: true,
-		spaceBetween: 0,
-		slidesPerView: 1,
+	const [thumbsSwiper, setThumbsSwiper] = useState(null);
+
+
+	const main_params = {
+		modules: [Navigation, FreeMode, Autoplay, Thumbs],
+		spaceBetween: 10,
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',
 		},
 		loop: true,
-		pagination: {
-			clickable: true,
-			el: '.swiper-pagination',
-			renderBullet: function (idx, className) {
-				return '<span class="' + className + '">' + (idx + 1) + '</span>'
-			}
+		thumbs: {
+			swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
 		},
-		watchOverflow: true,
-		autoplay: {
-			delay: 2000,
-			stopOnLastSlide: false,
-			disableOnInteraction: false
-		}
+	}
+
+	const thumbs_params = {
+		modules: [Navigation, FreeMode, Autoplay, Thumbs],
+		spaceBetween: 10,
+		watchSlidesProgress: true,
+		onSwiper: setThumbsSwiper,
+		slidesPerView: 4,
+		freeMode: true
+
 	}
 
 
 	return (
 		<>
-			<Swiper {...params}	>
+			<Swiper
+				style={{ "--swiper-navigation-color": "#fff" }}
+				{...main_params}
+				className="mySwiper2"
+			>
 				<SwiperSlide >
-					<div className="swiper-slide__image">
+					<img
+						src="/images/dubai-1.jpg"
+						alt="dubai-1"
+					/>
+				</SwiperSlide>
+				<SwiperSlide >
+					<img
+						src="/images/dubai-2.jpg"
+						alt="dubai-1"
+					/>
+				</SwiperSlide>
+				<SwiperSlide >
+					<img
+						src="/images/dubai-3.jpg"
+						alt="dubai-1"
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<img
+						src="/images/dubai-4.jpg"
+						alt="dubai-1"
+					/>
+				</SwiperSlide>
+				<div className="swiper-button-prev"></div>
+				<div className="swiper-button-next"></div>
+			</Swiper>
+
+			<Swiper
+				{...thumbs_params}
+				className="mySwiper"
+			>
+				<SwiperSlide >
 						<img
 							src="/images/dubai-1.jpg"
 							alt="dubai-1"
 						/>
-					</div>
 				</SwiperSlide>
 				<SwiperSlide >
-					<div className="swiper-slide__image">
 						<img
 							src="/images/dubai-2.jpg"
 							alt="dubai-1"
 						/>
-					</div>
 				</SwiperSlide>
 				<SwiperSlide >
-					<div className="swiper-slide__image">
 						<img
 							src="/images/dubai-3.jpg"
 							alt="dubai-1"
 						/>
-					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<div className="swiper-slide__image">
 						<img
 							src="/images/dubai-4.jpg"
 							alt="dubai-1"
 						/>
-					</div>
 				</SwiperSlide>
-				<div className="swiper-button-prev"></div>
-				<div className="swiper-button-next"></div>
-				<div className="swiper-pagination"></div>
-				<div className="swiper-scrollbar"></div>
 			</Swiper>
 		</>
 
