@@ -14,9 +14,11 @@
 }
 
 @font-face {
-	font-family: "AdventPro Black";
-	src: url("fonts/AdventPro/AdventPro-Black.ttf") format("truetype");
-	font-weight: 900;
+	font-family: "AdventPro Bold";
+	src: url("fonts/AdventPro/AdventPro-Bold.woff2") format("woff2"),
+		url("fonts/AdventPro/AdventPro-Bold.woff") format("woff"),
+		url("fonts/AdventPro/AdventPro-Bold.ttf") format("truetype");
+	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
 }
