@@ -1,7 +1,6 @@
-import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './App.scss';
-import { Navigation, FreeMode, Thumbs, Autoplay } from 'swiper/modules';
+import { Navigation, FreeMode} from 'swiper/modules';
 
 
 import 'swiper/css';
@@ -12,11 +11,10 @@ import 'swiper/css/navigation';
 
 function SliderComponent() {
 
-	const [thumbsSwiper] = useState(null);
 
 
 	const main_params = {
-		modules: [Navigation, FreeMode, Autoplay],
+		modules: [Navigation, FreeMode],
 		spaceBetween: 10,
 		direction: 'vertical',
 		navigation: {
@@ -32,7 +30,7 @@ function SliderComponent() {
 			<Swiper
 				style={{ "--swiper-navigation-color": "#fff" }}
 				{...main_params}
-				className="mySwiper2"
+				className="mySwiper"
 			>
 				<SwiperSlide >
 					<img
