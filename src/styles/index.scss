@@ -37,10 +37,11 @@ $color: gray;
 }
 
 //Миксины
-@mixin fontType($family, $fz, $color) {
+@mixin fontType($family, $fz, $lh, $color) {
 	//@include fontType($family, $fz, $color)
 	font-family: $family;
 	font-size: $fz;
+	line-height: $lh;
 	color: $color;
 }
 
@@ -73,7 +74,7 @@ $color: gray;
 }
 
 .text__container_3 {
-	@include fontType("AdventPro Thin", 24px, gray);
+	@include fontType("AdventPro Thin", 24px, 1.2, gray);
 	padding: 50px;
 }
 
@@ -86,7 +87,7 @@ $color: gray;
 }
 
 .text__container_6 {
-	@include fontType("AdventPro Thin", 24px, gray);
+	@include fontType("AdventPro Thin", 24px, 1.2, gray);
 	padding: 50px;
 }
 
