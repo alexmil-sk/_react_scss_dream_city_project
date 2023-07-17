@@ -14,7 +14,7 @@ import 'swiper/css/scrollbar';
 
 function SliderComponent() {
 
-	//const [sliderObject, setSliderObject] = useState({});
+	const [sliderObject, setSliderObject] = useState({});
 	const [isActiveIndex, setIsActiveIndex] = useState(0);
 
 	const menuLinks = ['Screen-1', 'Screen-2', 'Screen-3', 'Screen-4'];
@@ -52,16 +52,8 @@ function SliderComponent() {
 			bulletActiveClass: 'swiper__bullet_active',
 			clickable: true,
 		},
-		//init: false,
-		// on: {
-		// 	init: function () {
-		// 		menuSlider();
-		// 	},
-		// 	slideChange: function () {
-		// 		menuSliderRemove()
-		// 		menuLinks[sliderObject.realIndex].classList.add('active');
-		// 	}
-		// }
+		onBeforeInit: (swiper) => setSliderObject(swiper),
+		onActiveIndexChange: (swiper) => setIsActiveIndex(swiper.activeIndex),
 	};
 
 
@@ -102,17 +94,17 @@ function SliderComponent() {
 					{
 						menuLinks?.map((menuLink, idx) => (
 							<div
+								onClick={() => sliderObject.slideTo(idx, 1000)}
 								className={isActiveIndex === idx ? 'menu__link active' : 'menu__link'}
 								key={idx}
-							>{menuLink}
+							>
+								{menuLink}
 							</div>
 						))
 					}
 				</nav>
 			</div>
 			<Swiper
-				//onBeforeInit={(swiper) => setSliderObject(swiper)}
-				onActiveIndexChange={(swiper) => setIsActiveIndex(swiper.activeIndex)}
 				{...swiperParams}
 				className="mySwiper"
 			>
