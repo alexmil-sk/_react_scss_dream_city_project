@@ -1,20 +1,27 @@
+import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './App.scss';
-import { Navigation, Parallax, Mousewheel, Keyboard } from 'swiper/modules';
+import NavComponent from './components/Navigation/NavComponent.jsx';
+import { Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination } from 'swiper/modules';
 
 
 import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
 
 
 function SliderComponent() {
 
+	const [sliderObject, setSliderObject] = useState({});
+
+	const menuLinks = ['Screen-1', 'Screen-2', 'Screen-3', 'Screen-4'];
 
 
-	const params = {
-		modules: [Navigation, Parallax, Mousewheel, Keyboard],
+	const swiperParams = {
+		modules: [Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination],
 		spaceBetween: 10,
 		direction: 'vertical',
 		slidesPerView: 'auto',
@@ -26,17 +33,82 @@ function SliderComponent() {
 		speed: 1000,
 		parallax: true,
 		mousewheel: {
-			sensitivity: 2
+			sensitivity: 1
 		},
-		keyboard: true
+		keyboard: true,
+		observer: true,
+		observeParents: true,
+		observeSlideChildren: true,
+		watchOverflow: true,
+		scrollbar: {
+			el: '.swiper__scroll',
+			dragClass: 'swiper__drag-scroll',
+			draggable: true
+		},
+		pagination: {
+			el: '.swiper__pagination',
+			type: 'bullets',
+			bulletClass: 'swiper__bullet',
+			bulletActiveClass: 'swiper__bullet_active',
+			clickable: true,
+		},
+		init: false,
+		on: {
+			init: function () {
+				menuSlider();
+			},
+			slideChange: function () {
+				menuSliderRemove()
+				menuLinks[sliderObject.realIndex].classList.add('active');
+			}
+		}
+	};
+
+	//Interface SwiperEvents Search Swiper - v10.0.4
+	//https://swiperjs.com/types/interfaces/types_swiper_events.SwiperEvents#snapIndexChange
+
+	function menuSlider() {
+		if (menuLinks.length > 0) {
+			menuLinks[sliderObject.realIndex].classList.add('active');
+			menuLinks?.map((link, idx) => (
+				link.addEventListener("click", function (e) {
+					menuSliderRemove();
+					sliderObject.slideTo(idx, 800);
+					menuLinks.classList.add('active');
+					e.preventDefault();
+				})
+			))
+		}
+	}
+
+
+	function menuSliderRemove() {
+		let menuLinkActive = document.querySelector('.menu__link.active');
+
+		if (menuLinkActive) {
+			menuLinkActive.classList.remove('active');
+		}
 	}
 
 
 	return (
 		<>
+
+			<div className="header">
+				<nav className="header__menu menu">
+					<div
+						data-name={link}
+						style={isActive ? { color: 'yellow' } : null}
+						className='menu__link'
+						onClick={getActiveLink}
+					>
+						{link}
+					</div>
+				</nav>
+			</div>
 			<Swiper
-				style={{ "--swiper-navigation-color": "#fff" }}
-				{...params}
+				onBeforeInit={(swiper) => setSliderObject(swiper)}
+				{...swiperParams}
 				className="mySwiper"
 			>
 				<SwiperSlide >
@@ -87,6 +159,8 @@ function SliderComponent() {
 				</SwiperSlide>
 				<div className="swiper-button-prev"></div>
 				<div className="swiper-button-next"></div>
+				<div className="swiper__pagination"></div>
+				<div className="swiper__scroll"></div>
 			</Swiper >
 		</>
 

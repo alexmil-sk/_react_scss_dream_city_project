@@ -29,14 +29,16 @@
 
 
 /*Variables*/
-$color: gray;
+$main-bg-color: #011628;
+$menu-bg-color: #0e113e;
 
-//Шаблоны
+//Templates
 %myborder {
-	border-bottom: 5px dashed red; //	@extend %myborder;
+	//	@extend %myborder;
+	border: 1px solid red; 
 }
 
-//Миксины
+//Mixins
 @mixin fontType($family, $fz, $lh, $color) {
 	//@include fontType($family, $fz, $color)
 	font-family: $family;
