@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './App.scss';
-import NavComponent from './components/Navigation/NavComponent.jsx';
 import { Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination } from 'swiper/modules';
 
 
@@ -96,13 +95,8 @@ function SliderComponent() {
 
 			<div className="header">
 				<nav className="header__menu menu">
-					<div
-						data-name={link}
-						style={isActive ? { color: 'yellow' } : null}
-						className='menu__link'
-						onClick={getActiveLink}
-					>
-						{link}
+					<div className='menu__link'>
+						Screen-1
 					</div>
 				</nav>
 			</div>
