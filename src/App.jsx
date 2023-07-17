@@ -14,7 +14,8 @@ import 'swiper/css/scrollbar';
 
 function SliderComponent() {
 
-	const [sliderObject, setSliderObject] = useState({});
+	//const [sliderObject, setSliderObject] = useState({});
+	const [isActiveIndex, setIsActiveIndex] = useState(0);
 
 	const menuLinks = ['Screen-1', 'Screen-2', 'Screen-3', 'Screen-4'];
 
@@ -51,57 +52,67 @@ function SliderComponent() {
 			bulletActiveClass: 'swiper__bullet_active',
 			clickable: true,
 		},
-		init: false,
-		on: {
-			init: function () {
-				menuSlider();
-			},
-			slideChange: function () {
-				menuSliderRemove()
-				menuLinks[sliderObject.realIndex].classList.add('active');
-			}
-		}
+		//init: false,
+		// on: {
+		// 	init: function () {
+		// 		menuSlider();
+		// 	},
+		// 	slideChange: function () {
+		// 		menuSliderRemove()
+		// 		menuLinks[sliderObject.realIndex].classList.add('active');
+		// 	}
+		// }
 	};
+
 
 	//Interface SwiperEvents Search Swiper - v10.0.4
 	//https://swiperjs.com/types/interfaces/types_swiper_events.SwiperEvents#snapIndexChange
 
-	function menuSlider() {
-		if (menuLinks.length > 0) {
-			menuLinks[sliderObject.realIndex].classList.add('active');
-			menuLinks?.map((link, idx) => (
-				link.addEventListener("click", function (e) {
-					menuSliderRemove();
-					sliderObject.slideTo(idx, 800);
-					menuLinks.classList.add('active');
-					e.preventDefault();
-				})
-			))
-		}
-	}
+	// function menuSlider() {
+	// 	if (menuLinks.length > 0) {
 
+	// 		menuLinks[sliderObject.realIndex].classList.add('active');
 
-	function menuSliderRemove() {
-		let menuLinkActive = document.querySelector('.menu__link.active');
+	// 		menuLinks?.map((link, idx) => (
 
-		if (menuLinkActive) {
-			menuLinkActive.classList.remove('active');
-		}
-	}
+	// 			link.addEventListener("click", function (e) {
+	// 				menuSliderRemove();
+	// 				sliderObject.slideTo(idx, 800);
+	// 				menuLinks.classList.add('active');
+	// 				e.preventDefault();
+	// 			})
+	// 		))
+	// 	}
+
+	// }
+
+	// function menuSliderRemove() {
+	// 	let menuLinkActive = document.querySelector('.menu__link.active');
+
+	// 	if (menuLinkActive) {
+	// 		menuLinkActive.classList.remove('active');
+	// 	}
+	// }
 
 
 	return (
 		<>
-
 			<div className="header">
 				<nav className="header__menu menu">
-					<div className='menu__link'>
-						Screen-1
-					</div>
+					{
+						menuLinks?.map((menuLink, idx) => (
+							<div
+								className={isActiveIndex === idx ? 'menu__link active' : 'menu__link'}
+								key={idx}
+							>{menuLink}
+							</div>
+						))
+					}
 				</nav>
 			</div>
 			<Swiper
-				onBeforeInit={(swiper) => setSliderObject(swiper)}
+				//onBeforeInit={(swiper) => setSliderObject(swiper)}
+				onActiveIndexChange={(swiper) => setIsActiveIndex(swiper.activeIndex)}
 				{...swiperParams}
 				className="mySwiper"
 			>
