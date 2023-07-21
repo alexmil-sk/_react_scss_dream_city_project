@@ -30,7 +30,7 @@
 			line-height: 1.2;
 			color: white;
 			padding: 5px;
-			@include fontType("AdventPro Bold", 1.5rem, white);
+			@include fontType("AdventPro Bold", 1.5rem, 1.2, white);
 
 			&:nth-child(1) {
 				width: 40px;
@@ -52,7 +52,7 @@
 	}
 
 	.content {
-		@include fontType("AdventPro Bold", null, white);
+		@include fontType("AdventPro Bold", null, 1.2, white);
 		flex: 1 1 auto;
 		//FIRST BLOCK =========================================
 		.residence {
@@ -219,7 +219,7 @@
 				justify-content: center;
 				height: 60px;
 				.footer__text {
-					@include fontType("AdventPro Bold", null, white);
+					@include fontType("AdventPro Bold", null, 1.2, white);
 				}
 			}
 		}

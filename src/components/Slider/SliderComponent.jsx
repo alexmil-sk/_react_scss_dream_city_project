@@ -18,7 +18,8 @@ function SliderComponent() {
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay, Thumbs],
 		spaceBetween: 10,
-		direction: 'vertical',
+		speed: 1000,
+		direction: 'horizontal',
 		navigation: {
 			nextEl: '.swiper-button-next',
 			prevEl: '.swiper-button-prev',

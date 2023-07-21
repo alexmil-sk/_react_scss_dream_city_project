@@ -40,6 +40,6 @@
 		position: fixed;
 		top: 50%;
 		text-transform: uppercase;
-		@include fontType("AdventPro Black", 6rem, white);
+		@include fontType("AdventPro Black", 6rem, 1.2, white);
 	}
 }
