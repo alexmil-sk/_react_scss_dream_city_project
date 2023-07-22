@@ -7,18 +7,20 @@
 .fourth__container {
 	padding: 50px 20px;
 	max-width: 1260px;
-z
-	.flex__container {
+	&_flex {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		row-gap: 20px;
-		.object {
+
+		.objects {
 			&__container {
 				display: flex;
 				column-gap: 20px;
 				width: 100%;
 				flex-wrap: wrap;
 				justify-content: center;
+
 				// .video__content {
 				// 	&video {
 				// 		position: absolute;

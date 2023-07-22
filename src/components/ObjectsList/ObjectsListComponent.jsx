@@ -5,9 +5,9 @@ export default function ObjectsComponent() {
 		<div className="fullscreen bg">
 
 			<div className="fourth__container">
-				<div className="flex__container">
-					<div className="object">
-						<div className="object__container">
+				<div className="fourth__container_flex">
+					<div className="objects">
+						<div className="objects__container">
 							<div className="video__content">
 								<video width="600" poster="/posters/condor1280.jpg" controls preload="metadata">
 									<source type="video/webm" src="/videos/objects/condor.mp4" />
@@ -20,8 +20,8 @@ export default function ObjectsComponent() {
 						</div>
 					</div>
 
-					<div className="object">
-						<div className="object__container">
+					<div className="objects">
+						<div className="objects__container">
 							<div className="video__content">
 								<video width="600" poster="/posters/condor1280.jpg" controls preload="metadata">
 									<source type="video/webm" src="/videos/objects/condor.mp4" />
@@ -34,8 +34,8 @@ export default function ObjectsComponent() {
 						</div>
 					</div>
 
-					<div className="object">
-						<div className="object__container">
+					<div className="objects">
+						<div className="objects__container">
 							<div className="video__content">
 								<video width="600" poster="/posters/condor1280.jpg" controls preload="metadata">
 									<source type="video/webm" src="/videos/objects/condor.mp4" />

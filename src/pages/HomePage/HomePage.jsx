@@ -1,8 +1,8 @@
 
-import IntroComponent from "../../components/Intro/IntroComponent";
-import ObjectsListComponent from "../../components/ObjectsList/ObjectsListComponent";
-import GalleryComponent from "../../components/Gallery/GalleryComponent";
-import SliderComponent from "../../components/Slider/SliderComponent";
+import IntroComponent from "../../components/Intro/IntroComponent.jsx";
+import ObjectsListComponent from "../../components/ObjectsList/ObjectsListComponent.jsx";
+import GalleryComponent from "../../components/Gallery/GalleryComponent.jsx";
+import SliderComponent from "../../components/Slider/SliderComponent.jsx";
 import "./HomePage.scss";
 
 function HomePage() {
