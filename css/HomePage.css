@@ -1,0 +1,176 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+@font-face {
+  font-family: "AdventPro Thin";
+  src: url("fonts/AdventPro/AdventPro-Thin.woff2") format("woff2"), url("fonts/AdventPro/AdventPro-Thin.woff") format("woff"), url("fonts/AdventPro/AdventPro-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "AdventPro Bold";
+  src: url("fonts/AdventPro/AdventPro-Bold.woff2") format("woff2"), url("fonts/AdventPro/AdventPro-Bold.woff") format("woff"), url("fonts/AdventPro/AdventPro-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+/*Variables*/
+.wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fullscreen {
+  min-height: 100vh;
+  width: 100vw;
+  min-width: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.foto__container_1 {
+  height: 110vh;
+  background: url("/images/dubai-2.jpg") 0 0/cover no-repeat fixed;
+}
+
+.foto__container_2 {
+  height: 100vh;
+  background: url("/images/dubai-6.jpg") 0 0/cover no-repeat fixed;
+}
+
+.text__container_3 {
+  font-family: "AdventPro Thin";
+  font-size: 24px;
+  line-height: 1.2;
+  color: gray;
+  padding: 50px;
+}
+
+.foto__container_4 {
+  background: url("/images/dubai-1.jpg") 0 0/cover no-repeat fixed;
+}
+
+.foto__container_5 {
+  background: url("/images/dubai-5.jpg") 0 0/cover no-repeat fixed;
+}
+
+.text__container_6 {
+  font-family: "AdventPro Thin";
+  font-size: 24px;
+  line-height: 1.2;
+  color: gray;
+  padding: 50px;
+}
+
+.foto__container_7 {
+  background: url("/images/dubai-4.jpg") 0 0/cover no-repeat fixed;
+}

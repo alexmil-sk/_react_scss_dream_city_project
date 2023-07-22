@@ -1,4 +1,4 @@
-import "./ObjectComponent.scss"
+import "./ObjectsListComponent.scss"
 
 export default function ObjectsComponent() {
 	return (

@@ -99,7 +99,7 @@ function SliderComponent() {
 			</div>
 			<Swiper
 				{...swiperParams}
-				className="mySwiperParallax"
+				className="mySwiper-parallax"
 			>
 				<SwiperSlide >
 					<div className="screen__content screen">

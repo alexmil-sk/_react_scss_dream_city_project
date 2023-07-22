@@ -7,7 +7,7 @@
 .fourth__container {
 	padding: 50px 20px;
 	max-width: 1260px;
-
+z
 	.flex__container {
 		display: flex;
 		flex-direction: column;
@@ -19,14 +19,14 @@
 				width: 100%;
 				flex-wrap: wrap;
 				justify-content: center;
-				//.video__content {
-					//&video {
-						// position: absolute;
-						// top: 0;
-						// left: 0;
-						//height: 100%;
-					//}
-				//}
+				// .video__content {
+				// 	&video {
+				// 		position: absolute;
+				// 		top: 0;
+				// 		left: 0;
+				// 		height: 100%;
+				// 	}
+				// }
 				.text__content {
 					width: 600px;
 					height: 340px;

@@ -1,6 +1,6 @@
 
 import IntroComponent from "../../components/Intro/IntroComponent";
-import ObjectsComponent from "../../components/Objects/ObjectsComponent";
+import ObjectsListComponent from "../../components/ObjectsList/ObjectsListComponent";
 import GalleryComponent from "../../components/Gallery/GalleryComponent";
 import SliderComponent from "../../components/Slider/SliderComponent";
 import "./HomePage.scss";
@@ -25,7 +25,7 @@ function HomePage() {
 
 			<div className="fullscreen foto__container_4"></div>
 
-			<ObjectsComponent />
+			<ObjectsListComponent />
 
 			<div className="fullscreen foto__container_5"></div>
 
