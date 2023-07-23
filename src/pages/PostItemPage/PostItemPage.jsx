@@ -1,9 +1,9 @@
-import "./ParamsIdPage.scss";
+import "./PostItemPage.scss";
 import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 
-function ParamsIdPage() {
+function PostItemPage() {
 
 	const [post, setPost] = useState({});
 	const { id } = useParams();
@@ -15,9 +15,9 @@ function ParamsIdPage() {
 	}, [id]);
 
 	return (
-		<div className="params-id__wrapper">
-			<div className="params-id__content">
-				<h1>ParamsIdPage - {id}</h1>
+		<div className="post-id__wrapper">
+			<div className="post-id__content">
+				<h1>Post Item Page - {id}</h1>
 				<div>
 					{
 						post && (<>
@@ -28,10 +28,11 @@ function ParamsIdPage() {
 						</>)
 					}
 				</div>
-				<Link to="/params"><h1>To List of Posts</h1></Link>
+				<Link to="/posts"><button name="list">To List of Posts</button></Link>
+				<Link to={`/posts/${id}/edit`}><button name="edit">Edit</button></Link>
 			</div>
 		</div>
 	)
 }
 
-export default ParamsIdPage;
+export default PostItemPage;

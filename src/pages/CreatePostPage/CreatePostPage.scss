@@ -1,8 +1,8 @@
 @import "/src/styles/index.scss";
 
-.params-id__wrapper {
+.create-post__wrapper {
 	padding: 100px 20px 20px;
-	.params-id__content {
+	.create-post__content {
 		h1 {
 			@include fontType("AdventPro Bold", 24px, 1.2, gray);
 		}

@@ -1,12 +1,15 @@
-
-
 import { Link } from "react-router-dom";
+import "./NotFoundPage.scss";
+
 function NotFoundPage() {
 	return (
 		<>
-			<div>NotFRoundPage</div>
-
-			<h1><Link to="/">Home</Link></h1>
+			<div className="notfound__wrapper">
+				<div className="notfound__content">
+					<h1>Not Found Page</h1>
+				</div>
+			</div>
+			<Link to="/home">Home</Link>
 		</>
 	)
 }

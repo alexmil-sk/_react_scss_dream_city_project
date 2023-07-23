@@ -1,12 +1,14 @@
 import { createBrowserRouter } from "react-router-dom";
+import Layout from "../components/Layout/Layout.jsx";
 import HomePage from "../pages/HomePage/HomePage.jsx";
 import ObjectPage from "../pages/ObjectPage/ObjectPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage.jsx";
 import IntroPage from "../pages/IntroPage/IntroPage.jsx";
 import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
-import ParamsPage from "/src/pages/ParamsPage/ParamsPage.jsx";
-import ParamsIdPage from "/src/pages/ParamsIdPage/ParamsIdPage.jsx";
-import Layout from "../components/Layout/Layout.jsx";
+import PostsPage from "/src/pages/PostsPage/PostsPage.jsx";
+import PostItemPage from "/src/pages/PostItemPage/PostItemPage.jsx";
+import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
+import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
 
 const router = createBrowserRouter([
 	{
@@ -30,12 +32,20 @@ const router = createBrowserRouter([
 				element: <ContactsPage />,
 			},
 			{
-				path: "params",
-				element: <ParamsPage />,
+				path: "posts",
+				element: <PostsPage />,
 			},
 			{
-				path: "params/:id",
-				element: <ParamsIdPage />,
+				path: "posts/:id",
+				element: <PostItemPage />,
+			},
+			{
+				path: "posts/:id/edit",
+				element: <PostItemEditPage />,
+			},
+			{
+				path: "posts/new",
+				element: <CreatePostPage />,
 			},
 			{
 				path: "*",
