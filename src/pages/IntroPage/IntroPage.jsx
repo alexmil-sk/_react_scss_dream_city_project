@@ -15,7 +15,7 @@ export default function IntroComponent() {
 
 	const [play, { stop }] = useSound(audio);
 	const [isPlayingMusic, setIsPlayingMusic] = useState(false);
-	const [isPlayVideoOnScroll, setIsPlayVideoOnScroll] = useState(true);
+	// const [isPlayVideoOnScroll, setIsPlayVideoOnScroll] = useState(true);
 
 
 	// useEffect(() => {
@@ -46,39 +46,34 @@ export default function IntroComponent() {
 	}
 
 	return (<>
-		{
-			isPlayVideoOnScroll
-				? (<div className="media__container">
+		<div className="media__container">
 
-					<div className="audio__container">
-						{
-							isPlayingMusic
-								? (<button className="audio__red" onClick={soundHandlerOff}>
-									<img src={soundOff} alt="soundOff" />
-								</button>)
-								: (<button className="audio__green" onClick={soundHandlerOn}>
-									<img src={soundOn} alt="soundOn" />
-								</button>)
-						}
-					</div>
-					<div className="video__container">
-						<video
-							preload="metadata"
-							loop
-							autoPlay
-							muted
-						>
+			<div className="audio__container">
+				{
+					isPlayingMusic
+						? (<button className="audio__red" onClick={soundHandlerOff}>
+							<img src={soundOff} alt="soundOff" />
+						</button>)
+						: (<button className="audio__green" onClick={soundHandlerOn}>
+							<img src={soundOn} alt="soundOn" />
+						</button>)
+				}
+			</div>
+			<div className="video__container">
+				<video
+					preload="metadata"
+					loop
+					autoPlay
+					muted
+				>
 
-							<source src={videoWeb} type="video/webm" />
-							<source src={video} type="video/mp4" />
-						</video>
-					</div>
-					<div className="text__container">
-						<h1>Lorem ipsum dolor sit amet.</h1>
-					</div>
-				</div>
-				)
-				: null
-		}
+					<source src={videoWeb} type="video/webm" />
+					<source src={video} type="video/mp4" />
+				</video>
+			</div>
+			<div className="text__container">
+				<h1>Lorem ipsum dolor sit amet.</h1>
+			</div>
+		</div>
 	</>)
 }
