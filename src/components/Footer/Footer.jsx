@@ -1,9 +1,19 @@
+import { useEffect, useState } from "react";
 import "./Footer.scss";
 
 function FooterComponent() {
+
+	const [isActiveFooter, setIsActiveFooter] = useState(false);
+
+
+	useEffect(() => {
+		setIsActiveFooter(true)
+	}, []);
+
+
 	return (
-		<div className="footer">
-			<div className="container">
+		<div className={`footer ${isActiveFooter && 'loaded'}`}>
+			<div className="footer__container">
 				<div className="footer__row">
 					<div
 						className="footer__text"

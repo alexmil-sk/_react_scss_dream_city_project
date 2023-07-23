@@ -4,10 +4,14 @@
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	background-color: $menu-bg-color;
 	width: 100%;
-	.container {
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+
+	&__container {
 		border-top: 1px solid yellow;
+		transform: translate(0, +100%);
+		background-color: $menu-bg-color;
 
 		.footer__row {
 			display: flex;
@@ -19,4 +23,13 @@
 			}
 		}
 	}
+}
+
+.footer.loaded {
+	opacity: 1;
+}
+
+.footer.loaded .footer__container {
+	transition: transform 0.8s ease 0.8s;
+	transform: translate(0, 0);
 }
