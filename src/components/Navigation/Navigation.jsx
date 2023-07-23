@@ -1,10 +1,8 @@
-import { useState, useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navigation.scss";
 
-function Navigation() {
+function Navigation({ isActiveHeader, resetHeaderMenu }) {
 
-	const [isActiveHeader, setIsActiveHeader] = useState(false);
 
 	const menuLinks = [
 		{ link: "/", value: 'Intro' },
@@ -12,19 +10,8 @@ function Navigation() {
 		{ link: "/objects", value: 'Objects' },
 		{ link: "/contacts", value: 'Contacts' }];
 
-	let location = useLocation();
-
-	useEffect(() => {
-		setIsActiveHeader(true)
-	}, [location]);
-
-	function resetHeaderMenu() {
-		setIsActiveHeader(false)
-	}
-
-
 	return (
-		<div className={`wrapper__header ${isActiveHeader && 'loaded'}`}>
+		<div className={`wrapper__header ${isActiveHeader ? 'loaded' : ''}`}>
 			<div className="wrapper__background"></div>
 			<nav className="header">
 				<div className="header__menu menu">
