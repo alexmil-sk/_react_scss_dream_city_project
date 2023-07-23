@@ -6,6 +6,7 @@
 	flex-direction: column;
 	width: 100vw;
 	min-height: 100%;
+	padding: 50px;
 	overflow: hidden;
 	background: linear-gradient(
 		90deg,
@@ -205,21 +206,6 @@
 							}
 						}
 					}
-				}
-			}
-		}
-	}
-	//FOOTER =========================================
-	.footer {
-		background-color: #011628;
-		.container {
-			.footer__row {
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				height: 60px;
-				.footer__text {
-					@include fontType("AdventPro Bold", null, 1.2, white);
 				}
 			}
 		}

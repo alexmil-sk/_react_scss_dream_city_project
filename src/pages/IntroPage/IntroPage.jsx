@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import useSound from 'use-sound'; //https://reactjsexample.com/a-react-hook-for-playing-sound-effects/
 
-import "./IntroComponent.scss";
+import "./IntroPage.scss";
 
 import audio from "/videos/intro/observation_outside.mp3";
 import video from "/videos/intro/observation_outside.mp4";
@@ -18,22 +18,22 @@ export default function IntroComponent() {
 	const [isPlayVideoOnScroll, setIsPlayVideoOnScroll] = useState(true);
 
 
-	useEffect(() => {
-		window.addEventListener('scroll', () => {
-			if (window.scrollY == 0) {
-				if (isPlayingMusic === true) {
-					setIsPlayingMusic(false);
-					stop();
-				} else {
-					setIsPlayingMusic(false);
-					setIsPlayVideoOnScroll(true);
-				}
-			} else {
-				setIsPlayVideoOnScroll(false);
-				stop();
-			}
-		});
-	}, [stop, play, isPlayingMusic]);
+	// useEffect(() => {
+	// 	window.addEventListener('scroll', () => {
+	// 		if (window.scrollY == 0) {
+	// 			if (isPlayingMusic === true) {
+	// 				setIsPlayingMusic(false);
+	// 				stop();
+	// 			} else {
+	// 				setIsPlayingMusic(false);
+	// 				setIsPlayVideoOnScroll(true);
+	// 			}
+	// 		} else {
+	// 			setIsPlayVideoOnScroll(false);
+	// 			stop();
+	// 		}
+	// 	});
+	// }, [stop, play, isPlayingMusic]);
 
 	function soundHandlerOn() {
 		setIsPlayingMusic(true);
@@ -48,7 +48,7 @@ export default function IntroComponent() {
 	return (<>
 		{
 			isPlayVideoOnScroll
-				? (<div className="fullscreen media__container">
+				? (<div className="media__container">
 
 					<div className="audio__container">
 						{

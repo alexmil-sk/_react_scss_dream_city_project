@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './ObjectPage.scss';
 import { Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination, FreeMode } from 'swiper/modules';
+import { Link } from "react-router-dom"
 
 
 import 'swiper/css';
@@ -21,8 +22,11 @@ function SliderComponent() {
 	const [hidePagination, setHidePagination] = useState(false);
 	const [isFreeMode, setIsFreeMode] = useState(true);
 
-	const menuLinks = ['Screen-1', 'Screen-2', 'Screen-3', 'Screen-4'];
+	const menuSlider = ['Screen-1', 'Screen-2', 'Screen-3', 'Screen-4'];
 
+	function closeActiveMenu() {
+		setIsActiveMenu(false);
+	}
 
 	const swiperParams = {
 		modules: [Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination, FreeMode],
@@ -73,28 +77,34 @@ function SliderComponent() {
 		onActiveIndexChange: (swiper) => setIsActiveIndex(swiper.activeIndex),
 	};
 
-
-
 	//Interface SwiperEvents Search Swiper - v10.0.4
 	//https://swiperjs.com/types/interfaces/types_swiper_events.SwiperEvents#snapIndexChange
 
 	//https://www.youtube.com/watch?v=tBIHMzD1BZM - Адаптивная верстка полноэкранного лендинга с навигацией и параллакс эффектом на базе слайдера Swiper
 
 	return (
-		<div className={`wrapper__slider ${isActiveMenu && 'loaded'} ${hidePagination && 'free'}`}>
+		<div className={`wrapper__slider ${isActiveMenu ? 'loaded' : 'unloaded'} ${hidePagination && 'free'}`}>
 			<div className="header">
-				<nav className="header__menu menu">
-					{
-						menuLinks?.map((menuLink, idx) => (
-							<div
-								onClick={() => sliderObject.slideTo(idx, 1000)}
-								className={isActiveIndex === idx ? 'menu__link active' : 'menu__link'}
-								key={idx}
-							>
-								{menuLink}
-							</div>
-						))
-					}
+				<nav className="header__menu">
+					<div className="menu">
+						{
+							menuSlider?.map((menuLink, idx) => (
+								<div
+									onClick={() => sliderObject.slideTo(idx, 1000)}
+									className={isActiveIndex === idx ? 'menu__link active' : 'menu__link'}
+									key={idx}
+								>
+									{menuLink}
+								</div>
+							))
+						}
+					</div>
+
+					<div
+						className="menu__link close"
+						onClick={closeActiveMenu}
+					>&times;
+					</div>
 				</nav>
 			</div>
 			<Swiper
@@ -121,7 +131,6 @@ function SliderComponent() {
 							<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat corrupti quos doloremque laborum, sequi porro iure deserunt blanditiis quidem optio.</p>
 							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, culpa corporis ea nostrum commodi voluptates?</p>
 							<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, asperiores!</p>
-							<p>Voluptate consectetur molestias, voluptatibus in incidunt saepe maiores repudiandae repellendus temporibus ipsum sit accusamus pariatur ad, hic eos ab vitae. Vero, quis consequatur. Ea blanditiis nobis velit minus esse odio adipisci molestias natus, quis vel quaerat corrupti, facilis aspernatur quod, distinctio illum error cupiditate culpa eaque aliquid placeat laudantium omnis rem laboriosam! Aliquam tempore eveniet architecto voluptatem dolore, totam molestias ut ipsam? Ducimus recusandae obcaecati repellat natus nulla reiciendis laudantium esse placeat magnam nihil optio, illum unde. Laboriosam quasi placeat quaerat odit ratione! Eius illo exercitationem, cumque ut eos suscipit atque nemo assumenda nulla illum, ex quo explicabo, repellendus nihil molestias. Fugiat animi possimus aspernatur ducimus. Quidem exercitationem quis quos repudiandae autem ea aut error aliquam, numquam ratione sequi vel expedita dolorum pariatur sunt. Itaque quaerat quam nostrum recusandae, tempore, deserunt maiores voluptate error magni beatae veritatis natus quos fugit architecto saepe. Quos, quaerat repellat. Odit vel magnam nisi quidem, sapiente reprehenderit nostrum perferendis possimus praesentium deleniti ipsum suscipit necessitatibus dicta voluptas nemo atque nam rerum ullam qui repellendus? Aliquid porro quaerat nemo fugiat voluptates distinctio, ratione suscipit odit atque voluptatum, vel veritatis harum soluta assumenda excepturi explicabo! Ab debitis molestiae in autem veritatis, ut corrupti error blanditiis velit pariatur assumenda aliquid praesentium, obcaecati vero.</p>
 						</div>
 					</div>
 				</SwiperSlide>

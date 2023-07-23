@@ -233,23 +233,6 @@ function GalleryComponent() {
 							</div>
 						</div>
 					</div>
-
-				</div>
-				<div className="footer">
-					<div className="container">
-						<div className="footer__row">
-							<div
-								style={styleFont.text}
-								className="footer__text"
-							>
-								<span>DreamCity /&nbsp;</span>
-								<span>
-									{new Date().getFullYear()}&nbsp;/
-								</span>
-								<span>&nbsp;{Date()}</span>
-							</div>
-						</div>
-					</div>
 				</div>
 			</div>
 		</div>

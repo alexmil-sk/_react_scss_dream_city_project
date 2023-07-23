@@ -1,5 +1,5 @@
 
-import IntroComponent from "../../components/Intro/IntroComponent.jsx";
+// import IntroComponent from "../../components/Intro/IntroComponent.jsx";
 import ObjectsListComponent from "../../components/ObjectsList/ObjectsListComponent.jsx";
 import GalleryComponent from "../../components/Gallery/GalleryComponent.jsx";
 import SliderComponent from "../../components/Slider/SliderComponent.jsx";
@@ -10,9 +10,11 @@ function HomePage() {
 	return (
 		<div className="wrapper">
 
-			<IntroComponent />
-
+			{/* <IntroComponent /> */}
+			
 			<div className="fullscreen foto__container_1"></div>
+
+
 
 			<SliderComponent />
 
@@ -36,8 +38,6 @@ function HomePage() {
 			<div className="fullscreen foto__container_7"></div>
 
 			<GalleryComponent />
-
-
 
 		</div >
 	)
