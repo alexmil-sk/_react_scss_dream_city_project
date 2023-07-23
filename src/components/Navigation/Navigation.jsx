@@ -8,7 +8,8 @@ function Navigation({ isActiveHeader, resetHeaderMenu }) {
 		{ link: "/", value: 'Intro' },
 		{ link: "/home", value: 'Home' },
 		{ link: "/objects", value: 'Objects' },
-		{ link: "/contacts", value: 'Contacts' }];
+		{ link: "/contacts", value: 'Contacts' },
+		{ link: "/params", value: 'Params' }];
 
 	return (
 		<div className={`wrapper__header ${isActiveHeader ? 'loaded' : ''}`}>

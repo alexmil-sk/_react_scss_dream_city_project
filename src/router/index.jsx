@@ -4,6 +4,8 @@ import ObjectPage from "../pages/ObjectPage/ObjectPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage.jsx";
 import IntroPage from "../pages/IntroPage/IntroPage.jsx";
 import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
+import ParamsPage from "/src/pages/ParamsPage/ParamsPage.jsx";
+import ParamsIdPage from "/src/pages/ParamsIdPage/ParamsIdPage.jsx";
 import Layout from "../components/Layout/Layout.jsx";
 
 const router = createBrowserRouter([
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
 			{
 				path: "contacts",
 				element: <ContactsPage />,
+			},
+			{
+				path: "params",
+				element: <ParamsPage />,
+			},
+			{
+				path: "params/:id",
+				element: <ParamsIdPage />,
 			},
 			{
 				path: "*",
