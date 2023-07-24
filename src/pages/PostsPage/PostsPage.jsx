@@ -6,6 +6,7 @@ function PostsPage() {
 
 	const [posts, setPosts] = useState([]);
 
+
 	useEffect(() => {
 		fetch('https://jsonplaceholder.typicode.com/posts')
 			.then(res => res.json())
