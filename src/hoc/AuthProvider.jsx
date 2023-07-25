@@ -4,15 +4,15 @@ export const AuthContext = createContext(null);
 
 function AuthProvider({ children }) {
 
-	const [user, setUser] = useState(null);
+	const [user, setUser] = useState({email: null, pass: null});
 
-	function signin(newUser, cb) {
-		setUser(newUser);
+	function signin(userMail, userPass, cb) {
+		setUser({ email: userMail, pass: userPass });
 		cb();
 	}
 
 	function signout(cb) {
-		setUser(null);
+		setUser({ email: null, pass: null });
 		cb();
 	}
 

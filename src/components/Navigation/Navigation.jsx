@@ -1,7 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import "./Navigation.scss";
+import useAuth from "/src/hook/useAuth.js";
 
 function Navigation({ isActiveHeader, resetHeaderMenu }) {
+
+	const navigate = useNavigate();
+	const { signout } = useAuth();
 
 
 	const menuLinks = [
@@ -29,6 +33,7 @@ function Navigation({ isActiveHeader, resetHeaderMenu }) {
 							</NavLink>
 						))
 					}
+					<button onClick={() => signout(() => navigate("/home ", {replace: true}))}>Logout</button>
 				</div>
 			</nav>
 		</div>
