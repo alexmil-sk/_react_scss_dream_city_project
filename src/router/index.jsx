@@ -9,11 +9,15 @@ import PostsPage from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
 import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
+import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
+import RequireAuth from "/src/hoc/RequireAuth.jsx";
+import AuthProvider from "/src/hoc/AuthProvider.jsx";
+
 
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <Layout />,
+		element: <AuthProvider><Layout /></AuthProvider>,
 		children: [
 			{
 				index: true,
@@ -41,11 +45,15 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "posts/:id/edit",
-				element: <PostItemEditPage />,
+				element: <RequireAuth><PostItemEditPage /></RequireAuth>,
 			},
 			{
 				path: "posts/new",
-				element: <CreatePostPage />,
+				element: <RequireAuth><CreatePostPage /></RequireAuth>,
+			},
+			{
+				path: "login",
+				element: <LoginPage />,
 			},
 			{
 				path: "*",

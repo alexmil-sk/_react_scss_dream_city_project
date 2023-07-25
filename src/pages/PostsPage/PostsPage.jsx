@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import "./PostsPage.scss";
 import { Link } from "react-router-dom";
 
+
 function PostsPage() {
 
 	const [posts, setPosts] = useState([]);
@@ -16,7 +17,13 @@ function PostsPage() {
 	return (
 		<div className="params__wrapper">
 			<h1>Posts Page</h1>
-			<Link to="new"><button style={{padding: '5px 15px', border: '1px solid #000', fontSize: '1.5rem', background: 'green', color: '#fff' }}>new Post</button></Link>
+			<Link to="new">
+				<button
+					style={{ padding: '5px 15px', border: '1px solid #000', fontSize: '1.5rem', background: 'green', color: '#fff' }}
+				>
+					new Post
+				</button>
+			</Link>
 			<ul>
 				{
 					posts?.map(post => (
