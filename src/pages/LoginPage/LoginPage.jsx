@@ -18,8 +18,7 @@ function LoginPage() {
 		const email = form.email.value;
 		const password = form.password.value;
 
-		signin(email, password, () => navigate(fromPage, { replace: true })) 
-
+		signin(email, password, () => navigate(fromPage, { replace: true }))
 	}
 
 	return (
@@ -39,7 +38,7 @@ function LoginPage() {
 				</form>
 			</div>
 		</div>
-		
+
 	)
 }
 

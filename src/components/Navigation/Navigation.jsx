@@ -33,7 +33,7 @@ function Navigation({ isActiveHeader, resetHeaderMenu }) {
 							</NavLink>
 						))
 					}
-					<button onClick={() => signout(() => navigate("/home ", {replace: true}))}>Logout</button>
+					<button onClick={() => signout(() => navigate("/login ", {replace: true}))}>Logout</button>
 				</div>
 			</nav>
 		</div>
