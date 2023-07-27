@@ -10,8 +10,8 @@ function PostsPage() {
 	const [searchParams, setSearchParams] = useSearchParams();
 
 	const titleQuery = searchParams.get('title') || "";
-	const postIdQuery = searchParams.get('postId') || null;
-	const checkboxLatest = searchParams.has('latest') || null;
+	const postIdQuery = searchParams.get('postId') || "";
+	const checkboxLatest = searchParams.has('latest') || "";
 	//url.ru/posts?post=abc&data=...&latest
 
 	const startsLatest = checkboxLatest ? 80 : 1;
@@ -48,7 +48,7 @@ function PostsPage() {
 			<div className="posts__wrapper">
 				<h1>Posts Page</h1>
 
-				{/* SEARCH BLOK */}
+				{/* <SEARCH BLOK> =============================== */}
 
 				<SearchComponent
 					titleQuery={titleQuery}
@@ -56,7 +56,7 @@ function PostsPage() {
 					checkboxLatest={checkboxLatest}
 				/>
 
-				{/* =============================== */}
+				{/* </ SEARCH BLOK> =============================== */}
 
 				<Link to="new">
 					<button

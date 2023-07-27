@@ -3,11 +3,7 @@ import { useSearchParams } from "react-router-dom";
 
 import "./SearchComponent.scss";
 
-function SearchComponent({
-	titleQuery,
-	postIdQuery,
-	checkboxLatest,
-}) {
+function SearchComponent({titleQuery,	postIdQuery,checkboxLatest }) {
 
 	const [searchTitleValue, setSearchTitleValue] = useState(titleQuery);
 	const [searchPostIdValue, setSearchPostIdValue] = useState(postIdQuery);
