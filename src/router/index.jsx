@@ -10,6 +10,8 @@ import PostItemPage from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
 import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
+import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
+import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
 
@@ -34,6 +36,16 @@ const router = createBrowserRouter([
 			{
 				path: "contacts",
 				element: <ContactsPage />,
+				children: [
+					{
+						path: "fotos",
+						element: <OurFotos/>
+					},
+					{
+						path: "team",
+						element: <OurTeam />
+					}
+				]
 			},
 			{
 				path: "posts",

@@ -3,7 +3,10 @@ import { Link, useMatches } from "react-router-dom";
 
 function CastomLinkUI({ children, to, ...props }) {
 
-	const match = useMatches();
+	const match = useMatches({
+		path: to,
+		end: to.length === 1 ,
+	});
 	
 	//console.log('match: ', match);
 
