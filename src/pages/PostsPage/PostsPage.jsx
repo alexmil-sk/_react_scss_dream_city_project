@@ -78,4 +78,4 @@ function PostsPage() {
 	)
 }
 
-export default PostsPage;
+export { PostsPage };

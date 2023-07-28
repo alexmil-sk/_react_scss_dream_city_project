@@ -5,7 +5,7 @@ import ObjectPage from "../pages/ObjectPage/ObjectPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage.jsx";
 import IntroPage from "../pages/IntroPage/IntroPage.jsx";
 import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
-import PostsPage from "/src/pages/PostsPage/PostsPage.jsx";
+import {PostsPage} from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
 import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
