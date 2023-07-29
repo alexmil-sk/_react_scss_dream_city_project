@@ -1,38 +1,34 @@
 import "./PostItemPage.scss";
-import { useParams, Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 function PostItemPage() {
 
-	const [post, setPost] = useState({});
-	const { id } = useParams();
-
-	useEffect(() => {
-		fetch(`https://jsonplaceholder.typicode.com/posts/${id}`)
-			.then(res => res.json())
-			.then(data => setPost(data))
-	}, [id]);
+	const { post, id } = useLoaderData();
 
 	return (
 		<div className="post-id__wrapper">
 			<div className="post-id__content">
 				<h1>Post Item Page - {id}</h1>
 				<div>
-					{
-						post && (<>
-							<h1>title: {post.title}</h1>
-							<h2>UserId: {post.userId}</h2>
-							<h3>id: {post.id}</h3>
-							<p>body: {post.body}</p>
-						</>)
-					}
+					<h1>title: {post.title}</h1>
+					<h2>UserId: {post.userId}</h2>
+					<h3>id: {post.id}</h3>
+					<p>body: {post.body}</p>
 				</div>
 				<Link to="/posts"><button name="list">To List of Posts</button></Link>
 				<Link to={`/posts/${id}/edit`}><button name="edit">Edit</button></Link>
 			</div>
 		</div>
 	)
+}
+
+export const loaderPostItem = async ({ params }) => {
+	const id = params.id;
+	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
+	const post = await res.json();
+	return { post, id };
+
 }
 
 export default PostItemPage;

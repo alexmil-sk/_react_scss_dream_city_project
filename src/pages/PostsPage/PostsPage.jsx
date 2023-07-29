@@ -1,12 +1,11 @@
-import { useState, useEffect } from "react";
 import "./PostsPage.scss";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData } from "react-router-dom";
 import SearchComponent from "/src/components/Search/SearchComponent.jsx";
 
 
 function PostsPage() {
 
-	const [posts, setPosts] = useState([]);
+	const posts = useLoaderData();
 	const [searchParams, setSearchParams] = useSearchParams();
 
 	const titleQuery = searchParams.get('title') || "";
@@ -36,12 +35,6 @@ function PostsPage() {
 				))
 		)
 	}
-
-	useEffect(() => {
-		fetch('https://jsonplaceholder.typicode.com/posts')
-			.then(res => res.json())
-			.then(data => setPosts(data))
-	}, []);
 
 	return (
 		<div className="posts">
@@ -78,4 +71,10 @@ function PostsPage() {
 	)
 }
 
-export { PostsPage };
+
+export const loaderPosts = async () => {
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+	return res.json();
+}
+
+export default PostsPage;
