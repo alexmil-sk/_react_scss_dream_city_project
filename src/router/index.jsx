@@ -5,7 +5,7 @@ import ObjectPage from "../pages/ObjectPage/ObjectPage.jsx";
 import NotFoundPage from "../pages/NotFoundPage/NotFoundPage.jsx";
 import IntroPage from "../pages/IntroPage/IntroPage.jsx";
 import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
-import PostsPage, {loaderPosts } from "/src/pages/PostsPage/PostsPage.jsx";
+import PostsPage, { loaderPosts } from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage, { loaderPostItem } from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
 import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
@@ -14,6 +14,7 @@ import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
+import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
 
 
 const router = createBrowserRouter([
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
 				children: [
 					{
 						path: "fotos",
-						element: <OurFotos/>
+						element: <OurFotos />
 					},
 					{
 						path: "team",
@@ -50,12 +51,16 @@ const router = createBrowserRouter([
 			{
 				path: "posts",
 				element: <PostsPage />,
-				loader: loaderPosts
+				loader: loaderPosts,
+				errorElement: <ErrorBoundary />,
+
 			},
 			{
 				path: "posts/:id",
 				element: <PostItemPage />,
-				loader: loaderPostItem
+				loader: loaderPostItem,
+				errorElement: <ErrorBoundary />,
+
 			},
 			{
 				path: "posts/:id/edit",

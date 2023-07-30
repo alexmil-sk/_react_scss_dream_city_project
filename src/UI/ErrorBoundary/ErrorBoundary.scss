@@ -1,0 +1,22 @@
+@import "/src/styles/index.scss";
+
+.error-boundary__wrapper {
+	padding: 100px 20px 20px;
+	.error-boundary__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		h1 {
+			@include fontType("AdventPro Bold", 50px, 1.2, red);
+		}
+		h2 {
+			@include fontType("AdventPro Thin", 50px, 1.2, red);
+		}
+		h3 {
+			@include fontType("AdventPro Thin", 50px, 1.2, red);
+		}
+		h4 {
+			@include fontType("AdventPro Thin", 50px, 1.2, red);
+		}
+	}
+}

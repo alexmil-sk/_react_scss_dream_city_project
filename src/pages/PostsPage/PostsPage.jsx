@@ -1,6 +1,6 @@
 import "./PostsPage.scss";
 import { Suspense } from "react";
-import { Link, useSearchParams, useLoaderData, Await, useAsyncValue } from "react-router-dom";
+import { Link, useSearchParams, useLoaderData, Await, useAsyncValue, json } from "react-router-dom";
 import SearchComponent from "/src/components/Search/SearchComponent.jsx";
 
 
@@ -32,7 +32,7 @@ function MapPosts() {
 	const titleQuery = searchParams.get('title') || "";
 	const checkboxLatest = searchParams.has('latest') || "";
 	const startsLatest = checkboxLatest ? 80 : 1;
-	
+
 	return handlerMappingArrayPosts(posts, titleQuery, startsLatest)
 }
 
@@ -49,7 +49,7 @@ function FilterPosts() {
 	const startsLatest = checkboxLatest ? 80 : 1;
 
 	const newArray = posts.filter(post => post.id == postIdQuery)
-	
+
 	return handlerMappingArrayPosts(newArray, titleQuery, startsLatest)
 }
 
@@ -108,11 +108,32 @@ function PostsPage() {
 //==========================================================================
 
 async function getPosts() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts**');
+
+	if (!res.ok) {
+		throw new Response('Not Found', { status: res.status, statusText: res.statusText })
+	}
+
+
 	return res.json();
 }
 
 export const loaderPosts = async () => {
+
+	//======================================================
+	//const posts = await getPosts();
+
+	// if (!posts.length) {
+	// 	throw json(
+	// 		{ message: "email is required", reason: "Wrong URL" },
+	// 		{ status: 406, statusText: "JSON Status Text" }
+	// 	);
+	// }
+
+	//return { posts };
+	//======================================================
+
+
 	return { posts: getPosts() };
 }
 
