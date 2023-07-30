@@ -14,18 +14,42 @@ function Post() {
 	</div>)
 }
 
+function Comments() {
+	const comments = useAsyncValue();
+
+	return (<div>
+		<h1>Comments</h1>
+		{
+			comments.map((comment, idx) => (
+				<div key={idx}>
+					<h3>email: {comment.email}</h3>
+					<h4>name: {comment.name}</h4>
+					<p>body: {comment.body}</p>
+					<hr style={{ border: '1px solid gray', margin: '10px 0' }} />
+				</div>
+			))
+		}
+	</div>)
+}
+
 
 function PostItemPage() {
 
-	const { post, id } = useLoaderData();
+	const { post, comments, id } = useLoaderData();
 
 	return (
 		<div className="post-id__wrapper">
 			<div className="post-id__content">
 				<h1>Post Item Page - {id}</h1>
-				<Suspense fallback={<h1 style={{backgroundColor: 'yellow'}}>...Post is loading</h1>}>
+				<Suspense fallback={<h1 style={{ backgroundColor: 'yellow' }}>...Post is loading</h1>}>
 					<Await resolve={post}>
 						<Post />
+					</Await>
+				</Suspense>
+
+				<Suspense fallback={<h1 style={{ backgroundColor: 'cyan' }}>...Comments are loading</h1>}>
+					<Await resolve={comments}>
+						<Comments />
 					</Await>
 				</Suspense>
 				<Link to="/posts"><button name="list">To List of Posts</button></Link>
@@ -40,10 +64,17 @@ async function getPostItem(id) {
 	return res.json();
 }
 
+async function getPostComments(id) {
+	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
+	return res.json();
+}
+
+
+
 export const loaderPostItem = async ({ params }) => {
 	const id = params.id;
 
-	return { post: getPostItem(id), id };
+	return { post: await getPostItem(id), comments: getPostComments(id), id };
 
 }
 
