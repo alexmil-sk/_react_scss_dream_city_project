@@ -3,6 +3,25 @@ import { Suspense } from "react";
 import { Link, useSearchParams, useLoaderData, Await, useAsyncValue } from "react-router-dom";
 import SearchComponent from "/src/components/Search/SearchComponent.jsx";
 
+
+//========================================================================
+
+function handlerMappingArrayPosts(array, titleQuery, startsLatest) {
+	return (
+		array
+			.filter(post => post.title.includes(titleQuery?.toLowerCase()) && post.id >= startsLatest)
+			.map(post => (
+				<Link to={`/posts/${post.id}`} key={post.id}>
+					<li
+						style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
+					>
+						{post.userId}.{post.id} - {post.body}
+					</li>
+				</Link>
+			))
+	)
+}
+
 //=========================================================================
 
 function MapPosts() {
@@ -12,25 +31,9 @@ function MapPosts() {
 
 	const titleQuery = searchParams.get('title') || "";
 	const checkboxLatest = searchParams.has('latest') || "";
-
 	const startsLatest = checkboxLatest ? 80 : 1;
-
-	function mapAllPosts(array) {
-		return (
-			array
-				.filter(post => post.title.includes(titleQuery?.toLowerCase()) && post.id >= startsLatest)
-				.map(post => (
-					<Link to={`/posts/${post.id}`} key={post.id}>
-						<li
-							style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
-						>
-							{post.userId}.{post.id} - {post.body}
-						</li>
-					</Link>
-				))
-		)
-	}
-	return mapAllPosts(posts);
+	
+	return handlerMappingArrayPosts(posts, titleQuery, startsLatest)
 }
 
 //==================================================================
@@ -43,26 +46,11 @@ function FilterPosts() {
 	const titleQuery = searchParams.get('title') || "";
 	const postIdQuery = searchParams.get('postId') || "";
 	const checkboxLatest = searchParams.has('latest') || "";
-
 	const startsLatest = checkboxLatest ? 80 : 1;
 
-	function filterAllPosts(array) {
-		const newArray = array.filter(post => post.id == postIdQuery)
-		return (
-			newArray
-				.filter(post => post.title.includes(titleQuery?.toLowerCase()) && post.id >= startsLatest)
-				.map(post => (
-					<Link to={`/posts/${post.id}`} key={post.id}>
-						<li
-							style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
-						>
-							{post.userId}.{post.id} - {post.body}
-						</li>
-					</Link>
-				))
-		);
-	}
-	return filterAllPosts(posts)
+	const newArray = posts.filter(post => post.id == postIdQuery)
+	
+	return handlerMappingArrayPosts(newArray, titleQuery, startsLatest)
 }
 
 //==================================================================
