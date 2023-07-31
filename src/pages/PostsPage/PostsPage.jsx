@@ -108,7 +108,7 @@ function PostsPage() {
 //==========================================================================
 
 async function getPosts() {
-	const res = await fetch('https://jsonplaceholder.typicode.com/posts**');
+	const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 
 	if (!res.ok) {
 		throw new Response('Not Found', { status: res.status, statusText: res.statusText })

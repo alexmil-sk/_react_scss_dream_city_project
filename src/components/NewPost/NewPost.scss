@@ -1,0 +1,42 @@
+@import "/src/styles/index.scss";
+
+.create-post__form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 50px;
+	border: 1px solid #000;
+
+	.form__title,
+	.form__body {
+		width: 100%;
+		display: flex;
+		align-items: start;
+		flex-direction: column;
+		text-transform: uppercase;
+		@include fontType("AdventPro Bold", 16px, 1.2, #000);
+
+		input {
+			border: 1px solid #000;
+			margin: 10px 0;
+			height: 20px;
+			padding: 15px 10px;
+			@include fontType("AdventPro Bold", 20px, 1.2, #000);
+		}
+		textarea {
+			width: 100%;
+			border: 1px solid #000;
+			margin: 10px 0;
+			height: 100px;
+			padding: 5px 10px;
+			@include fontType("AdventPro Bold", 20px, 1.2, #000);
+		}
+	}
+	input[type="submit"] {
+		width: 100%;
+		padding: 10px;
+		background-color: lightgreen;
+		text-transform: uppercase;
+		@include fontType("AdventPro Bold", 20px, 1.2, #000);
+	}
+}

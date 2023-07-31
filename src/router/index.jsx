@@ -8,7 +8,7 @@ import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
 import PostsPage, { loaderPosts } from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage, { loaderPostItem } from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
-import CreatePostPage from "/src/pages/CreatePostPage/CreatePostPage.jsx";
+import CreatePostPage, {createPostAction} from "/src/pages/CreatePostPage/CreatePostPage.jsx";
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
@@ -69,6 +69,7 @@ const router = createBrowserRouter([
 			{
 				path: "posts/new",
 				element: <RequireAuth><CreatePostPage /></RequireAuth>,
+				action: createPostAction
 			},
 			{
 				path: "login",
