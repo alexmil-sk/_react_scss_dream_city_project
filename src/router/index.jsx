@@ -7,7 +7,7 @@ import IntroPage from "../pages/IntroPage/IntroPage.jsx";
 import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
 import PostsPage, { loaderPosts } from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage, { loaderPostItem } from "/src/pages/PostItemPage/PostItemPage.jsx";
-import PostItemEditPage from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
+import PostItemEditPage, { loaderEditPost, editPostAction } from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
 import CreatePostPage, {createPostAction} from "/src/pages/CreatePostPage/CreatePostPage.jsx";
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
@@ -65,11 +65,15 @@ const router = createBrowserRouter([
 			{
 				path: "posts/:id/edit",
 				element: <RequireAuth><PostItemEditPage /></RequireAuth>,
+				loader: loaderEditPost,
+				action: editPostAction,
+				errorElement: <ErrorBoundary />,
 			},
 			{
 				path: "posts/new",
 				element: <RequireAuth><CreatePostPage /></RequireAuth>,
-				action: createPostAction
+				action: createPostAction,
+				errorElement: <ErrorBoundary />,
 			},
 			{
 				path: "login",

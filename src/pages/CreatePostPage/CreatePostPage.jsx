@@ -11,7 +11,9 @@ function CreatePostPage() {
 		<div className="create-post__wrapper">
 			<div className="create-post__container">
 				<h1>Create Post Page</h1>
-				<NewPost submitting={navigation.state === 'submitting'} />
+				<NewPost
+					submitting={navigation.state === 'submitting'}
+				/>
 				<div className="block__btn">
 					<Link to="/posts"><button name="posts-list">To List of Posts</button></Link>
 				</div>

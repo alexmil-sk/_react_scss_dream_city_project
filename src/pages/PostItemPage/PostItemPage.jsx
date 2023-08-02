@@ -1,3 +1,5 @@
+import { getPostItem } from "/src/js/getPostItem.js";
+import { getPostComments } from "/src/js/getPostComments.js";
 import { Suspense } from "react";
 import "./PostItemPage.scss";
 import { Link, useLoaderData, useAsyncValue, Await } from "react-router-dom";
@@ -53,37 +55,20 @@ function PostItemPage() {
 					</Await>
 				</Suspense>
 				<Link to="/posts"><button name="list">To List of Posts</button></Link>
-				<Link to={`/posts/${id}/edit`}><button name="edit">Edit</button></Link>
+				<Link	to={`/posts/${id}/edit`}>
+					<button name="edit">Edit</button>
+				</Link>
 			</div>
 		</div>
 	)
 }
 
-async function getPostItem(id) {
-	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
-	if (!res.ok) {
-		throw new Response('', { status: res.status, statusText: res.statusText })
-	}
-
-	return res.json();
-}
-
-async function getPostComments(id) {
-	const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}/comments`);
-	if (!res.ok) {
-		throw new Response('', { status: res.status, statusText: res.statusText })
-	}
-
-	return res.json();
-}
-
-
+//============================================================
 
 export const loaderPostItem = async ({ params }) => {
 	const id = params.id;
 
 	return { post: await getPostItem(id), comments: getPostComments(id), id };
-
 }
 
 export default PostItemPage;
