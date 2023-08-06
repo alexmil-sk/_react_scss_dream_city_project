@@ -1,6 +1,6 @@
 import "./SortPage.scss";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import ButtonCategory from "./ButtonCategory.jsx";
 import CardsCategory from "./CardsCategory.jsx";
 import { data } from "./data.js";
