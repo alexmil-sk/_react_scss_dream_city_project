@@ -2,6 +2,25 @@ import "./PostsPage.scss";
 import { Suspense } from "react";
 import { Link, useSearchParams, useLoaderData, Await, useAsyncValue, json } from "react-router-dom";
 import SearchComponent from "/src/components/Search/SearchComponent.jsx";
+import { motion } from "framer-motion";
+
+
+const liMotionSettings = {
+	hidden: {
+		opacity: 0,
+		x: -2000
+	},
+	visible: i => ({
+		opacity: 1,
+		x: 0,
+		transition: {
+			delay: i * 0.08,
+			duration: 1.5,
+			type: 'just',
+			ease: 'linear'
+		}
+	})
+}
 
 
 //========================================================================
@@ -10,14 +29,22 @@ function handlerMappingArrayPosts(array, titleQuery, startsLatest) {
 	return (
 		array
 			.filter(post => post.title.includes(titleQuery?.toLowerCase()) && post.id >= startsLatest)
-			.map(post => (
-				<Link to={`/posts/${post.id}`} key={post.id}>
-					<li
-						style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
-					>
-						{post.userId}.{post.id} - {post.body}
-					</li>
-				</Link>
+			.map((post, i) => (
+				<motion.div
+					key={post.id}
+					initial='hidden'
+					animate='visible'
+					variants={liMotionSettings}
+					custom={i}
+				>
+					<Link to={`/posts/${post.id}`} >
+						<li
+							style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
+						>
+							{post.userId}.{post.id} - {post.body}
+						</li>
+					</Link>
+				</motion.div>
 			))
 	)
 }

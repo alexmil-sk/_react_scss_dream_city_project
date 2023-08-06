@@ -49,7 +49,7 @@ $menu-bg-color: #0e113e;
 
 //Mixins
 @mixin fontType($family, $fz, $lh, $color) {
-	//@include fontType($family, $fz, $color)
+	//@include fontType($family, $fz, $lh, $color)
 	font-family: $family;
 	font-size: $fz;
 	line-height: $lh;

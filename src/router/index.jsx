@@ -8,13 +8,43 @@ import ContactsPage from "../pages/ContactsPage/ContactsPage.jsx";
 import PostsPage, { loaderPosts } from "/src/pages/PostsPage/PostsPage.jsx";
 import PostItemPage, { loaderPostItem } from "/src/pages/PostItemPage/PostItemPage.jsx";
 import PostItemEditPage, { loaderEditPost, editPostAction } from "/src/pages/PostItemEditPage/PostItemEditPage.jsx";
-import CreatePostPage, {createPostAction} from "/src/pages/CreatePostPage/CreatePostPage.jsx";
+import CreatePostPage, { createPostAction } from "/src/pages/CreatePostPage/CreatePostPage.jsx";
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
+import SortPage from "/src/pages/SortPage/SortPage.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
+import { motion } from "framer-motion"
+
+const framerVariants_1 = {
+	visible: {
+		opacity: 1,
+		y: 0
+	},
+	hidden: {
+		opacity: 0,
+		y: -2000
+	}
+}
+
+const framerVariants_2 = {
+	visible: i => ({
+		opacity: 1,
+		y: 0,
+		transition: {
+			delay: i * 0.5,
+			duration: 1.5,
+			type: 'just',
+			ease: 'linear'
+		}
+	}),
+	hidden: {
+		opacity: 0,
+		y: -2000,
+	}
+}
 
 
 const router = createBrowserRouter([
@@ -36,7 +66,14 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "contacts",
-				element: <ContactsPage />,
+				element: <motion.div
+					initial={'hidden'}
+					animate={'visible'}
+					whileHover={{ y: -20 }}
+					variants={framerVariants_2}
+				>
+					<ContactsPage />
+				</motion.div>,
 				children: [
 					{
 						path: "fotos",
@@ -74,6 +111,10 @@ const router = createBrowserRouter([
 				element: <RequireAuth><CreatePostPage /></RequireAuth>,
 				action: createPostAction,
 				errorElement: <ErrorBoundary />,
+			},
+			{
+				path: "sort",
+				element: <SortPage />,
 			},
 			{
 				path: "login",

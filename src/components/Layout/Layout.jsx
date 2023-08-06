@@ -4,7 +4,7 @@ import Navigation from "/src/components/Navigation/Navigation.jsx";
 import Footer from "/src/components/Footer/Footer.jsx";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
+//import { motion } from "framer-motion"
 
 
 function Layout() {
@@ -26,9 +26,22 @@ function Layout() {
 
 	return (
 		<>
+
 			<Navigation resetHeaderMenu={resetHeaderMenu} isActiveHeader={isActiveHeader} />
 
-			<Outlet />
+			{/* <motion.div
+				initial={{ opacity: 0 }}
+				animate={{ opacity: 1 }}
+				transition={{
+					delay: 0,
+					duration: 1,
+					repeat: 0,
+					repeatDelay: 0,
+					ease: 'linear'
+				}}
+			> */}
+				<Outlet />
+			{/* </motion.div> */}
 
 			<Footer isActiveHeader={isActiveHeader} />
 		</>
