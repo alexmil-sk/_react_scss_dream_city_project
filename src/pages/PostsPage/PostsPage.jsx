@@ -14,8 +14,8 @@ const liMotionSettings = {
 		opacity: 1,
 		x: 0,
 		transition: {
-			delay: i * 0.08,
-			duration: 1.5,
+			delay: i * 0.05,
+			duration: 1.2,
 			type: 'just',
 			ease: 'linear'
 		}
@@ -110,13 +110,30 @@ function PostsPage() {
 
 				<Link to="new">
 					<button
-						style={{ padding: '5px 15px', border: '1px solid #000', fontSize: '1.5rem', background: 'green', color: '#fff', margin: '20px 0' }}
+						style={{
+							padding: '5px 15px',
+							border: '1px solid #000',
+							fontSize: '1.5rem',
+							background: 'green',
+							color: '#fff',
+							margin: '20px 0'
+						}}
 					>
 						new Post
 					</button>
 				</Link>
 				<ul>
-					<Suspense fallback={<h1 style={{ backgroundColor: 'yellow', margin: "20px 0" }}>Posts are loading...</h1>}>
+					<Suspense
+						fallback={
+							<h1
+								style={{
+									backgroundColor: 'yellow',
+									margin: "20px 0"
+								}}>
+								Posts are loading...
+							</h1>
+						}
+					>
 						<Await resolve={posts}	>
 							{
 								postIdQuery
