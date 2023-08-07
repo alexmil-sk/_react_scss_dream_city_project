@@ -1,35 +1,50 @@
 import { motion } from 'framer-motion';
 import "/src/styles/index.scss";
+import "./ButtonCategory.scss";
 
 
 const btnStyle = {
-	fontFamily: "AdventPro Regular",
-	fontSize: '1.3rem',
-	lineHeight: '1.2',
-	color: '#000',
-	border: '1px solid black',
-	borderRadius: '5px',
-	margin: '10px',
-	outline: 'none',
-	padding: '10px 20px',
-	backgroundColor: '#f1f1f1',
-	cursor: 'pointer',
-
-
+	common: {
+		fontSize: '1.3rem',
+		lineHeight: '1.2',
+		borderRadius: '5px',
+		margin: '10px',
+		outline: 'none',
+		padding: '10px 20px',
+		cursor: 'pointer',
+		transition: 'all 600ms linear',
+	},
+	backgroundColorActive: {
+		fontFamily: "AdventPro Bold",
+		backgroundColor: 'rgb(255,0,0)',
+		color: '#fff',
+		border: '1px solid red',
+		transition: 'all 400ms linear'
+	},
+	backgroundColorNotActive: {
+		fontFamily: "AdventPro Regular",
+		backgroundColor: '#f1f1f1',
+		color: '#000',
+		border: '1px solid black',
+		transition: 'all 400ms linear'
+	},
 }
 
-function ButtonCategory({ text, handleClick = Function.prototype }) {
+const stylesNotActive = Object.assign({}, btnStyle.common, btnStyle.backgroundColorNotActive);
+const stylesActive = Object.assign({}, btnStyle.common, btnStyle.backgroundColorActive);
+
+
+function ButtonCategory({ text, handleClick = Function.prototype, selected }) {
 
 
 	return (
-		<motion.button
-			style={btnStyle}
-			whileHover={{ backgroundColor: '#ddd' }}
-			whileTap={{ backgroundColor: '#ccc' }}
+		<button
+			style={text === selected ? stylesActive : stylesNotActive}
 			onClick={handleClick}
 		>
-			{text}
-		</motion.button>
+			<span>{text}</span>
+
+		</button>
 	)
 }
 
