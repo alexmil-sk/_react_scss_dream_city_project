@@ -13,7 +13,6 @@ function SortPage() {
 	const buttons = data.reduce((acc, el) => {
 		if (acc.includes(el.category)) return acc;
 
-		console.log(acc)
 		return [...acc, el.category];
 	}, []);
 
