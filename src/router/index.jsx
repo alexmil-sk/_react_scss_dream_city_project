@@ -12,22 +12,23 @@ import CreatePostPage, { createPostAction } from "/src/pages/CreatePostPage/Crea
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
+import AnimatedMenu from "/src/components/AnimatedMenu/AnimatedMenu.jsx";
 import SortPage from "/src/pages/SortPage/SortPage.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
-const framerVariants_1 = {
-	visible: {
-		opacity: 1,
-		y: 0
-	},
-	hidden: {
-		opacity: 0,
-		y: -2000
-	}
-}
+//const framerVariants_1 = {
+//	visible: {
+//		opacity: 1,
+//		y: 0
+//	},
+//	hidden: {
+//		opacity: 0,
+//		y: -2000
+//	}
+//}
 
 const framerVariants_2 = {
 	visible: i => ({
@@ -115,6 +116,10 @@ const router = createBrowserRouter([
 			{
 				path: "sort",
 				element: <SortPage />,
+			},
+			{
+				path: "menu",
+				element: <AnimatedMenu />
 			},
 			{
 				path: "login",

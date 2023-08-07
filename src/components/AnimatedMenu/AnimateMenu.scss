@@ -1,0 +1,20 @@
+@import "/src/styles/index.scss";
+
+.animated-menu {
+	background-color: #eee;
+	.menu__container {
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 1rem;
+
+		.menu__wrapper {
+			display: flex;
+			background-color: #ccc;
+			padding: 1rem;
+			border-radius: 25px;
+			@include fontType("AdventPro Bold", 2rem, 1.2, black);
+		}
+	}
+}

@@ -15,6 +15,7 @@ function Navigation({ isActiveHeader, resetHeaderMenu }) {
 		{ link: "/contacts", value: 'Contacts' },
 		{ link: "/posts", value: 'Posts' },
 		{ link: "/sort", value: 'Sort' },
+		{ link: "/menu", value: 'Menu' },
 		{ link: "/login", value: 'Login' }];
 
 	return (
