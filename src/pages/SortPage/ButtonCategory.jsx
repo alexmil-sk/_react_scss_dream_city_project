@@ -12,21 +12,19 @@ const btnStyle = {
 		outline: 'none',
 		padding: '10px 20px',
 		cursor: 'pointer',
-		transition: 'all 600ms linear',
+		transition: 'all 400ms linear',
 	},
 	backgroundColorActive: {
 		fontFamily: "AdventPro Bold",
-		backgroundColor: 'rgb(255,0,0)',
-		color: '#fff',
+		backgroundColor: '#ffb6a3',
+		color: 'red',
 		border: '1px solid red',
-		transition: 'all 400ms linear'
 	},
 	backgroundColorNotActive: {
 		fontFamily: "AdventPro Regular",
 		backgroundColor: '#f1f1f1',
 		color: '#000',
 		border: '1px solid black',
-		transition: 'all 400ms linear'
 	},
 }
 
