@@ -62,10 +62,11 @@ function MenuActiveLine() {
 		<motion.div
 			layoutId="activeLine"
 			style={{
-				width: '100%',
+				width: 'calc(100% - 10px)',
 				height: '4px',
 				position: 'absolute',
 				bottom: '-6px',
+				left: '5px',
 				backgroundColor: 'rgb(255,0,0)'
 			}}
 		></motion.div>

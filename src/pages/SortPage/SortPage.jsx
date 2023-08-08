@@ -4,6 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import ButtonCategory from "./ButtonCategory.jsx";
 import CardsCategory from "./CardsCategory.jsx";
 import { data } from "./data.js";
+import MenuMotion from "/src/components/MenuMotion/MenuMotion.jsx";
+
 
 function SortPage() {
 
@@ -29,6 +31,7 @@ function SortPage() {
 			<div className="sort__container">
 				<div className="sort__wrapper">
 					<h1>Sort Page</h1>
+					<MenuMotion />
 					<div className="categories__container">
 						<div className="btns">
 							<div className="btns__container">
