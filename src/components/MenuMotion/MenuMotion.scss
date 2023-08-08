@@ -1,0 +1,10 @@
+@import "/src/styles/index.scss";
+
+.menu__wrapper {
+			display: flex;
+			justify-content: center;
+			background-color: #ccc;
+			padding: 1rem;
+			border-radius: 25px;
+			@include fontType("AdventPro Bold", 2rem, 1.2, black);
+		}

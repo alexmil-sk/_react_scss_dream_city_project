@@ -1,35 +1,34 @@
 import { useState } from "react";
 import { motion, AnimateSharedLayout } from 'framer-motion';
-import "./AnimateMenu.scss";
+import "./MenuMotion.scss";
 
 const menuElements = ['MenuShort', 'MenuTwooooooooooo', 'MenuItem Normal'];
+
+//=================================================================================
 
 function AnimatedMenu() {
 
 	const [activeIndex, setActiveIndex] = useState(0);
 
 	return (
-		<div className="animated-menu">
-			<div className="menu__container">
-				<div className="menu__wrapper">
-					{
-						menuElements.map((item, idx) => (
-							<MenuItem
-								key={item}
-								item={item}
-								isSelected={activeIndex === idx}
-								handleClick={() => setActiveIndex(idx)}
-							/>
-						))
-					}
-				</div>
-			</div>
+		<div className="menu__wrapper">
+			{
+				menuElements.map((item, idx) => (
+					<MenuItem
+						key={item}
+						item={item}
+						isSelected={activeIndex === idx}
+						handleClick={() => setActiveIndex(idx)}
+					/>
+				))
+			}
 		</div>
 	)
 }
 
 export default AnimatedMenu;
 
+//=================================================================================
 
 function MenuItem(props) {
 	const { item, isSelected, handleClick = Function.prototype } = props;
@@ -50,11 +49,13 @@ function MenuItem(props) {
 			transition={{ duration: .3 }}
 		>
 			{isSelected && <MenuActiveLine />
-}
+			}
 			{item}
 		</motion.div>
 	)
 }
+
+//=================================================================================
 
 function MenuActiveLine() {
 
@@ -72,3 +73,5 @@ function MenuActiveLine() {
 	)
 
 }
+
+//=================================================================================

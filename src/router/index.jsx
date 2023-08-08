@@ -12,7 +12,7 @@ import CreatePostPage, { createPostAction } from "/src/pages/CreatePostPage/Crea
 import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
-import AnimatedMenu from "/src/components/AnimatedMenu/AnimatedMenu.jsx";
+import Menu from "/src/pages/Menu/Menu.jsx";
 import SortPage from "/src/pages/SortPage/SortPage.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "menu",
-				element: <AnimatedMenu />
+				element: <Menu />
 			},
 			{
 				path: "login",
