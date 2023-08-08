@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimateSharedLayout } from 'framer-motion';
+import { motion } from 'framer-motion';
 import "./MenuMotion.scss";
 
 const menuElements = ['MenuShort', 'MenuTwooooooooooo', 'MenuItem Normal'];
@@ -12,16 +12,16 @@ function AnimatedMenu() {
 
 	return (
 		<div className="menu__wrapper">
-			{
-				menuElements.map((item, idx) => (
-					<MenuItem
-						key={item}
-						item={item}
-						isSelected={activeIndex === idx}
-						handleClick={() => setActiveIndex(idx)}
-					/>
-				))
-			}
+				{
+					menuElements.map((item, idx) => (
+						<MenuItem
+							key={item}
+							item={item}
+							isSelected={activeIndex === idx}
+							handleClick={() => setActiveIndex(idx)}
+						/>
+					))
+				}
 		</div>
 	)
 }
@@ -37,10 +37,9 @@ function MenuItem(props) {
 		<motion.div
 			onClick={handleClick}
 			style={{
-				padding: '0 0.5rem',
 				fontWeight: 900,
 				position: 'relative',
-				margin: '0 10px',
+				margin: '0 1rem',
 				textAlign: 'center',
 				cursor: 'pointer'
 			}}
@@ -48,9 +47,9 @@ function MenuItem(props) {
 			animate={{ color: isSelected ? 'rgb(255, 0, 0)' : '#000' }}
 			transition={{ duration: .3 }}
 		>
-			{isSelected && <MenuActiveLine />
-			}
 			{item}
+
+			{isSelected && <MenuActiveLine />}
 		</motion.div>
 	)
 }
@@ -67,7 +66,7 @@ function MenuActiveLine() {
 				height: '4px',
 				position: 'absolute',
 				bottom: '-6px',
-				backgroundColor: 'rgb(255, 0, 0)'
+				backgroundColor: 'rgb(255,0,0)'
 			}}
 		></motion.div>
 	)
