@@ -2,22 +2,6 @@ import { motion } from 'framer-motion';
 import "/src/styles/index.scss";
 
 
-const btnStyle = {
-	fontFamily: "AdventPro Regular",
-	fontSize: '1.3rem',
-	lineHeight: '1.2',
-	color: '#000',
-	border: '1px solid black',
-	borderRadius: '5px',
-	margin: '10px',
-	outline: 'none',
-	padding: '10px 20px',
-	backgroundColor: '#f1f1f1',
-	cursor: 'pointer',
-
-
-}
-
 function CardsCategory({ el }) {
 
 	const cardsSettings = {
@@ -40,6 +24,7 @@ function CardsCategory({ el }) {
 
 	return (
 		<motion.div
+			layout
 			className="list__item"
 			initial='hidden'
 			animate='visible'

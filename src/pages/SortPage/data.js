@@ -12,6 +12,14 @@ export const data = [
 		title: '40 м2'
 	},
 	{
+		category: '1 комн. кв.',
+		title: '45 м2'
+	},
+	{
+		category: '1 комн. кв.',
+		title: '50 м2'
+	},
+	{
 		category: '2 комн. кв.',
 		title: '60 м2'
 	},

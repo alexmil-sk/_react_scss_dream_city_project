@@ -1,23 +1,25 @@
 import "./SortPage.scss";
 import { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import ButtonCategory from "./ButtonCategory.jsx";
 import CardsCategory from "./CardsCategory.jsx";
 import { data } from "./data.js";
 
 function SortPage() {
 
-	const [cards, setCards] = useState(data?.filter(el => el.category === '1 комн. кв.'));
-	const [selected, setSelected] = useState("1 комн. кв.");
+	const [cards, setCards] = useState(data);
+	const [selected, setSelected] = useState("ALL");
 
 	const buttons = data.reduce((acc, el) => {
 		if (acc.includes(el.category)) return acc;
 
 		return [...acc, el.category];
-	}, []);
+	}, ['ALL']);
 
 	function handleCards(selector) {
-		setCards(data.filter(el => el.category === selector));
+		if (selector === 'ALL') setCards(data);
+		else setCards(data.filter(el => el.category === selector));
+		
 		setSelected(selector);
 	}
 
@@ -44,7 +46,10 @@ function SortPage() {
 						</div>
 
 						<div className="list">
-							<div className="list__container">
+							<motion.div
+								layout
+								className="list__container"
+							>
 								<AnimatePresence initial={false} mode="wait" >
 									{
 										cards.map(el => (
@@ -55,7 +60,7 @@ function SortPage() {
 										))
 									}
 								</AnimatePresence>
-							</div>
+							</motion.div>
 						</div>
 
 					</div>

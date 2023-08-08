@@ -26,16 +26,22 @@
 					}
 				}
 				.list {
+					margin: 20px;
 					&__container {
 						display: flex;
+						border: 1px solid #000;
 						justify-content: flex-start;
+						flex-wrap: wrap;
+						max-width: 800px;
 						overflow: hidden;
+						margin: 0 auto;
 						.list__item {
 							@include fontType("AdventPro Regular", 1.8em, 1.2, #000);
 							display: flex;
 							align-items: center;
 							justify-content: center;
 							width: 150px;
+							flex: 1 0 auto;
 							height: 150px;
 							background-color: lightblue;
 							padding: 10px;
