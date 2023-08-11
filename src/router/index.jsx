@@ -13,7 +13,9 @@ import LoginPage from "/src/pages/LoginPage/LoginPage.jsx";
 import OurTeam from "/src/pages/OurTeam/OurTeam.jsx";
 import OurFotos from "/src/pages/OurFotos/OurFotos.jsx";
 import Menu from "/src/pages/Menu/Menu.jsx";
+import MenuSticker from "/src/pages/MenuSticker/MenuSticker.jsx";
 import SortPage from "/src/pages/SortPage/SortPage.jsx";
+import TodosPage from "/src/pages/TodosPage/TodosPage.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
@@ -120,6 +122,14 @@ const router = createBrowserRouter([
 			{
 				path: "menu",
 				element: <Menu />
+			},
+			{
+				path: "menusticker",
+				element: <MenuSticker />
+			},
+			{
+				path: "todos",
+				element: <TodosPage />
 			},
 			{
 				path: "login",
