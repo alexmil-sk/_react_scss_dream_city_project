@@ -19,35 +19,6 @@ import TodosPage from "/src/pages/TodosPage/TodosPage.jsx";
 import RequireAuth from "/src/hoc/RequireAuth.jsx";
 import AuthProvider from "/src/hoc/AuthProvider.jsx";
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
-import { motion } from "framer-motion";
-
-//const framerVariants_1 = {
-//	visible: {
-//		opacity: 1,
-//		y: 0
-//	},
-//	hidden: {
-//		opacity: 0,
-//		y: -2000
-//	}
-//}
-
-const framerVariants_2 = {
-	visible: i => ({
-		opacity: 1,
-		y: 0,
-		transition: {
-			delay: i * 0.5,
-			duration: 1.5,
-			type: 'just',
-			ease: 'linear'
-		}
-	}),
-	hidden: {
-		opacity: 0,
-		y: -2000,
-	}
-}
 
 
 const router = createBrowserRouter([
@@ -69,14 +40,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "contacts",
-				element: <motion.div
-					initial={'hidden'}
-					animate={'visible'}
-					whileHover={{ y: -20 }}
-					variants={framerVariants_2}
-				>
-					<ContactsPage />
-				</motion.div>,
+				element: <ContactsPage />,
 				children: [
 					{
 						path: "fotos",
@@ -90,10 +54,9 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "posts",
-				element: <PostsPage />,
 				loader: loaderPosts,
 				errorElement: <ErrorBoundary />,
-
+				element: <PostsPage />
 			},
 			{
 				path: "posts/:id",
@@ -117,7 +80,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "sort",
-				element: <SortPage />,
+				element: <SortPage />
 			},
 			{
 				path: "menu",

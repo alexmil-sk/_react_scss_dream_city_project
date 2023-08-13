@@ -3,6 +3,7 @@ import { Suspense } from "react";
 import { Link, useSearchParams, useLoaderData, Await, useAsyncValue, json } from "react-router-dom";
 import SearchComponent from "/src/components/Search/SearchComponent.jsx";
 import { motion } from "framer-motion";
+import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
 const liMotionSettings = {
@@ -94,7 +95,12 @@ function PostsPage() {
 	//url.ru/posts?post=abc&data=...&latest
 
 	return (
-		<div className="posts">
+		<motion.div
+			className="posts"
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerFallingDown}
+		>
 			<div className="posts__wrapper">
 				<h1>Posts Page</h1>
 
@@ -144,7 +150,7 @@ function PostsPage() {
 					</Suspense>
 				</ul>
 			</div>
-		</div>
+		</motion.div>
 
 	)
 }

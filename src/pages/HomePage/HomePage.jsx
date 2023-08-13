@@ -4,17 +4,23 @@ import ObjectsListComponent from "../../components/ObjectsList/ObjectsListCompon
 import GalleryComponent from "../../components/Gallery/GalleryComponent.jsx";
 import SliderComponent from "../../components/Slider/SliderComponent.jsx";
 import "./HomePage.scss";
+import { motion } from "framer-motion";
+import { framerOpacity } from "/src/js/animationFramerSettings.js";
+
 
 function HomePage() {
 
 	return (
-		<div className="wrapper">
+		<motion.div
+			className="wrapper"
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerOpacity}
+		>
 
 			{/* <IntroComponent /> */}
 			
 			<div className="fullscreen foto__container_1"></div>
-
-
 
 			<SliderComponent />
 
@@ -39,7 +45,7 @@ function HomePage() {
 
 			<GalleryComponent />
 
-		</div >
+		</motion.div >
 	)
 }
 

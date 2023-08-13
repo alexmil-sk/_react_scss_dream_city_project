@@ -5,6 +5,7 @@ import ButtonCategory from "./ButtonCategory.jsx";
 import CardsCategory from "./CardsCategory.jsx";
 import { data } from "./data.js";
 import MenuMotion from "/src/components/MenuMotion/MenuMotion.jsx";
+import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
 function SortPage() {
@@ -27,7 +28,12 @@ function SortPage() {
 
 
 	return (
-		<div className="sort">
+		<motion.div
+			className="sort"
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerFallingDown}
+		>
 			<div className="sort__container">
 				<div className="sort__wrapper">
 					<h1>Sort Page</h1>
@@ -69,7 +75,7 @@ function SortPage() {
 					</div>
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

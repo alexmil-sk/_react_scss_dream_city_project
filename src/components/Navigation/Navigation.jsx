@@ -16,7 +16,7 @@ function Navigation({ isActiveHeader, resetHeaderMenu }) {
 		{ link: "/posts", value: 'Posts' },
 		{ link: "/sort", value: 'Sort' },
 		{ link: "/menu", value: 'Menu' },
-		{ link: "/menusticker", value: 'Menu Sticker' },
+		{ link: "/menusticker", value: 'MenuSticker' },
 		{ link: "/todos", value: 'Todos' },
 		{ link: "/login", value: 'Login' }];
 

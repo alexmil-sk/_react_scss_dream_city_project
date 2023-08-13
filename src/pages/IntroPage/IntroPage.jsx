@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import useSound from 'use-sound'; //https://reactjsexample.com/a-react-hook-for-playing-sound-effects/
-
 import "./IntroPage.scss";
+import { motion } from "framer-motion";
+import { framerOpacity } from "/src/js/animationFramerSettings.js";
+
 
 import audio from "/videos/intro/observation_outside.mp3";
 import video from "/videos/intro/observation_outside.mp4";
@@ -17,6 +19,7 @@ export default function IntroComponent() {
 	const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 	// const [isPlayVideoOnScroll, setIsPlayVideoOnScroll] = useState(true);
 
+	//== ВАРИАНТ С ПРОИГРЫВАНИЕМ МУЗЫКИ ПРИ ЗАГРУЗКЕ ==================================
 
 	// useEffect(() => {
 	// 	window.addEventListener('scroll', () => {
@@ -46,7 +49,12 @@ export default function IntroComponent() {
 	}
 
 	return (<>
-		<div className="media__container">
+		<motion.div
+			className="media__container"
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerOpacity}
+		>
 
 			<div className="audio__container">
 				{
@@ -74,6 +82,6 @@ export default function IntroComponent() {
 			<div className="text__container">
 				<h1>Lorem ipsum dolor sit amet.</h1>
 			</div>
-		</div>
+		</motion.div>
 	</>)
 }

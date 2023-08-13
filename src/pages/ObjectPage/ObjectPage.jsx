@@ -2,7 +2,8 @@ import { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './ObjectPage.scss';
 import { Navigation, Parallax, Mousewheel, Keyboard, Scrollbar, Pagination, FreeMode } from 'swiper/modules';
-import { Link } from "react-router-dom"
+import { motion } from "framer-motion";
+import { framerOpacityObjects } from "/src/js/animationFramerSettings.js";
 
 
 import 'swiper/css';
@@ -83,8 +84,13 @@ function SliderComponent() {
 	//https://www.youtube.com/watch?v=tBIHMzD1BZM - Адаптивная верстка полноэкранного лендинга с навигацией и параллакс эффектом на базе слайдера Swiper
 
 	return (
-		<div className={`wrapper__slider ${isActiveMenu ? 'loaded' : 'unloaded'} ${hidePagination && 'free'}`}>
-			<div className="header">
+		<motion.div
+			className={`wrapper__slider ${isActiveMenu ? 'loaded' : 'unloaded'} ${hidePagination && 'free'}`}
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerOpacityObjects}
+		>
+			<div className="header" >
 				<nav className="header__menu">
 					<div className="menu">
 						{
@@ -161,7 +167,7 @@ function SliderComponent() {
 				<div className="swiper__pagination"></div>
 				<div className="swiper__scroll"></div>
 			</Swiper >
-		</div>
+		</motion.div>
 
 	)
 }

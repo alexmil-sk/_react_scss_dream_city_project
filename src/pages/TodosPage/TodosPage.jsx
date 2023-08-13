@@ -1,5 +1,5 @@
 import "./TodosPage.scss";
-import { Reorder } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import CreateTodo from "./CreateTodo.jsx";
 import Todos from "./Todos.jsx";
@@ -25,7 +25,24 @@ function TodosPage() {
 	}, [todos])
 
 	return (
-		<div className="todos">
+		<motion.div
+			className="todos"
+
+			animate={i => ({
+				opacity: 1,
+				y: 0,
+				transition: {
+					delay: i * 0.5,
+					duration: 1.5,
+					type: 'just',
+					ease: 'linear'
+				}
+			})}
+			initial={{
+				opacity: 0,
+				y: -2000,
+			}}
+		>
 			<div className="todos__container">
 				<div className="todos__wrapper">
 					<h1>Todos Page 1</h1>
@@ -33,7 +50,7 @@ function TodosPage() {
 					<Todos todos={todos} setTodos={setTodos} deleteTodo={deleteTodo} />
 				</div>
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 

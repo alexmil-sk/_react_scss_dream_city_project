@@ -2,7 +2,7 @@ import "./ContactsPage.scss";
 import CastomLink from "/src/UI/CastomLinkUI/CastomLinkUI.jsx";
 import { Link, Outlet } from "react-router-dom";
 import { motion } from "framer-motion"
-
+import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
 function ContactsPage() {
@@ -68,7 +68,12 @@ function ContactsPage() {
 	}
 
 	return (
-		<div className="contacts">
+		<motion.div
+			className="contacts"
+			initial={'hidden'}
+			animate={'visible'}
+			variants={framerFallingDown}
+		>
 			<div className="contacts__container">
 				<motion.div
 					className="title"
@@ -110,7 +115,7 @@ function ContactsPage() {
 				<Outlet />
 
 			</div>
-		</div>
+		</motion.div>
 	)
 }
 
