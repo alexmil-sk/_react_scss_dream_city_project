@@ -1,0 +1,90 @@
+@import "/src/styles/index.scss";
+
+.media__container {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: $main-bg-color;
+	background: url("/images/intro/intro.jpg") 0 0 / cover no-repeat fixed;
+
+
+	.audio__container {
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		z-index: 10;
+		& button {
+			width: 50px;
+			border-radius: 50%;
+			&.audio__red {
+				background-color: red;
+				transition: all 0.6s ease 0s;
+
+				&:hover {
+					box-shadow: 0 0 30px 2px lightcoral;
+					border: 1px solid red !important;
+				}
+			}
+			&.audio__green {
+				background-color: green;
+				transition: all 0.6s ease 0s;
+				&:hover {
+					box-shadow: 0 0 30px 2px lightgreen;
+					border: 1px solid green !important;
+				}
+			}
+		}
+	}
+
+	.video__container {
+		//width: 100%;
+		//height: 100%;
+		& video {
+			height: 99vh;
+			//height: 100vh;
+		}
+		& img {
+			height: 100%;
+		}
+	}
+	.text__container {
+		position: fixed;
+		top: 30%;
+		text-transform: uppercase;
+		opacity: 0.9;
+		@include fontType("Lobster", 5rem, 1.2, #ffe066);
+		h1 {
+			letter-spacing: 4px;
+			text-shadow: -0 -1px 5px #ff140c, 0 -1px 5px #ff140c, -0 1px 5px #ff140c, 0 1px 5px #ff140c, -1px -0 5px #ff140c,
+				1px -0 5px #ff140c, -1px 0 5px #ff140c, 1px 0 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c,
+				-1px 1px 5px #ff140c, 1px 1px 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c, -1px 1px 5px #ff140c,
+				1px 1px 5px #ff140c;
+		}
+	}
+	.button__container {
+		display: flex;
+		justify-content: space-between;
+		width: 250px;
+		position: fixed;
+		bottom: 30%;
+		a {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			width: 89px;
+			height: 89px;
+			box-shadow: 3px 4px 7px 0px rgba(52, 73, 68, 0.8);
+			background: rgba(189, 187, 187, 0.64);
+			border-radius: 50%;
+			&:hover {
+				background: rgba(189, 187, 187, 0.99);
+			}
+			span {
+				@include fontType("Bebas Neue Regular", 4rem, 1.2, #fffbf5);
+				text-shadow: #e6e7e8 1px 2px 5px, #000 0px 1px 3px;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+@import "/src/styles/index.scss";
+
+.bg {
+	background-color: #3c305a;
+}
+
+.fourth__container {
+	padding: 50px 20px;
+	max-width: 1260px;
+	&_flex {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		row-gap: 20px;
+
+		.objects {
+			&__container {
+				display: flex;
+				column-gap: 20px;
+				width: 100%;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				// .video__content {
+				// 	&video {
+				// 		position: absolute;
+				// 		top: 0;
+				// 		left: 0;
+				// 		height: 100%;
+				// 	}
+				// }
+				.text__content {
+					width: 600px;
+					height: 340px;
+					@include fontType("AdventPro Bold", 24px, 1.2, #e26c5a);
+					border: 1px solid gray;
+					padding: 15px;
+					border-radius: 15px;
+					background-color: #b5a5df;
+					line-height: 1.5;
+					letter-spacing: 1px;
+				}
+			}
+		}
+	}
+}

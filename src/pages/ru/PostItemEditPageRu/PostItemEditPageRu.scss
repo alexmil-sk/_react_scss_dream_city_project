@@ -1,0 +1,27 @@
+@import "/src/styles/index.scss";
+
+.post-edit__wrapper {
+	padding: 100px 20px 20px;
+	.post-edit__container {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		h1 {
+			@include fontType("AdventPro Bold", 24px, 1.2, gray);
+		}
+		.block__btn {
+			button {
+				padding: 2px 10px;
+				border: 1px solid #000;
+				color: #fff;
+				margin: 5px;
+				&[name="posts-list"] {
+					background-color: blue;
+				}
+				&[name="back"] {
+					background-color: darkcyan;
+				}
+			}
+		}
+	}
+}

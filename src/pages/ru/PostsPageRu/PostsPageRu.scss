@@ -1,0 +1,14 @@
+@import "/src/styles/index.scss";
+
+.posts {
+	width: 100%;
+	.posts__wrapper {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 100px 20px 20px;
+		h1 {
+			text-align: center;
+			@include fontType("AdventPro Bold", 36px, 1.2, gray);
+		}
+	}
+}

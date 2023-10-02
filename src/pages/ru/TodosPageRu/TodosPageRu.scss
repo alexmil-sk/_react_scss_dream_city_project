@@ -1,0 +1,15 @@
+@import "/src/styles/index.scss";
+
+.todos {
+	padding: 100px 25px 25px;
+	&__container {
+		display: flex;
+		justify-content: center;
+	}
+	&__wrapper {
+		@include fontType("AdventPro Regular", 2rem, 1.2, #000);
+		h1 {
+			@include fontType("AdventPro Bold", 2rem, 1.2, #000);
+		}
+	}
+}
