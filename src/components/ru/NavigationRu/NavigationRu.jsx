@@ -8,10 +8,10 @@ function NavigationRu({ isActiveHeader, resetHeaderMenu }) {
 
 	const menuLinks = [
 		{ link: "/ru/home", value: 'Домашняя' },
-		{ link: "/ru/sort", value: 'Объекты' },
-		{ link: "/ru/objects", value: 'Верт_Слайдер' },
+		{ link: "/ru/sort", value: 'Сортировка' },
+		{ link: "/ru/blocks", value: 'Блоки' },
 		{ link: "/ru/contacts", value: 'Контакты' },
-		{ link: "/ru/posts", value: 'Посты' },
+		{ link: "/ru/objects", value: 'Объекты' },
 		{ link: "/", value: 'Выбор_языка' }]
 
 	return (

@@ -29,20 +29,20 @@ const liMotionSettings = {
 function handlerMappingArrayPosts(array, titleQuery, startsLatest) {
 	return (
 		array
-			.filter(post => post.title.includes(titleQuery?.toLowerCase()) && post.id >= startsLatest)
-			.map((post, i) => (
+			.filter(obj => obj.title.includes(titleQuery?.toLowerCase()) && obj.id >= startsLatest)
+			.map((obj, i) => (
 				<motion.div
-					key={post.id}
+					key={obj.id}
 					initial='hidden'
 					animate='visible'
 					variants={liMotionSettings}
 					custom={i}
 				>
-					<Link to={`/ru/posts/${post.id}`} >
+					<Link to={`/ru/objects/${obj.id}`} >
 						<li
 							style={{ listStyle: 'square', lineHeight: 1.5, fontSize: '25px' }}
 						>
-							{post.userId}.{post.id} - {post.body}
+							{obj.id} - {obj.title}
 						</li>
 					</Link>
 				</motion.div>

@@ -9,7 +9,6 @@ import {
 	ObjectPageSliderComponentRu,
 	ContactsPageRu,
 	PostsPageRu,
-	PostItemPageRu,
 	OurTeamRu,
 	OurFotosRu,
 	SortPageRu,
@@ -23,7 +22,7 @@ import {
 
 
 import { loaderPosts } from "/src/pages/ru/PostsPageRu/PostsPageRu.jsx";
-import { loaderPostItem } from "/src/pages/ru/PostItemPageRu/PostItemPageRu.jsx";
+import { loaderPostItem } from "/src/pages/ru/ObjectCardItemPageRu/ObjectCardItemPageRu.jsx";
 
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
 
@@ -46,7 +45,7 @@ const router = createBrowserRouter([
 				element: <HomePageRu />,
 			},
 			{
-				path: "objects",
+				path: "blocks",
 				element: <ObjectPageSliderComponentRu />,
 			},
 			{
@@ -64,13 +63,13 @@ const router = createBrowserRouter([
 				],
 			},
 			{
-				path: "posts",
+				path: "objects",
 				loader: loaderPosts,
 				errorElement: <ErrorBoundary />,
 				element: <PostsPageRu />,
 			},
 			{
-				path: "posts/:id",
+				path: "objects/:id",
 				element: <ObjectCardItemPageRu />,
 				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,

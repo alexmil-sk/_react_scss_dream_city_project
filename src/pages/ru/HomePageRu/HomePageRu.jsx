@@ -38,7 +38,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard.map((obj) => (
-								<Link key={obj.id} to={`/ru/posts/${obj.id}`} >
+								<Link key={obj.id} to={`/ru/objects/${obj.id}`} >
 									<ObjectHomeCard object={obj} />
 								</Link>
 							))}

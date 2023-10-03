@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import "./ObjectCardItemPageRu.scss";
 import { Link, useLoaderData, useAsyncValue, Await } from "react-router-dom";
 
-function Post() {
+function Object() {
 
 	const post = useAsyncValue();
 
@@ -16,48 +16,25 @@ function Post() {
 	</div>)
 }
 
-function Comments() {
-	const comments = useAsyncValue();
 
-	return (<div>
-		<h1>Comments</h1>
-		{
-			comments.map((comment, idx) => (
-				<div key={idx}>
-					<h3>email: {comment.email}</h3>
-					<h4>name: {comment.name}</h4>
-					<p>body: {comment.body}</p>
-					<hr style={{ border: '1px solid gray', margin: '10px 0' }} />
-				</div>
-			))
-		}
-	</div>)
-}
-
-
-function PostItemPageRu() {
-
-	const { post, comments, id } = useLoaderData();
+function ObjectCardItemPageRu() {
+	const { post, id } = useLoaderData();
 
 	return (
 		<div className="post-id__wrapper">
 			<div className="post-id__content">
-				<h1>Post Item Page - {id}</h1>
-				<Suspense fallback={<h1 style={{ backgroundColor: 'yellow' }}>...Post is loading</h1>}>
+				<h1>карточка объекта - {id}</h1>
+				<Suspense fallback={<h1 style={{ backgroundColor: "yellow" }}>...Карточка объекта загружается</h1>}>
 					<Await resolve={post}>
-						<Post />
+						<Object />
 					</Await>
 				</Suspense>
-
-				<Suspense fallback={<h1 style={{ backgroundColor: 'cyan' }}>...Comments are loading</h1>}>
-					<Await resolve={comments}>
-						<Comments />
-					</Await>
-				</Suspense>
-				<Link to="/ru/posts"><button name="list">В каталог объектов</button></Link>
+				<Link to="/ru/objects">
+					<button name="list">В каталог объектов</button>
+				</Link>
 			</div>
 		</div>
-	)
+	);
 }
 
 //============================================================
@@ -68,4 +45,4 @@ export const loaderPostItem = async ({ params }) => {
 	return { post: await getPostItem(id), comments: getPostComments(id), id };
 }
 
-export default PostItemPageRu;
+export default ObjectCardItemPageRu;
