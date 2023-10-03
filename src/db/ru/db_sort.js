@@ -1,4 +1,4 @@
-export const db_objects = [
+export const db_sort = [
 	{
 		category: '1 комн. кв.',
 		title: '30 м2'

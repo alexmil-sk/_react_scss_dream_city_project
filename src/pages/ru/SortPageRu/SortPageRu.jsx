@@ -3,16 +3,16 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ButtonCategory from "/src/UI/ButtonCategory/ButtonCategory.jsx";
 import CardsCategory from "/src/UI/CardsCategory/CardsCategory.jsx";
-import { db_objects } from "/src/db/ru/db_objects.js";
+import { db_sort } from "/src/db/ru/db_sort.js";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
 function SortPageRu() {
 
-	const [cards, setCards] = useState(db_objects);
+	const [cards, setCards] = useState(db_sort);
 	const [selected, setSelected] = useState("ALL");
 
-	const buttons = db_objects.reduce(
+	const buttons = db_sort.reduce(
 		(acc, el) => {
 			if (acc.includes(el.category)) return acc;
 
@@ -22,8 +22,8 @@ function SortPageRu() {
 	);
 
 	function handleCards(selector) {
-		if (selector === 'ALL') setCards(db_objects);
-		else setCards(db_objects.filter((el) => el.category === selector));
+		if (selector === 'ALL') setCards(db_sort);
+		else setCards(db_sort.filter((el) => el.category === selector));
 		
 		setSelected(selector);
 	}

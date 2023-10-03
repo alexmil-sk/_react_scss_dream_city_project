@@ -2,10 +2,14 @@ import SliderComponentRu from "/src/components/ru/SliderComponentRu/SliderCompon
 import "./HomePageRu.scss";
 import { motion } from "framer-motion";
 import { framerOpacity } from "/src/js/animationFramerSettings.js";
+import ObjectHomeCard from "/src/components/ru/ObjectHomeCard/ObjectHomeCard";
+import { dbObjectCard } from "/src/db/ru/dbObjectCard.js";
 
 function HomePageRu() {
 	return (
 		<motion.div className="wrapper" initial={"hidden"} animate={"visible"} variants={framerOpacity}>
+			{/* =========================== BLOCK-1 ================================= */}
+
 			<div className="fullscreen foto__container_title">
 				<div className="title__row">
 					<div className="logo__item">
@@ -19,6 +23,8 @@ function HomePageRu() {
 				</div>
 			</div>
 
+			{/* =========================== BLOCK-2 ================================= */}
+
 			<div className="fullscreen text__container_projects">
 				<div className="projects__content">
 					<h1>
@@ -28,60 +34,24 @@ function HomePageRu() {
 					<div className="objects">
 						<div className="objects__row">
 							{/* ============================================================ */}
-							<div className="object__item foto__condor">
-								<div className="object__item_header">
-									<p>Condor Marina Star Residences</p>
-									<p>расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall</p>
-								</div>
-								<div className="object__item_footer">
-									<p>Адрес:</p>
-									<p>MARINA STAR, 14, AL SEBA STREET, DUBAI</p>
-									<p>СРОК СДАЧИ: СЕНТЯБРЬ 2023 ГОДА</p>
-								</div>
-							</div>
-							{/* ============================================================ */}
-							<div className="object__item foto__concept">
-								<div className="object__item_header">
-									<p>Concept 7 Residences </p>
-									<p>Очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle</p>
-								</div>
-								<div className="object__item_footer">
-									<p>Адрес:</p>
-									<p>DUBAI JUMEIRAH VILLAGE CIRCLE DUBAI</p>
-									<p>СРОК СДАЧИ: 2025 ГОД</p>
-								</div>
-							</div>
-							{/* ============================================================ */}
-							<div className="object__item foto__concept">
-								<div className="object__item_header">
-									<p>Concept 7 Residences </p>
-									<p>Очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle</p>
-								</div>
-								<div className="object__item_footer">
-									<p>Адрес:</p>
-									<p>DUBAI JUMEIRAH VILLAGE CIRCLE DUBAI</p>
-									<p>СРОК СДАЧИ: 2025 ГОД</p>
-								</div>
-							</div>
-							{/* ============================================================ */}
-							<div className="object__item foto__concept">
-								<div className="object__item_header">
-									<p>Concept 7 Residences </p>
-									<p>Очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle</p>
-								</div>
-								<div className="object__item_footer">
-									<p>Адрес:</p>
-									<p>DUBAI JUMEIRAH VILLAGE CIRCLE DUBAI</p>
-									<p>СРОК СДАЧИ: 2025 ГОД</p>
-								</div>
-							</div>
+							
+							{
+								dbObjectCard.map((obj) => (
+								<ObjectHomeCard key={obj.id} object={obj} />
+								))
+							}
+
 							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
 			</div>
 
+			{/* =========================== BLOCK-3 ================================= */}
+
 			<SliderComponentRu />
+
+			{/* =========================== BLOCK-4 ================================= */}
 
 			<div className="fullscreen text__container_projects">
 				<div className="projects__content">
@@ -118,7 +88,11 @@ function HomePageRu() {
 				</div>
 			</div>
 
+			{/* =========================== BLOCK-5 ================================= */}
+
 			<div className="fullscreen foto__container_one"></div>
+
+			{/* =========================== BLOCK-6 ================================= */}
 
 			<div className="fullscreen text__container_about-developer">
 				<div className="about-developer__content">
@@ -160,13 +134,13 @@ function HomePageRu() {
 				</div>
 			</div>
 
+			{/* =========================== BLOCK-7 ================================= */}
+
 			<div className="fullscreen foto__container_two"></div>
 
 			{/* <div className="fullscreen foto__container_three"></div> */}
 
-
 			{/* <div className="fullscreen foto__container_four"></div> */}
-
 		</motion.div>
 	);
 }
