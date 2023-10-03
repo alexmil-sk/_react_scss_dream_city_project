@@ -1,4 +1,4 @@
-export const data = [
+export const db_objects = [
 	{
 		category: '1 комн. кв.',
 		title: '30 м2'

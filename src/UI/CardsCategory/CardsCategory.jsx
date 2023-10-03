@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import "/src/styles/index.scss";
 
 
+// eslint-disable-next-line react/prop-types
 function CardsCategory({ el }) {
 
 	const cardsSettings = {

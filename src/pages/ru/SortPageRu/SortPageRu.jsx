@@ -1,26 +1,29 @@
 import "./SortPageRu.scss";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ButtonCategory from "./ButtonCategory.jsx";
-import CardsCategory from "./CardsCategory.jsx";
-import { data } from "./data.js";
+import ButtonCategory from "/src/UI/ButtonCategory/ButtonCategory.jsx";
+import CardsCategory from "/src/UI/CardsCategory/CardsCategory.jsx";
+import { db_objects } from "/src/db/ru/db_objects.js";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
 function SortPageRu() {
 
-	const [cards, setCards] = useState(data);
+	const [cards, setCards] = useState(db_objects);
 	const [selected, setSelected] = useState("ALL");
 
-	const buttons = data.reduce((acc, el) => {
-		if (acc.includes(el.category)) return acc;
+	const buttons = db_objects.reduce(
+		(acc, el) => {
+			if (acc.includes(el.category)) return acc;
 
-		return [...acc, el.category];
-	}, ['ALL']);
+			return [...acc, el.category];
+		},
+		["ALL"],
+	);
 
 	function handleCards(selector) {
-		if (selector === 'ALL') setCards(data);
-		else setCards(data.filter(el => el.category === selector));
+		if (selector === 'ALL') setCards(db_objects);
+		else setCards(db_objects.filter((el) => el.category === selector));
 		
 		setSelected(selector);
 	}
@@ -36,7 +39,6 @@ function SortPageRu() {
 			<div className="sort__container">
 				<div className="sort__wrapper">
 					<h1>Сортировка по типу объектов</h1>
-					{/* <AnimatedMenuRu /> */}
 					<div className="categories__container">
 						<div className="btns">
 							<div className="btns__container">
