@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import SliderComponentRu from "/src/components/ru/SliderComponentRu/SliderComponentRu.jsx";
 import "./HomePageRu.scss";
 import { motion } from "framer-motion";
@@ -34,12 +36,12 @@ function HomePageRu() {
 					<div className="objects">
 						<div className="objects__row">
 							{/* ============================================================ */}
-							
-							{
-								dbObjectCard.map((obj) => (
-								<ObjectHomeCard key={obj.id} object={obj} />
-								))
-							}
+
+							{dbObjectCard.map((obj) => (
+								<Link key={obj.id} to={`/ru/posts/${obj.id}`} >
+									<ObjectHomeCard object={obj} />
+								</Link>
+							))}
 
 							{/* ============================================================ */}
 						</div>

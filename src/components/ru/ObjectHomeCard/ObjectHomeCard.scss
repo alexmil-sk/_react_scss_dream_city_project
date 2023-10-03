@@ -1,8 +1,5 @@
 @import "/src/styles/index.scss";
 
-.foto__condor {
-	background: url("/images/home/objects_bs/condor-marina-star.png") 0 0 / cover no-repeat;
-}
 .object__item {
 	display: flex;
 	flex-direction: column;
@@ -12,6 +9,11 @@
 	width: 400px;
 	border-radius: 25px;
 	margin: 10px 10px;
+	cursor: pointer;
+	&:hover {
+		box-shadow: inset 0 0 50px 5px #fff;
+		transform: translateY(-5px);
+	}
 	&_footer,
 	&_header {
 		display: flex;

@@ -114,20 +114,6 @@ function PostsPageRu() {
 
 				{/* </ SEARCH BLOK> =============================== */}
 
-				<Link to="new">
-					<button
-						style={{
-							padding: '5px 15px',
-							border: '1px solid #000',
-							fontSize: '1.5rem',
-							background: 'green',
-							color: '#fff',
-							margin: '20px 0'
-						}}
-					>
-						new Post
-					</button>
-				</Link>
 				<ul>
 					<Suspense
 						fallback={

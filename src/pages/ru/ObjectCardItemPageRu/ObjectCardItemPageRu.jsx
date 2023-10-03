@@ -1,7 +1,7 @@
 import { getPostItem } from "/src/js/getPostItem.js";
 import { getPostComments } from "/src/js/getPostComments.js";
 import { Suspense } from "react";
-import "./PostItemPageRu.scss";
+import "./ObjectCardItemPageRu.scss";
 import { Link, useLoaderData, useAsyncValue, Await } from "react-router-dom";
 
 function Post() {

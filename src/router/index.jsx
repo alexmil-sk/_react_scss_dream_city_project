@@ -13,6 +13,7 @@ import {
 	OurTeamRu,
 	OurFotosRu,
 	SortPageRu,
+	ObjectCardItemPageRu,
 } from "./router-ru.jsx";
 
 import {
@@ -30,11 +31,11 @@ import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <IntroPage />
+		element: <IntroPage />,
 	},
 	{
 		path: "*",
-		element: <NotFoundPage />
+		element: <NotFoundPage />,
 	},
 	{
 		path: "/ru",
@@ -54,31 +55,31 @@ const router = createBrowserRouter([
 				children: [
 					{
 						path: "fotos",
-						element: <OurFotosRu />
+						element: <OurFotosRu />,
 					},
 					{
 						path: "team",
-						element: <OurTeamRu />
-					}
-				]
+						element: <OurTeamRu />,
+					},
+				],
 			},
 			{
 				path: "posts",
 				loader: loaderPosts,
 				errorElement: <ErrorBoundary />,
-				element: <PostsPageRu />
+				element: <PostsPageRu />,
 			},
 			{
 				path: "posts/:id",
-				element: <PostItemPageRu />,
+				element: <ObjectCardItemPageRu />,
 				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,
 			},
 			{
 				path: "sort",
-				element: <SortPageRu />
+				element: <SortPageRu />,
 			},
-		]
+		],
 	},
 	{
 		path: "/sk",
@@ -88,8 +89,8 @@ const router = createBrowserRouter([
 				path: "home",
 				element: <HomePageSk />,
 			},
-		]
-	}
+		],
+	},
 ]);
 
 export default router;

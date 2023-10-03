@@ -7,6 +7,7 @@ import PostItemPageRu from "/src/pages/ru/PostItemPageRu/PostItemPageRu.jsx";
 import OurTeamRu from "/src/pages/ru/ContactsPageRu/OurTeamRu/OurTeamRu.jsx";
 import OurFotosRu from "/src/pages/ru/ContactsPageRu/OurFotosRu/OurFotosRu.jsx";
 import SortPageRu from "/src/pages/ru/SortPageRu/SortPageRu.jsx";
+import ObjectCardItemPageRu from "/src/pages/ru/ObjectCardItemPageRu/ObjectCardItemPageRu.jsx";
 
 export {
 	LayoutRu,
@@ -18,4 +19,5 @@ export {
 	OurTeamRu,
 	OurFotosRu,
 	SortPageRu,
+	ObjectCardItemPageRu
 };
