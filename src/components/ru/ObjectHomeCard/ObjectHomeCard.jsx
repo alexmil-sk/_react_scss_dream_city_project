@@ -6,9 +6,10 @@ function ObjectHomeCard({ object }) {
 
 	return (
 		<div
-			className="object__item foto__condor_DELETE"
+			className="object__item"
 			style={{
-				background: `url(${foto}) 0 0 / cover no-repeat`,
+				//background: `url(${foto}) 0 0 / cover no-repeat`,
+				background: foto.map((item) => `url(${item}) 0 0 / cover no-repeat`)
 			}}
 		>
 			<div className="object__item_header">

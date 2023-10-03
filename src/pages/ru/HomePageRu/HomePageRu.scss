@@ -11,7 +11,8 @@
 }
 
 .fullscreen {
-	min-height: 94vh;
+	//min-height: 94vh;
+	height: 100vh;
 	width: 100vw;
 	min-width: 0;
 	display: flex;
@@ -19,7 +20,7 @@
 }
 
 .foto__container_title {
-	background: url("/images/home/bratislava-1.png") 0 0 / 100% 100% no-repeat fixed;
+	background: url("/images/home/bratislava-title.png") 0 0 / 100% 100% no-repeat fixed;
 	.title__row {
 		width: 1200px;
 		max-width: 1200px;
@@ -53,89 +54,21 @@
 	}
 }
 
-.text__container_why-dubai {
-	.why-dubai__content {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		max-width: 1600px;
-		padding: 20px 200px;
-		text-align: center;
-		h1 {
-			letter-spacing: 0.05rem;
-			text-transform: uppercase;
-			margin-bottom: 1rem;
-			@include fontType("Montserrat Bold", 1.6rem, 1.2, rgba(0, 0, 0, 0.5));
-		}
-		.gallery-container {
-			margin-top: 1rem;
-
-			&_row {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				row-gap: 1rem;
-				.gallery__item {
-					width: 381px;
-					height: 294px;
-					img {
-						margin-bottom: 1.2rem;
-					}
-					p {
-						@include fontType("Montserrat Medium", 1rem, 1.2, #000000);
-					}
-				}
-			}
-		}
-	}
-}
-
-.text__container_you-can {
-	display: flex;
-	align-items: center;
-	.you-can__content {
-		max-width: 1600px;
-		padding: 70px 200px;
-		text-align: center;
-		h1 {
-			letter-spacing: 0.05rem;
-			text-transform: uppercase;
-			margin-bottom: 3rem;
-			@include fontType("Montserrat Bold", 1.6rem, 1.2, rgba(0, 0, 0, 0.5));
-		}
-		.list__container {
-			margin-top: 2.5rem;
-
-			&_row {
-				display: flex;
-				justify-content: space-between;
-				flex-wrap: wrap;
-				.list__item {
-					flex: 0 0 50%;
-					height: 100px;
-					text-align: left;
-					@include fontType("Montserrat Bold", 1.2rem, 1.2, #000000);
-					border-bottom: 1px solid gray;
-
-					&:nth-child(3),
-					&:nth-child(4) {
-						display: flex;
-						align-items: flex-end;
-						border: none;
-					}
-					&:nth-child(4) {
-						padding-bottom: 1.4rem;
-					}
-				}
-			}
-		}
-	}
-}
-
 .foto__container_one {
 	background:
 		url("/images/home/background/bg-1.jpg") center / auto 100% no-repeat fixed,
 		url("/images/home/background/bg-1.jpg") center / auto no-repeat fixed;
+}
+
+.bratislava {
+	background: url("/images/home/flags/bratislava_flag_mask.jpg") center / 90% auto no-repeat;
+}
+
+.slovakia {
+	background: url("/images/home/flags/slovakia_flag_mask.png") center / 90% auto no-repeat;
+} 
+.spain {
+	background: url("/images/home/flags/spain_flag.png") center / auto no-repeat fixed;
 }
 
 .text__container_projects {
@@ -147,6 +80,7 @@
 		max-width: 1600px;
 		text-align: center;
 		//padding: 70px 200px;
+
 		h1 {
 			letter-spacing: 0.05rem;
 			max-width: 750px;
@@ -167,7 +101,6 @@
 		}
 		.objects {
 			margin-top: 2.5rem;
-
 			&__row {
 				display: flex;
 				justify-content: center;
@@ -216,6 +149,7 @@
 		}
 	}
 }
+
 
 .foto__container_two {
 	background:

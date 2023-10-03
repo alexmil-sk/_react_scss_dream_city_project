@@ -8,7 +8,7 @@ import {
 	HomePageRu,
 	ObjectPageSliderComponentRu,
 	ContactsPageRu,
-	PostsPageRu,
+	ObjectsPageRu,
 	OurTeamRu,
 	OurFotosRu,
 	SortPageRu,
@@ -21,7 +21,7 @@ import {
 } from "./router-sk.jsx";
 
 
-import { loaderPosts } from "/src/pages/ru/PostsPageRu/PostsPageRu.jsx";
+import { loaderPosts } from "/src/pages/ru/ObjectsPageRu/ObjectsPageRu.jsx";
 import { loaderPostItem } from "/src/pages/ru/ObjectCardItemPageRu/ObjectCardItemPageRu.jsx";
 
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
@@ -66,7 +66,7 @@ const router = createBrowserRouter([
 				path: "objects",
 				loader: loaderPosts,
 				errorElement: <ErrorBoundary />,
-				element: <PostsPageRu />,
+				element: <ObjectsPageRu />,
 			},
 			{
 				path: "objects/:id",
