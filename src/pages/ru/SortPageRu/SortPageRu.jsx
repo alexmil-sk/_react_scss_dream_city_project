@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import ButtonCategory from "./ButtonCategory.jsx";
 import CardsCategory from "./CardsCategory.jsx";
 import { data } from "./data.js";
-import AnimatedMenuRu from "/src/components/ru/AnimatedMenuRu/AnimatedMenuRu.jsx";
+//import AnimatedMenuRu from "/src/components/ru/AnimatedMenuRu/AnimatedMenuRu.jsx";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 
@@ -36,8 +36,8 @@ function SortPageRu() {
 		>
 			<div className="sort__container">
 				<div className="sort__wrapper">
-					<h1>Sort Page</h1>
-					<AnimatedMenuRu />
+					<h1>Сортировка по типу объектов</h1>
+					{/* <AnimatedMenuRu /> */}
 					<div className="categories__container">
 						<div className="btns">
 							<div className="btns__container">

@@ -38,7 +38,7 @@
 			justify-content: space-around;
 			flex-wrap: wrap;
 			@include fontType("Montserrat SemiBold", 1.5rem, 1.2, rgba(255, 255, 255, 1));
-			
+
 			p {
 				margin: 15px 30px;
 				text-transform: uppercase;
@@ -133,7 +133,9 @@
 }
 
 .foto__container_one {
-	background: url("/images/dubai-3.jpg") 0 0 / cover no-repeat fixed;
+	background:
+		url("/images/home/background/bg-1.jpg") center / auto 100% no-repeat fixed,
+		url("/images/home/background/bg-1.jpg") center / auto no-repeat fixed;
 }
 
 .text__container_projects {
@@ -141,9 +143,10 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		max-width: 1600px;
-		//padding: 70px 200px;
 		text-align: center;
+		//padding: 70px 200px;
 		h1 {
 			letter-spacing: 0.05rem;
 			max-width: 750px;
@@ -167,21 +170,23 @@
 
 			&__row {
 				display: flex;
-				justify-content: space-between;
+				justify-content: center;
+				flex-wrap: wrap;
 				.foto__condor {
-					background: url("/images/home/condor-marina-star.png") 0 0 / cover no-repeat;
+					background: url("/images/home/objects_bs/condor-marina-star.png") 0 0 / cover no-repeat;
 				}
 				.foto__concept {
-					background: url("/images/home/jvc-concept.png") 0 0 / cover no-repeat;
+					background: url("/images/home/objects_bs/jvc-concept.png") 0 0 / cover no-repeat;
 				}
 				.object__item {
 					display: flex;
 					flex-direction: column;
 					justify-content: space-between;
-					flex: 0 1 49%;
+					flex: 0 0 380px;
 					height: 500px;
 					width: 400px;
 					border-radius: 25px;
+					margin: 10px 10px;
 					&_footer,
 					&_header {
 						display: flex;
@@ -219,7 +224,9 @@
 }
 
 .foto__container_two {
-	background: url("/images/dubai-7.jpg") 0 0 / cover no-repeat fixed;
+	background:
+		url("/images/home/background/bg-2.jpg") center / auto 100% no-repeat fixed,
+		url("/images/home/background/bg-2.jpg") center / auto no-repeat fixed;
 }
 
 .text__container_about-developer {
@@ -282,7 +289,7 @@
 }
 
 .foto__container_three {
-	background: url("/images/dubai-5.jpg") 0 0 / cover no-repeat fixed;
+	background: url("/images/home/background/bg-3.jpg") 0 0 / cover no-repeat fixed;
 }
 
 .text__container_6 {
@@ -291,5 +298,5 @@
 }
 
 .foto__container_four {
-	background: url("/images/dubai-4.jpg") 0 0 / cover no-repeat fixed;
+	background: url("/images/home/background/bg-4.jpg") 0 0 / cover no-repeat fixed;
 }

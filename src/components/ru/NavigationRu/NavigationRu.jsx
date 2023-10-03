@@ -9,10 +9,10 @@ function NavigationRu({ isActiveHeader, resetHeaderMenu }) {
 		{ link: "/ru/home", value: 'Домашняя' },
 		{ link: "/ru/objects", value: 'Объекты' },
 		{ link: "/ru/contacts", value: 'Контакты' },
-		{ link: "/ru/posts", value: 'Посты' },
+		// { link: "/ru/posts", value: 'Посты' },
 		{ link: "/ru/sort", value: 'Сортировка' },
-		{ link: "/ru/menusticker", value: 'Липкое_меню' },
-		{ link: "/ru/todos", value: 'Список_дел' },
+		// { link: "/ru/menusticker", value: 'Липкое_меню' },
+		// { link: "/ru/todos", value: 'Список_дел' },
 		{ link: "/", value: 'Выбор_языка' }]
 
 	return (
