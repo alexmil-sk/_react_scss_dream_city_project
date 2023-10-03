@@ -10,13 +10,9 @@ import {
 	ContactsPageRu,
 	PostsPageRu,
 	PostItemPageRu,
-	PostItemEditPageRu,
-	CreatePostPageRu,
 	OurTeamRu,
 	OurFotosRu,
-	MenuStickerRu,
 	SortPageRu,
-	TodosPageRu
 } from "./router-ru.jsx";
 
 import {
@@ -27,8 +23,6 @@ import {
 
 import { loaderPosts } from "/src/pages/ru/PostsPageRu/PostsPageRu.jsx";
 import { loaderPostItem } from "/src/pages/ru/PostItemPageRu/PostItemPageRu.jsx";
-import { loaderEditPost, editPostAction } from "/src/pages/ru/PostItemEditPageRu/PostItemEditPageRu.jsx";
-import { createPostAction } from "/src/pages/ru/CreatePostPageRu/CreatePostPageRu.jsx";
 
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
 
@@ -79,32 +73,10 @@ const router = createBrowserRouter([
 				element: <PostItemPageRu />,
 				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,
-
-			},
-			{
-				path: "posts/:id/edit",
-				element: <PostItemEditPageRu />,
-				loader: loaderEditPost,
-				action: editPostAction,
-				errorElement: <ErrorBoundary />,
-			},
-			{
-				path: "posts/new",
-				element: <CreatePostPageRu />,
-				action: createPostAction,
-				errorElement: <ErrorBoundary />,
 			},
 			{
 				path: "sort",
 				element: <SortPageRu />
-			},
-			{
-				path: "menusticker",
-				element: <MenuStickerRu />
-			},
-			{
-				path: "todos",
-				element: <TodosPageRu />
 			},
 		]
 	},

@@ -55,7 +55,7 @@ function handlerMappingArrayPosts(array, titleQuery, startsLatest) {
 function MapPosts() {
 
 	const posts = useAsyncValue();
-	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchParams, ] = useSearchParams();
 
 	const titleQuery = searchParams.get('title') || "";
 	const checkboxLatest = searchParams.has('latest') || "";
@@ -69,7 +69,7 @@ function MapPosts() {
 function FilterPosts() {
 
 	const posts = useAsyncValue();
-	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchParams, ] = useSearchParams();
 
 	const titleQuery = searchParams.get('title') || "";
 	const postIdQuery = searchParams.get('postId') || "";
@@ -87,7 +87,7 @@ function FilterPosts() {
 function PostsPageRu() {
 
 	const { posts } = useLoaderData();
-	const [searchParams, setSearchParams] = useSearchParams();
+	const [searchParams, ] = useSearchParams();
 
 	const titleQuery = searchParams.get('title') || "";
 	const postIdQuery = searchParams.get('postId') || "";

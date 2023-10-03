@@ -105,10 +105,10 @@ function ContactsPageRu() {
 					animate='visible'
 					variants={ulMotionSettings}
 				>
-					<li><Link to="fotos">Our Fotos</Link></li>
-					<li><Link to="team">Our Team</Link></li>
-					<li><CastomLink to="/home">To the Home page</CastomLink></li>
-					<li><Link to="/contacts">Close Nested Pages x</Link></li>
+					<li><Link to="fotos">Наши Фото</Link></li>
+					<li><Link to="team">Наша Команда</Link></li>
+					<li><CastomLink to="/ru/home">На домашнюю страницу</CastomLink></li>
+					<li><Link to="/ru/contacts">Закрыть вложенные страницы x</Link></li>
 				</motion.ul>
 
 

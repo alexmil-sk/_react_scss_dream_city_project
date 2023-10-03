@@ -1,5 +1,3 @@
-//import ObjectsListComponentRu from "/src/components/ru/ObjectsListComponentRu/ObjectsListComponentRu.jsx";
-//import ObjectCardComponentRu from "/src/components/ru/ObjectCardComponentRu/ObjectCardComponentRu.jsx";
 import SliderComponentRu from "/src/components/ru/SliderComponentRu/SliderComponentRu.jsx";
 import "./HomePageRu.scss";
 import { motion } from "framer-motion";
@@ -78,46 +76,12 @@ function HomePageRu() {
 								</div>
 							</div>
 							{/* ============================================================ */}
-							<div className="object__item foto__concept">
-								<div className="object__item_header">
-									<p>Concept 7 Residences </p>
-									<p>Очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle</p>
-								</div>
-								<div className="object__item_footer">
-									<p>Адрес:</p>
-									<p>DUBAI JUMEIRAH VILLAGE CIRCLE DUBAI</p>
-									<p>СРОК СДАЧИ: 2025 ГОД</p>
-								</div>
-							</div>
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
 			</div>
 
 			<SliderComponentRu />
-
-			{/* <div className="fullscreen text__container_you-can">
-				<div className="you-can__content">
-					<h1>Здесь вы можете:</h1>
-					<div className="list__container">
-						<ul className="list__container_row">
-							<li className="list__item">
-								1.&nbsp;Отдыхать на лучшем из морских курортов, когда пожелаете.
-							</li>
-							<li className="list__item">
-								2.&nbsp;Каждый год получать гарантированные 5% дохода на инвестиции.
-							</li>
-							<li className="list__item">
-								3.&nbsp;Ежегодно получать 10-17% дохода на инвестиции, сдавая свое жилье в аренду.
-							</li>
-							<li className="list__item">
-								4.&nbsp;ВНЖ на срок от 2-х до 10 лет.
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div> */}
 
 			<div className="fullscreen text__container_projects">
 				<div className="projects__content">
@@ -200,11 +164,9 @@ function HomePageRu() {
 
 			{/* <div className="fullscreen foto__container_three"></div> */}
 
-			{/* <ObjectsListComponentRu /> */}
 
 			{/* <div className="fullscreen foto__container_four"></div> */}
 
-			{/* <ObjectCardComponentRu /> */}
 		</motion.div>
 	);
 }
