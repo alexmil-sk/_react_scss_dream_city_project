@@ -7,14 +7,14 @@ import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 const liMotionSettings = {
 	hidden: {
-		opacity: 0,
+		opacity: 1,
 		x: -2000,
 	},
 	visible: (i) => ({
 		opacity: 1,
 		x: 0,
 		transition: {
-			delay: i * 1,
+			delay: i * 0.1,
 			duration: 1.2,
 			type: "just",
 			ease: "linear",
@@ -24,23 +24,31 @@ const liMotionSettings = {
 
 //========================================================================
 
-function handlerMappingArrayPosts(objectsArray, titleQuery, startsLatest) {
+function handlerMappingArrayPosts(objectsArray, titleQuery) {
 	return objectsArray
-		.filter((obj) => obj.title.toLowerCase().includes(titleQuery?.toLowerCase()) && obj.id >= startsLatest)
+		.filter((obj) => obj.title.toLowerCase().includes(titleQuery?.toLowerCase()))
 		.map((obj, i) => (
 			<motion.div key={obj.id} initial="hidden" animate="visible" variants={liMotionSettings} custom={i}>
-				<Link to={`/ru/objects/${obj.id}`}>
-					<li style={{ listStyle: "square", lineHeight: 1.5, fontSize: "25px" }}>
-						<p>
-							{obj.id} - {obj.title} - ({obj.location}) - {obj.operation_type}
-						</p>
-						{
-							obj.foto.map((item, idx) => (
-								<img src={item} width="50" key={idx} />
-							))
-						}
-					</li>
-				</Link>
+				<div className="object-link">
+					<div className="object-link__item">
+						<Link to={`/ru/objects/${obj.id}`} className="object-link__item_btn">
+							<span>Подробнее</span>
+						</Link>
+						<div className="object-link__item_text">
+							<p>{obj.id} - {obj.operation_type}</p>
+							<p>{obj.title}</p>
+							<>Город: {obj.location}</>
+						</div>
+						<div className="object-link__item_image">
+							{obj.foto.map((item, idx) => (
+								<Link to={item} target="_blank" key={idx} rel="noreferrer">
+									<img src={item} height="50" />
+								</Link>
+							))}
+						</div>
+						<span className="object-link__item_price">{obj.price}</span>
+					</div>
+				</div>
 			</motion.div>
 		));
 }
@@ -52,10 +60,7 @@ function MapObjects() {
 	const [searchParams] = useSearchParams();
 
 	const titleQuery = searchParams.get("title") || "";
-	const checkboxLatest = searchParams.has("latest") || "";
-	const startsLatest = checkboxLatest ? 3 : 1;
-
-	return handlerMappingArrayPosts(allObjects, titleQuery, startsLatest);
+	return handlerMappingArrayPosts(allObjects, titleQuery);
 }
 
 //==================================================================
@@ -65,13 +70,11 @@ function FilterObjects() {
 	const [searchParams] = useSearchParams();
 
 	const titleQuery = searchParams.get("title") || "";
-	const objIdQuery = searchParams.get("objId") || "";
-	const checkboxLatest = searchParams.has("latest") || "";
-	const startsLatest = checkboxLatest ? 3 : 1;
+	const objLocationQuery = searchParams.get("location") || "";
 
-	const newArray = allObjects.filter((obj) => obj.id == objIdQuery);
+	const newArray = allObjects.filter((obj) => obj.location.toLowerCase().includes(objLocationQuery?.toLowerCase()));
 
-	return handlerMappingArrayPosts(newArray, titleQuery, startsLatest);
+	return handlerMappingArrayPosts(newArray, titleQuery);
 }
 
 //==================================================================
@@ -81,18 +84,17 @@ function ObjectsPageRu() {
 	const [searchParams] = useSearchParams();
 
 	const titleQuery = searchParams.get("title") || "";
-	const objIdQuery = searchParams.get("objId") || "";
-	const checkboxLatest = searchParams.has("latest") || "";
+	const objLocationQuery = searchParams.get("location") || "";
 	//url.ru/posts?post=abc&data=...&latest
 
 	return (
-		<motion.div className="posts" initial={"hidden"} animate={"visible"} variants={framerFallingDown}>
-			<div className="posts__wrapper">
-				<h1>Перечень объектов</h1>
+		<motion.div className="objects__list" initial={"hidden"} animate={"visible"} variants={framerFallingDown}>
+			<div className="objects__list_wrapper">
+				<h1>Перечень объектов недвижимости</h1>
 
 				{/* <SEARCH BLOK> =============================== */}
 
-				<SearchComponentRu titleQuery={titleQuery} objIdQuery={objIdQuery} checkboxLatest={checkboxLatest} />
+				<SearchComponentRu titleQuery={titleQuery} objLocationQuery={objLocationQuery} />
 
 				{/* </ SEARCH BLOK> =============================== */}
 
@@ -101,7 +103,7 @@ function ObjectsPageRu() {
 						fallback={
 							<h1
 								style={{
-									backgroundColor: "yellow",
+									backgroundColor: "#540d6e",
 									margin: "20px 0",
 								}}
 							>
@@ -109,7 +111,7 @@ function ObjectsPageRu() {
 							</h1>
 						}
 					>
-						<Await resolve={allObjects}>{objIdQuery ? <FilterObjects /> : <MapObjects />}</Await>
+						<Await resolve={allObjects}>{objLocationQuery ? <FilterObjects /> : <MapObjects />}</Await>
 					</Suspense>
 				</ul>
 			</div>

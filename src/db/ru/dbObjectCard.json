@@ -1,7 +1,7 @@
 [
 	{
 		"id": 1,
-		"location": "Дубаи",
+		"location": "Дубаи, ОАЭ",
 		"rooms": "1.5, 2, 3 комнат",
 		"title": "Condor Marina Star Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -21,7 +21,7 @@
 	},
 	{
 		"id": 2,
-		"location": "Дубаи",
+		"location": "Дубаи, ОАЭ",
 		"rooms": "1.5, 2, 3 комнат",
 		"title": "Concept 7 Residences",
 		"description_short": "Concept 7 Residences - очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle",
@@ -41,7 +41,7 @@
 	},
 	{
 		"id": 3,
-		"location": "Братислава",
+		"location": "Братислава, Словакия",
 		"rooms": "1.5 комнат",
 		"title": "Дуплекс (двe террассы)",
 		"description_short": "Элегантная квартира площадью 50м2 в жилом доме, расположенном под лесом",
@@ -65,8 +65,8 @@
 		"price": "0 eur"
 	},
 	{
-			"id": 5,
-			"location": "Братислава",
+			"id": 4,
+			"location": "Братислава, Словакия",
 			"rooms": "2.5 комнат",
 			"square": "83 м2",
 			"title": "Квартира 83 м2 c террасой",
@@ -98,8 +98,8 @@
 			"price": "236 000 eur (тип 'Стандарт')"
 		},
 	{
-		"id": 4,
-		"location": "Словакия",
+		"id": 5,
+		"location": "Трнава, Словакия",
 		"rooms": "1.5 комнат",
 		"title": "Родинный дом",
 		"description_short": "Элегантная квартира площадью 50м2 в жилом доме, расположенном под лесом",
@@ -123,8 +123,8 @@
 		"price": "0 eur"
 	},
 	{
-		"id": 5,
-		"location": "Испания",
+		"id": 6,
+		"location": "Барселона, Испания",
 		"rooms": "1.5, 2, 3 комнат",
 		"title": "Spain Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -143,8 +143,8 @@
 		"price": "0 eur"
 	},
 	{
-		"id": 6,
-		"location": "Дубаи",
+		"id": 7,
+		"location": "Дубаи, ОАЭ",
 		"rooms": "1.5, 2, 3 комнат",
 		"title": "Dubai Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -163,8 +163,8 @@
 		"price": "0 eur"
 	},
 	{
-		"id": 6,
-		"location": "Турция",
+		"id": 8,
+		"location": "Анкара, Турция",
 		"rooms": "1.5, 2, 3 комнат",
 		"title": "Turkey Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",

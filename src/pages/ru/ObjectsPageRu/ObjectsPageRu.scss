@@ -1,14 +1,87 @@
 @import "/src/styles/index.scss";
 
-.posts {
+.objects__list {
 	width: 100%;
-	.posts__wrapper {
+	background: #540d6e;
+	min-height: 100vh;
+	&_wrapper {
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 100px 20px 20px;
+		line-height: 1.5;
+		font-size: 25px;
+		background-color: #e6e6e6;
 		h1 {
+			text-transform: uppercase;
 			text-align: center;
 			@include fontType("AdventPro Bold", 36px, 1.2, gray);
+		}
+	}
+}
+
+.object-link {
+	@include fontType("AdventPro Bold", 36px, 1.2, gray);
+	background-color: rgb(219, 219, 220);
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 150px;
+		border: 1px solid #000;
+		border-radius: 10px;
+		padding: 15px;
+		margin: 20px 0;
+		&_btn {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			border: 1px solid #000;
+			border-radius: 3px;
+			padding: 5px 10px;
+			background-color: #f3d8ef;
+			transition: all 600ms ease-in-out;
+			@include fontType("Oswald Regular", 20px, 1.2, #6a306e);
+			text-transform: uppercase;
+			&:hover {
+				background-color: #6a306e;
+				color: #f3d8ef;
+			}
+			p {
+			}
+			&:hover {
+			}
+		}
+		&_text {
+		}
+		&_image {
+			display: flex;
+			justify-content: start;
+			flex-wrap: wrap;
+			row-gap: 10px;
+			column-gap: 10px;
+			margin-top: 10px;
+			max-width: 850px;
+			a {
+				padding: 2px;
+				border: 1px solid black;
+				&:hover {
+					outline: 3px solid black;
+				}
+			}
+		}
+		&_price {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			min-width: 115px;
+			border: 1px solid rgba(17, 76, 95, 1);
+			border-radius: 3px;
+			padding: 5px 10px;
+			background-color: #4182a4;
+			@include fontType("Oswald Regular", 20px, 1.2, #fff);
+			text-transform: uppercase;
 		}
 	}
 }
