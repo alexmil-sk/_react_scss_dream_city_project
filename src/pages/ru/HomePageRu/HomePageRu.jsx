@@ -90,7 +90,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-6 ================================= */}
 
-			<div className="fullscreen text__container_projects">
+			<div className="fullscreen text__container_projects spain">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в испании</span>:
@@ -118,7 +118,7 @@ function HomePageRu() {
 
 			<div className="fullscreen foto__container_two"></div>
 
-			<div className="fullscreen text__container_projects">
+			<div className="fullscreen text__container_projects emirates">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в ОАЭ (Дубаи)</span>:
@@ -146,7 +146,7 @@ function HomePageRu() {
 
 			<div className="fullscreen foto__container_two"></div>
 
-			<div className="fullscreen text__container_projects">
+			<div className="fullscreen text__container_projects turkey">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в Турции</span>:

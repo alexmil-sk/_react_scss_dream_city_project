@@ -61,14 +61,22 @@
 }
 
 .bratislava {
-	background: url("/images/home/flags/bratislava_flag_mask.jpg") center / 90% auto no-repeat;
+	background: url("/images/home/flags/bratislava_maslo.jpg") center / cover no-repeat;
 }
 
 .slovakia {
-	background: url("/images/home/flags/slovakia_flag_mask.png") center / 90% auto no-repeat;
+	background: url("/images/home/flags/slovakia_flag.gif") center / auto 180% no-repeat;
 } 
 .spain {
-	background: url("/images/home/flags/spain_flag.png") center / auto no-repeat fixed;
+	background: url("/images/home/flags/spain_flag.gif") center / 150% 170% no-repeat;
+}
+
+.turkey {
+	background: url("/images/home/flags/turkey_flag.gif") center / 120% 150% no-repeat;
+}
+
+.emirates {
+	background: url("/images/home/flags/emirates_flag.gif") center / 130% 130% no-repeat;
 }
 
 .text__container_projects {
@@ -149,7 +157,6 @@
 		}
 	}
 }
-
 
 .foto__container_two {
 	background:
