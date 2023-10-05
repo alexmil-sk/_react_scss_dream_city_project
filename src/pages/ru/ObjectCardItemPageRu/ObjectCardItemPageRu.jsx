@@ -2,17 +2,30 @@
 import { getObjectsArray } from "/src/js/getObjectsArray.js";
 import { Suspense } from "react";
 import "./ObjectCardItemPageRu.scss";
-import { Link, useLoaderData, useAsyncValue, Await } from "react-router-dom";
+import { Link, useLoaderData, Await } from "react-router-dom";
+import { motion } from "framer-motion";
+import { framerFallingDown } from "/src/js/animationFramerSettings.js";
+
+
 
 function ObjectItemData() {
-	const { objects, id } = useLoaderData();
+	const { objects, id} = useLoaderData();
+	
+	const { location, rooms, title, description_full, address, conditions, foto, operation_type, price } = objects[id - 1];;
 
 	return (
-		<div>
-			<h1>title: {objects[id-1].title}</h1>
-			<h2>Location: {objects[id-1].location}</h2>
-			<h3>id: {objects[id-1].id}</h3>
-			<p>desc: {objects[id-1].description_short}</p>
+		<div className="card__item_content">
+			<div className="object__info">
+				<h2> {title}</h2>
+				<h2>Адрес: {location}</h2>
+				<h3>id: {id}</h3>
+				<p>desc: {description_full}</p>
+			</div>
+			<div className="object__descr">
+				{
+					//foto.map()
+				}
+			</div>
 		</div>
 	);
 }
@@ -21,22 +34,27 @@ function ObjectCardItemPageRu() {
 	const { objects, id } = useLoaderData();
 
 	return (
-		<div className="post-id__wrapper">
-			<div className="post-id__content">
-				<h1>карточка объекта - {id}</h1>
-				<Suspense fallback={<h1 style={{ backgroundColor: "yellow" }}>...Карточка объекта загружается</h1>}>
-					<Await resolve={objects}>
-						<ObjectItemData />
-					</Await>
-				</Suspense>
+		<motion.div className="card" initial={"hidden"} animate={"visible"} variants={framerFallingDown}>
+			<div className="card__wrapper">
+				<div className="card__title">
+					<h1>{objects[id - 1].title}</h1>
+				</div>
+
+				<div className="card__item">
+					<Suspense fallback={<h1 style={{ backgroundColor: "yellow" }}>...Карточка объекта загружается</h1>}>
+						<Await resolve={objects}>
+							<ObjectItemData />
+						</Await>
+					</Suspense>
+				</div>
 				<Link to="/ru/objects">
-					<button name="list">В каталог объектов</button>
+					<span name="list">В каталог объектов</span>
 				</Link>
 				<Link to="/ru/home">
-					<button name="list">На домашнюю страницу</button>
+					<span name="list">На домашнюю страницу</span>
 				</Link>
 			</div>
-		</div>
+		</motion.div>
 	);
 }
 

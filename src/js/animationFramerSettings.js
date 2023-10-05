@@ -8,8 +8,8 @@ export const framerFallingDown = {
 		opacity: 1,
 		y: 0,
 		transition: {
-			delay: i * 0.5,
-			duration: 1.5,
+			delay: i * 0.1,
+			duration: 2,
 			type: 'just',
 			ease: 'linear'
 		}
