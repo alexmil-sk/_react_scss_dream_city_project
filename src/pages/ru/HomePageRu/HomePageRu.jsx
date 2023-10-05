@@ -41,7 +41,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard
-								.filter((i) => i.location === "Братислава")
+								.filter((i) => i.location.includes("Братислава"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
 										<ObjectHomeCard object={obj} />
@@ -71,7 +71,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard
-								.filter((i) => i.location === "Словакия")
+								.filter((i) => i.location.includes("Словакия"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
 										<ObjectHomeCard object={obj} />
@@ -101,7 +101,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard
-								.filter((i) => i.location === "Испания")
+								.filter((i) => i.location.includes("Испания"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
 										<ObjectHomeCard object={obj} />
@@ -129,7 +129,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard
-								.filter((i) => i.location === "Дубаи")
+								.filter((i) => i.location.includes("Дубаи"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
 										<ObjectHomeCard object={obj} />
@@ -157,7 +157,7 @@ function HomePageRu() {
 							{/* ============================================================ */}
 
 							{dbObjectCard
-								.filter((i) => i.location === "Турция")
+								.filter((i) => i.location.includes("Турция"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
 										<ObjectHomeCard object={obj} />
