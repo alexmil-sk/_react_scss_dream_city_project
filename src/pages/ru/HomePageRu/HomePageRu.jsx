@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import SliderComponentRu from "/src/components/ru/SliderComponentRu/SliderComponentRu.jsx";
+import SliderComponent from "/src/components/SliderComponent/SliderComponent.jsx";
 import "./HomePageRu.scss";
 import { motion } from "framer-motion";
 import { framerOpacity } from "/src/js/animationFramerSettings.js";
@@ -56,7 +56,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-3 ================================= */}
 
-			<SliderComponentRu />
+			<SliderComponent />
 
 			{/* =========================== BLOCK-4 ================================= */}
 
@@ -116,7 +116,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-7 ================================= */}
 
-			<div className="fullscreen foto__container_two"></div>
+			<div className="fullscreen foto__container"></div>
 
 			<div className="fullscreen text__container_projects emirates">
 				<div className="projects__content">
@@ -144,7 +144,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-8 ================================= */}
 
-			<div className="fullscreen foto__container_two"></div>
+			<div className="fullscreen foto__container"></div>
 
 			<div className="fullscreen text__container_projects turkey">
 				<div className="projects__content">
@@ -172,7 +172,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-9 ================================= */}
 
-			<div className="fullscreen foto__container_three"></div>
+			<div className="fullscreen foto__container_double"></div>
 
 			{/* <div className="fullscreen foto__container_four"></div> */}
 		</motion.div>

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./SliderObjectCardComponentRu.scss";
+import "./SliderObjectCardComponent.scss";
 import { Navigation, FreeMode, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 
-function SliderObjectCardComponentRu({ foto }) {
+function SliderObjectCardComponent({ foto }) {
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay],
 		spaceBetween: 10,
@@ -51,4 +51,4 @@ function SliderObjectCardComponentRu({ foto }) {
 	);
 }
 
-export default SliderObjectCardComponentRu;
+export default SliderObjectCardComponent;

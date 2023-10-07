@@ -5,7 +5,7 @@ import SearchComponentRu from "/src/components/ru/SearchComponentRu/SearchCompon
 import { motion } from "framer-motion";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
-import SliderObjectCardComponentRu from "/src/components/ru/SliderObjectCardComponentRu/SliderObjectCardComponentRu.jsx";
+import SliderObjectCardComponent from "/src/components/SliderObjectCardComponent/SliderObjectCardComponent.jsx";
 
 const liMotionSettings = {
 	hidden: {
@@ -34,7 +34,7 @@ function handlerMappingArrayPosts(objectsArray, titleQuery) {
 				<div className="object-link">
 					<div className="object-link__item">
 						<div className="object-link__item_slider">
-							<SliderObjectCardComponentRu foto={obj.foto} />
+							<SliderObjectCardComponent foto={obj.foto} />
 						</div>
 						<div className="object-link__item_content">
 							<div className="object-link__item_text">

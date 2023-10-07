@@ -21,44 +21,14 @@
 
 .mySwiper2 .swiper-slide-active {
 	margin-right: 0 !important;
-	//height: 200px !important;
+	height: 200px !important;
 }
-
-// .swiper-slide img {
-// 	display: block;
-// 	width: 100%;
-// 	width: 10%;
-// 	height: 100%;
-// 	object-fit: cover;
-// }
-
 .mySwiper2 .swiper-slide img {
 	display: block;
 	width: 100%;
-	height: 100%;
+	//height: 100%;
 	padding: 0 !important;
 }
-
-// .mySwiper .swiper-slide img {
-// 	display: block;
-// 	width: 100%;
-// 	height: 100%;
-// 	object-fit: cover;
-// 	border: 3px solid white;
-// }
-
-// .mySwiper .swiper-slide {
-// 	width: 10%;
-// 	height: 100%;
-// 	opacity: 0.6;
-// 	padding: 10px 0 10px;
-// }
-
-// .mySwiper .swiper-slide-thumb-active {
-// 	opacity: 1;
-// 	border: none;
-// }
-
 .swiper-button-prev,
 .swiper-button-next {
 	position: absolute;
