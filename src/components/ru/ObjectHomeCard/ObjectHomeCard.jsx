@@ -17,7 +17,7 @@ function ObjectHomeCard({ object }) {
 				<p>{description_short}</p>
 			</div>
 			<div className="object__item_footer">
-				<p>Адрес:</p>
+				<p>Адреc:</p>
 				<p>{address}</p>
 				<p>{conditions}</p>
 			</div>

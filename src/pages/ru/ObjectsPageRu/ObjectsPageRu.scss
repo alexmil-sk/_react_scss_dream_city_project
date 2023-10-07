@@ -2,86 +2,112 @@
 
 .objects__list {
 	width: 100%;
-	background: #540d6e;
+	background: #dddddd;
 	min-height: 100vh;
+	border-bottom: 1px solid #000;
+
 	&_wrapper {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 100px 20px 20px;
+		padding: 100px 0px 20px;
 		line-height: 1.5;
 		font-size: 25px;
-		background-color: #e6e6e6;
+		background-color: #fefefe;
 		h1 {
 			text-transform: uppercase;
 			text-align: center;
 			@include fontType("AdventPro Bold", 36px, 1.2, gray);
 		}
 	}
+	&_search {
+	}
+	&_container {
+	}
+	&_cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1em;
+	}
 }
 
 .object-link {
-	@include fontType("AdventPro Bold", 36px, 1.2, gray);
-	background-color: rgb(219, 219, 220);
-
+	background-color: #fefefe;
+	width: 340px;
+	height: 480px;
 	&__item {
-		position: relative;
 		display: flex;
 		flex-direction: column;
-		justify-content: space-between;
-		min-height: 150px;
-		border: 1px solid #000;
-		border-radius: 10px;
-		padding: 15px;
+		height: 100%;
+		border: 1px solid #dedede;
+		padding: 0px;
 		margin: 20px 0;
-		&_btn {
-			position: absolute;
-			right: 20px;
-			top: 20px;
-			border: 1px solid #000;
-			border-radius: 3px;
-			padding: 5px 10px;
-			background-color: #f3d8ef;
-			transition: all 600ms ease-in-out;
-			@include fontType("Oswald Regular", 20px, 1.2, #6a306e);
-			text-transform: uppercase;
-			&:hover {
-				background-color: #6a306e;
-				color: #f3d8ef;
-			}
-			p {
-			}
-			&:hover {
-			}
+
+		border-radius: 0px;
+		background: #fefefe;
+		box-shadow:
+			5px 5px 5px #dedede,
+			-5px -5px 5px #ffffff;
+
+		&_slider {
+			cursor: pointer;
 		}
-		&_text {
-		}
-		&_image {
+		&_content {
 			display: flex;
-			justify-content: start;
-			flex-wrap: wrap;
-			row-gap: 10px;
-			column-gap: 10px;
-			margin-top: 10px;
-			max-width: 850px;
-			a {
-				padding: 2px;
-				border: 1px solid black;
-				&:hover {
-					outline: 3px solid black;
+			height: 100%;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&_text {
+			padding: 15px;
+
+			.title {
+				height: 65px;
+				@include fontType("AdventPro Bold", 1.5rem, 1.2, #474a4d);
+				border-bottom: 1px solid #dddddd;
+				margin-bottom: 5px;
+			}
+			.price {
+				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+				span {
+					color: #d70427;
+				}
+			}
+			.location {
+				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+				span {
+					color: #d70427;
+				}
+			}
+			.address {
+				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+				span {
+					color: #d70427;
 				}
 			}
 		}
-		&_price {
-			position: absolute;
-			right: 20px;
-			bottom: 20px;
-			min-width: 115px;
-			border: 1px solid rgba(17, 76, 95, 1);
-			border-radius: 3px;
-			padding: 5px 10px;
-			background-color: #4182a4;
-			@include fontType("Oswald Regular", 20px, 1.2, #fff);
-			text-transform: uppercase;
+		&_btn {
+			display: flex;
+			justify-content: end;
+			padding: 0 15px 15px 15px;
+
+			a {
+				width: fit-content;
+				border: 1px solid #474a4d;
+				border-radius: 3px;
+				padding: 5px 10px;
+				//background-color: #c5c3c6;
+				@include fontType("Oswald Regular", 1rem, 1.5, #474a4d);
+				span {
+					text-transform: uppercase;
+				}
+				transition: all 600ms ease-in-out;
+				&:hover {
+					background-color: #474a4d;
+					color: #fff;
+				}
+			}
 		}
 	}
 }

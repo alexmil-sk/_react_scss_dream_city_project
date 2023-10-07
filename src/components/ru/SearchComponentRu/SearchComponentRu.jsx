@@ -9,8 +9,6 @@ function SearchComponentRu({ titleQuery, objLocationQuery }) {
 	const [searchLocationValue, setSearchLocationValue] = useState(objLocationQuery);
 
 	const [, setSearchParams] = useSearchParams();
-	
-
 
 	function handleSubmit(e) {
 		e.preventDefault();
@@ -47,7 +45,7 @@ function SearchComponentRu({ titleQuery, objLocationQuery }) {
 						name="search_title"
 						value={searchTitleValue}
 						onChange={(e) => setSearchTitleValue(e.target.value)}
-						placeholder="название"
+						placeholder="объект"
 					/>
 					<input
 						type="search"
@@ -55,10 +53,12 @@ function SearchComponentRu({ titleQuery, objLocationQuery }) {
 						value={searchLocationValue}
 						min="1"
 						onChange={(e) => setSearchLocationValue(e.target.value)}
-						placeholder="город"
+						placeholder="локация"
 					/>
-					<input type="button" name="clear" value="clear" onClick={clearSearch} />
-					<input type="submit" name="submit" value="search" />
+					<div className="btn-block">
+						<input type="button" name="clear" value="очистить" onClick={clearSearch} />
+						<input type="submit" name="submit" value="поиск" />
+					</div>
 				</form>
 			</div>
 		</div>

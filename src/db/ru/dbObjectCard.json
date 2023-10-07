@@ -17,7 +17,7 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 		"id": 2,
@@ -37,7 +37,7 @@
 			"/public/images/objects/dubai/jvc-concept.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 		"id": 3,
@@ -62,7 +62,7 @@
 			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 			"id": 4,
@@ -95,7 +95,7 @@
 				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_18.jpeg"
 			],
 			"operation_type": "Продажа",
-			"price": "236 000 eur (тип 'Стандарт')"
+			"price": "236 000 EUR (тип 'Стандарт')"
 		},
 	{
 		"id": 5,
@@ -120,7 +120,7 @@
 			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 		"id": 6,
@@ -140,7 +140,7 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 		"id": 7,
@@ -160,7 +160,7 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	},
 	{
 		"id": 8,
@@ -180,6 +180,6 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 eur"
+		"price": "0 EUR"
 	}
 ]

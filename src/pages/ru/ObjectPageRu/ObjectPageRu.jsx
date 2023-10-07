@@ -119,7 +119,10 @@ function ObjectPageSliderComponentRu() {
 			>
 				<SwiperSlide >
 					<div className="screen__content screen">
-						<h1 className="screen__title screen__title_bg" data-swiper-parallax="50%" data-swiper-parallax-opacity="0">Slider Swiper Title</h1>
+						<h1
+							className="screen__title screen__title_bg"
+							data-swiper-parallax="50%"
+							data-swiper-parallax-opacity="0">Slider Swiper Title</h1>
 					</div>
 					<div className="screen__body">
 						<div className="screen__image" data-swiper-parallax="33%" data-swiper-parallax-scale="1.1">

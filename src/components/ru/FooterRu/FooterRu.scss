@@ -7,7 +7,7 @@
 	width: 100%;
 	opacity: 0;
 	transition: opacity 0.8s ease 0s;
-
+	z-index: 100;
 	&__container {
 		border-top: 1px solid yellow;
 		transform: translate(0, +100%);
@@ -28,7 +28,7 @@
 					@include fontType("AdventPro Bold", 2rem, 1.2, lightblue);
 				}
 				span:nth-child(2) {
-					width: 330px;
+					width: 350px;
 					@include fontType("AdventPro Regular", 1.2rem, 1.2, #efc3e6);
 				}
 			}
