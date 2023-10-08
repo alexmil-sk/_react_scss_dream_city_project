@@ -5,11 +5,12 @@
 	opacity: 0;
 	transition: opacity 0.8s ease 0s;
 	.header {
+		display: flex;
+		justify-content: center;
 		position: fixed;
 		top: 0;
 		left: 0;
 		min-height: 70px;
-		width: 100%;
 		background-color: $menu-bg-color;
 		border-bottom: 1px solid yellow;
 		padding: 10px 20px;
@@ -23,12 +24,39 @@
 			display: flex;
 			align-items: center;
 			min-height: 50px;
-			justify-content: center;
+			justify-content: space-between !important;
 			&__link {
 				@include fontType("AdventPro Bold", 20px, 1.2, #fff);
-				margin: 0 20px 0 0;
+				//margin-right: 20px !important;
 				cursor: pointer;
-				transition: color 0.6s ease 0s;
+				transition: all 0.6s ease-in-out 0s;
+				&:hover {
+					color: #1f1f1f;
+					text-shadow:
+						-0 -1px 3px #f9f502,
+						0 -1px 3px #f9f502,
+						-0 1px 3px #f9f502,
+						0 1px 3px #f9f502,
+						-1px -0 3px #f9f502,
+						1px -0 3px #f9f502,
+						-1px 0 3px #f9f502,
+						1px 0 3px #f9f502,
+						-1px -1px 3px #f9f502,
+						1px -1px 3px #f9f502,
+						-1px 1px 3px #f9f502,
+						1px 1px 3px #f9f502,
+						-1px -1px 3px #f9f502,
+						1px -1px 3px #f9f502,
+						-1px 1px 3px #f9f502,
+						1px 1px 3px #f9f502;
+				}
+			}
+			&__link_lang img {
+				width: 36px;
+				&:hover {
+					border-radius: 50%;
+					box-shadow: 0px 0px 15px 2px #fff;
+				}
 			}
 			.active {
 				color: yellow;

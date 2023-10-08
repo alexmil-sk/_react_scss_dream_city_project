@@ -1,12 +1,29 @@
 import { Link } from "react-router-dom";
 
-import SliderComponent from "/src/components/SliderComponent/SliderComponent.jsx";
+import SliderHomeComponent from "/src/components/SliderHomeComponent/SliderHomeComponent.jsx";
 import "./HomePageRu.scss";
 import { motion } from "framer-motion";
 import { framerOpacity } from "/src/js/animationFramerSettings.js";
 import ObjectHomeCard from "/src/components/ru/ObjectHomeCard/ObjectHomeCard";
 import dbObjectCard from "/src/db/ru/dbObjectCard.json";
 
+const location = [
+	{ name: "братислава", link: "#bratislava" },
+	{ name: "словакия", link: "#slovakia" },
+	{ name: "турция", link: "#turkey" },
+	{ name: "испания", link: "#spain" },
+	{ name: "оаэ (дубаи)", link: "#emirates" },
+];
+
+function MyObjectLink() {
+	return (
+		<div className="objects__link">
+			<Link to="/ru/objects">
+				<span>больше объектов</span>
+			</Link>
+		</div>
+	);
+};
 
 function HomePageRu() {
 	return (
@@ -23,27 +40,17 @@ function HomePageRu() {
 					</div>
 					<h1>Элегантная городская жизнь</h1>
 					<div className="undertitle">
-						<Link to="#bratislava" reloadDocument>
-							<p>братислава</p>
-						</Link>
-						<Link to="#slovakia" reloadDocument>
-							<p>словакия</p>
-						</Link>
-						<Link to="#turkey" reloadDocument>
-							<p>турция</p>
-						</Link>
-						<Link to="#spain" reloadDocument>
-							<p>испания</p>
-						</Link>
-						<Link to="#emirates" reloadDocument>
-							<p>оаэ (дубаи)</p>
-						</Link>
+						{location.map((item, idx) => (
+							<Link to={item.link} reloadDocument key={idx}>
+								<p>{item.name}</p>
+							</Link>
+						))}
 					</div>
 				</div>
 			</div>
 			{/* =========================== BLOCK-2 ================================= */}
 
-			<SliderComponent />
+			<SliderHomeComponent />
 
 			{/* =========================== BLOCK-3 ================================= */}
 
@@ -64,6 +71,7 @@ function HomePageRu() {
 								))}
 						</div>
 					</div>
+					<MyObjectLink />
 				</div>
 			</div>
 
@@ -88,6 +96,7 @@ function HomePageRu() {
 								))}
 						</div>
 					</div>
+					<MyObjectLink />
 				</div>
 			</div>
 
@@ -114,6 +123,7 @@ function HomePageRu() {
 								))}
 						</div>
 					</div>
+					<MyObjectLink />
 				</div>
 			</div>
 
@@ -140,6 +150,7 @@ function HomePageRu() {
 								))}
 						</div>
 					</div>
+					<MyObjectLink />
 				</div>
 			</div>
 
@@ -166,6 +177,7 @@ function HomePageRu() {
 								))}
 						</div>
 					</div>
+					<MyObjectLink />
 				</div>
 			</div>
 

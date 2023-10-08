@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { Swiper, SwiperSlide } from "swiper/react";
-import "./SliderObjectCardComponent.scss";
+import "./SliderObjectCardItemComponent.scss";
 import { Navigation, FreeMode, Autoplay } from "swiper/modules";
 import { Link } from "react-router-dom";
 
@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 
-function SliderObjectCardComponent({ foto }) {
+function SliderObjectCardItemComponent({ fotos }) {
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay],
 		spaceBetween: 10,
@@ -23,11 +23,11 @@ function SliderObjectCardComponent({ foto }) {
 
 	return (
 		<>
-			<Swiper style={{ "--swiper-navigation-color": "#fff" }} {...main_params} className="mySwiper2">
-				{foto.map((item, idx) => (
-					<SwiperSlide style={{ "margin-right": "0" }} key={idx}>
+			<Swiper style={{ "--swiper-navigation-color": "#fff" }} {...main_params} className="mySwiperCardItem">
+				{fotos.map((item, idx) => (
+					<SwiperSlide style={{ "marginRight": "0" }} key={idx}>
 						<Link to={item} target="_blank" key={idx} rel="noreferrer">
-							<img src={item} height="50" />
+							<img src={item} />
 						</Link>
 					</SwiperSlide>
 				))}
@@ -38,4 +38,4 @@ function SliderObjectCardComponent({ foto }) {
 	);
 }
 
-export default SliderObjectCardComponent;
+export default SliderObjectCardItemComponent;

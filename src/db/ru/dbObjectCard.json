@@ -2,7 +2,8 @@
 	{
 		"id": 1,
 		"location": "Дубаи, ОАЭ",
-		"rooms": "1.5, 2, 3 комнат",
+		"rooms": "1.5, 2, 3",
+		"square": "разные м2",
 		"title": "Condor Marina Star Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
 		"description_full": "Condor Marina Star Residences расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -17,12 +18,13 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 		"id": 2,
 		"location": "Дубаи, ОАЭ",
-		"rooms": "1.5, 2, 3 комнат",
+		"rooms": "1.5, 2, 3",
+		"square": "разные м2",
 		"title": "Concept 7 Residences",
 		"description_short": "Concept 7 Residences - очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle",
 		"description_full": "Очень перспективный проект расположенный в новом активно развивающемся районе Jumeirah Village Circle",
@@ -37,12 +39,13 @@
 			"/public/images/objects/dubai/jvc-concept.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 		"id": 3,
 		"location": "Братислава, Словакия",
-		"rooms": "1.5 комнат",
+		"rooms": "1.5",
+		"square": "50 м2 + 2 террасы 20м2",
 		"title": "Дуплекс (двe террассы)",
 		"description_short": "Элегантная квартира площадью 50м2 в жилом доме, расположенном под лесом",
 		"description_full": "Элегантная двухэтажная квартира площадью 50м2 с двумя террасами по 20 м2 в жилом доме, расположенном под лесом. \n Первый этаж: прихожая, гостиная-студия с выходом на террасу, ванная с туалетом \n Второй этаж: спальня с выходом на террасу \n Паркование во дворе (одно парковочное место)",
@@ -62,12 +65,12 @@
 			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 			"id": 4,
 			"location": "Братислава, Словакия",
-			"rooms": "2.5 комнат",
+			"rooms": "2.5",
 			"square": "83 м2",
 			"title": "Квартира 83 м2 c террасой",
 			"description_short": "Большая и светлая квартира площадью 83 м2 с террасой и небольшим участком в ближайшем пригороде",
@@ -100,7 +103,8 @@
 	{
 		"id": 5,
 		"location": "Трнава, Словакия",
-		"rooms": "1.5 комнат",
+		"rooms": "1.5",
+		"square": "50 м2 + 2 террасы по 20м2",
 		"title": "Родинный дом",
 		"description_short": "Элегантная квартира площадью 50м2 в жилом доме, расположенном под лесом",
 		"description_full": "Элегантная двухэтажная квартира площадью 50м2 с двумя террасами по 20 м2 в жилом доме, расположенном под лесом. \n Первый этаж: прихожая, гостиная-студия с выходом на террасу, ванная с туалетом \n Второй этаж: спальня с выходом на террасу \n Паркование во дворе (одно парковочное место)",
@@ -120,12 +124,13 @@
 			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 		"id": 6,
 		"location": "Барселона, Испания",
-		"rooms": "1.5, 2, 3 комнат",
+		"rooms": "1.5, 2, 3",
+		"square": "разные м2",
 		"title": "Spain Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
 		"description_full": "Condor Marina Star Residences расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -140,12 +145,13 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 		"id": 7,
 		"location": "Дубаи, ОАЭ",
-		"rooms": "1.5, 2, 3 комнат",
+		"rooms": "1.5, 2, 3",
+		"square": "разные м2",
 		"title": "Dubai Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
 		"description_full": "Condor Marina Star Residences расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -160,12 +166,13 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	},
 	{
 		"id": 8,
 		"location": "Анкара, Турция",
-		"rooms": "1.5, 2, 3 комнат",
+		"rooms": "1.5, 2, 3",
+		"square": "разные м2",
 		"title": "Turkey Residences",
 		"description_short": "расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
 		"description_full": "Condor Marina Star Residences расположена на берегу моря в окружении прекрасных пляжей и рядом с Торговым центром Dubai Marina Mall",
@@ -180,6 +187,6 @@
 			"/public/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
-		"price": "0 EUR"
+		"price": "300 000 EUR (Черновик)"
 	}
 ]

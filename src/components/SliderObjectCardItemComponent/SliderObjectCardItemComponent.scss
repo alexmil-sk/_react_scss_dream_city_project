@@ -1,0 +1,46 @@
+
+
+.mySwiperCardItem {
+	position: relative;
+	display: flex;
+	align-items: center;
+	background-color: #c6c6c6!important;
+}
+
+.mySwiperCardItem .swiper-slide {
+	
+}
+
+.mySwiperCardItem .swiper-slide-active {
+	margin-right: 0 !important;
+}
+.mySwiperCardItem .swiper-slide a {
+}
+
+.mySwiperCardItem .swiper-slide img {
+}
+
+.mySwiperCardItem .swiper-button-prev,
+.mySwiperCardItem .swiper-button-next {
+	position: absolute;
+	top: 33% !important;
+	margin: 50px !important;
+	background-color: transparent;
+	padding: 50px !important;
+	border: 1px solid #fff;
+	border-radius: 100%;
+	box-shadow: 0 0 15px 1px #fff;
+	transition: all 0.5s ease 0s;
+
+	&::after {
+		color: #fff;
+		opacity: 0.5;
+		font-size: 3rem !important;
+	}
+	&:hover {
+		box-shadow: 0 0 20px 5px #fff;
+		&::after {
+			opacity: 0.9;
+		}
+	}
+}
