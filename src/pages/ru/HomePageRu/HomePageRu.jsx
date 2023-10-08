@@ -7,9 +7,13 @@ import { framerOpacity } from "/src/js/animationFramerSettings.js";
 import ObjectHomeCard from "/src/components/ru/ObjectHomeCard/ObjectHomeCard";
 import dbObjectCard from "/src/db/ru/dbObjectCard.json";
 
+
 function HomePageRu() {
 	return (
 		<motion.div className="wrapper" initial={"hidden"} animate={"visible"} variants={framerOpacity}>
+			<a href="#" className="up-to-title">
+				<img src="/icons/arrow_upward.svg" />
+			</a>
 			{/* =========================== BLOCK-1 ================================= */}
 
 			<div className="fullscreen foto__container_title">
@@ -19,18 +23,31 @@ function HomePageRu() {
 					</div>
 					<h1>Элегантная городская жизнь</h1>
 					<div className="undertitle">
-						<p>братислава</p>
-						<p>словакия</p>
-						<p>турция</p>
-						<p>испания</p>
-						<p>оаэ (дубаи)</p>
+						<Link to="#bratislava" reloadDocument>
+							<p>братислава</p>
+						</Link>
+						<Link to="#slovakia" reloadDocument>
+							<p>словакия</p>
+						</Link>
+						<Link to="#turkey" reloadDocument>
+							<p>турция</p>
+						</Link>
+						<Link to="#spain" reloadDocument>
+							<p>испания</p>
+						</Link>
+						<Link to="#emirates" reloadDocument>
+							<p>оаэ (дубаи)</p>
+						</Link>
 					</div>
 				</div>
 			</div>
-
 			{/* =========================== BLOCK-2 ================================= */}
 
-			<div className="fullscreen text__container_projects bratislava">
+			<SliderComponent />
+
+			{/* =========================== BLOCK-3 ================================= */}
+
+			<div id="bratislava" className="fullscreen text__container_projects bratislava">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в братиславе</span>:
@@ -38,8 +55,6 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{/* ============================================================ */}
-
 							{dbObjectCard
 								.filter((i) => i.location.includes("Братислава"))
 								.map((obj) => (
@@ -47,20 +62,16 @@ function HomePageRu() {
 										<ObjectHomeCard object={obj} />
 									</Link>
 								))}
-
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
 			</div>
 
-			{/* =========================== BLOCK-3 ================================= */}
-
-			<SliderComponent />
-
 			{/* =========================== BLOCK-4 ================================= */}
 
-			<div className="fullscreen text__container_projects slovakia">
+			<div className="fullscreen foto__container_one"></div>
+
+			<div id="slovakia" className="fullscreen text__container_projects slovakia">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>на всей территории Словакии</span>:
@@ -68,8 +79,6 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{/* ============================================================ */}
-
 							{dbObjectCard
 								.filter((i) => i.location.includes("Словакия"))
 								.map((obj) => (
@@ -77,8 +86,6 @@ function HomePageRu() {
 										<ObjectHomeCard object={obj} />
 									</Link>
 								))}
-
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
@@ -86,11 +93,11 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-5 ================================= */}
 
-			<div className="fullscreen foto__container_one"></div>
+			<div className="fullscreen foto__container_two"></div>
 
 			{/* =========================== BLOCK-6 ================================= */}
 
-			<div className="fullscreen text__container_projects spain">
+			<div id="spain" className="fullscreen text__container_projects spain">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в испании</span>:
@@ -98,8 +105,6 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{/* ============================================================ */}
-
 							{dbObjectCard
 								.filter((i) => i.location.includes("Испания"))
 								.map((obj) => (
@@ -107,8 +112,6 @@ function HomePageRu() {
 										<ObjectHomeCard object={obj} />
 									</Link>
 								))}
-
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
@@ -116,9 +119,11 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-7 ================================= */}
 
-			<div className="fullscreen foto__container"></div>
+			<div className="fullscreen foto__container_three"></div>
 
-			<div className="fullscreen text__container_projects emirates">
+			{/* =========================== BLOCK-7 ================================= */}
+
+			<div id="emirates" className="fullscreen text__container_projects emirates">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в ОАЭ (Дубаи)</span>:
@@ -126,8 +131,6 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{/* ============================================================ */}
-
 							{dbObjectCard
 								.filter((i) => i.location.includes("Дубаи"))
 								.map((obj) => (
@@ -135,8 +138,6 @@ function HomePageRu() {
 										<ObjectHomeCard object={obj} />
 									</Link>
 								))}
-
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
@@ -144,9 +145,11 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-8 ================================= */}
 
-			<div className="fullscreen foto__container"></div>
+			<div className="fullscreen foto__container_four"></div>
 
-			<div className="fullscreen text__container_projects turkey">
+			{/* =========================== BLOCK-7 ================================= */}
+
+			<div id="turkey" className="fullscreen text__container_projects turkey">
 				<div className="projects__content">
 					<h1>
 						Предлагаем вам к покупке недвижимость от застройщика <span>в Турции</span>:
@@ -154,8 +157,6 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{/* ============================================================ */}
-
 							{dbObjectCard
 								.filter((i) => i.location.includes("Турция"))
 								.map((obj) => (
@@ -163,8 +164,6 @@ function HomePageRu() {
 										<ObjectHomeCard object={obj} />
 									</Link>
 								))}
-
-							{/* ============================================================ */}
 						</div>
 					</div>
 				</div>
@@ -172,9 +171,7 @@ function HomePageRu() {
 
 			{/* =========================== BLOCK-9 ================================= */}
 
-			<div className="fullscreen foto__container_double"></div>
-
-			{/* <div className="fullscreen foto__container_four"></div> */}
+			<div className="fullscreen foto__container_five"></div>
 		</motion.div>
 	);
 }

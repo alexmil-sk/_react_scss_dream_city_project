@@ -30,7 +30,13 @@ function handlerMappingArrayPosts(objectsArray, titleQuery) {
 	return objectsArray
 		.filter((obj) => obj.title.toLowerCase().includes(titleQuery?.toLowerCase()))
 		.map((obj, i) => (
-			<motion.div key={obj.id} initial="hidden" animate="visible" variants={liMotionSettings} custom={i}>
+			<motion.div
+				key={obj.id}
+				initial="hidden"
+				animate="visible"
+				variants={liMotionSettings}
+				custom={i}
+			>
 				<div className="object-link">
 					<div className="object-link__item">
 						<div className="object-link__item_slider">
@@ -96,7 +102,12 @@ function ObjectsPageRu() {
 	//url.ru/posts?post=abc&data=...&latest
 
 	return (
-		<motion.div className="objects__list" initial={"hidden"} animate={"visible"} variants={framerFallingDown}>
+		<motion.div
+			className="objects__list"
+			initial={"hidden"}
+			animate={"visible"}
+			variants={framerFallingDown}
+		>
 			<div className="objects__list_wrapper">
 				<div className="objects__list_search">
 					<h1>Перечень объектов недвижимости</h1>

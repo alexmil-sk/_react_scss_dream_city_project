@@ -8,6 +8,47 @@
 	align-items: center;
 }
 
+.up-to-title {
+	position: fixed;
+	top: 100px;
+	left: 50px;
+	display: flex;
+	@include fontType("Oswald Medium", 1rem, 3, rgba(255, 255, 255, 1));
+	padding: 5px;
+	border: 1px solid $menu-bg-color;
+	border-radius: 150px;
+	background: #e0e0e0;
+	box-shadow:
+		8px 8px 29px $menu-bg-color,
+		-8px -8px 29px #ffffff;
+	z-index: 200;
+
+	img {
+		margin: auto;
+		width: 50px;
+	}
+	&:hover {
+		border-radius: 150px;
+		background: linear-gradient(145deg, #cacaca, #f0f0f0);
+		box-shadow:
+			6px 6px 19px $menu-bg-color,
+			-8px -8px 29px #ffffff;
+		img {
+			opacity: 0.7;
+		}
+	}
+	&:active {
+		border-radius: 150px;
+		background: #e0e0e0;
+		box-shadow:
+			inset 8px 8px 29px $menu-bg-color,
+			inset -8px -8px 29px #ffffff;
+		img {
+			opacity: 0.6;
+		}
+	}
+}
+
 .fullscreen {
 	min-height: 94vh;
 	width: 100vw;
@@ -33,16 +74,15 @@
 			display: flex;
 			justify-content: space-around;
 			flex-wrap: wrap;
-			@include fontType("Montserrat SemiBold", 1.5rem, 1.2, rgba(255, 255, 255, 1));
 
-			p {
+			a {
 				margin: 15px 30px;
 				text-transform: uppercase;
+				@include fontType("Montserrat SemiBold", 1.5rem, 1.2, rgba(255, 255, 255, 1));
 				transition: 300ms ease-in-out 0s;
 				&:hover {
 					color: yellow;
-					cursor: pointer;
-					transform: scale(1.1) translateY(3px);
+					transform: scale(1.1) translateY(-3px);
 				}
 			}
 		}
@@ -154,80 +194,28 @@
 	}
 }
 
-.foto__container {
+.foto__container_one {
+	background:
+		url("/images/home/background/bg-1.jpg") center / auto 100% no-repeat fixed,
+		url("/images/home/background/bg-1.jpg") center / auto no-repeat fixed;
+}
+
+.foto__container_two {
 	background:
 		url("/images/home/background/bg-2.jpg") center / auto 100% no-repeat fixed,
 		url("/images/home/background/bg-2.jpg") center / auto no-repeat fixed;
 }
 
-// .text__container_about-developer {
-// 	.about-developer__content {
-// 		max-width: 1600px;
-// 		display: flex;
-// 		align-items: center;
-// 		.flex__container {
-// 			display: flex;
-// 			flex-direction: column;
-// 			justify-content: center;
-// 			align-items: center;
-// 			text-align: center;
-// 			h1 {
-// 				letter-spacing: 0.05rem;
-// 				text-transform: uppercase;
-// 				margin-bottom: 3rem;
-// 				@include fontType("Montserrat Bold", 1.6rem, 1.2, rgba(0, 0, 0, 0.5));
-// 			}
-// 			.text {
-// 				@include fontType("Montserrat Medium", 1.2rem, 1.5, rgba(0, 0, 0, 0.5));
-// 				&__container {
-// 					display: flex;
-// 					justify-content: space-between;
-// 					p {
-// 						flex: 0 1 auto;
-// 						width: 380px;
-// 						margin: 0 15px 20px;
-// 						padding: 20px 35px;
-// 						border: 1px solid rgba(0, 0, 0, 0.5);
-// 						border-radius: 15px 100px;
-// 					}
-// 				}
-// 			}
-// 			.description {
-// 				&__row {
-// 					margin: 30px 0;
-// 					display: flex;
-// 					flex-wrap: nowrap;
-// 					justify-content: space-between;
-// 					.item__element {
-// 						width: 380px;
-// 						height: 155px;
-// 						p:nth-child(1) {
-// 							@include fontType("Montserrat Bold", 4rem, 1.2, rgba(0, 0, 0, 1));
-// 						}
-// 						p:nth-child(2) {
-// 							text-transform: uppercase;
-// 							margin-top: 20px;
-// 							@include fontType("Montserrat SemiBold", 1.7rem, 1, rgba(0, 0, 0, 1));
-// 						}
-// 					}
-// 					.item__element:nth-child(2) {
-// 						margin: 0 15px;
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// }
-
-.foto__container_double {
+.foto__container_three {
 	background: url("/images/home/background/bg-3.jpg") 0 0 / cover no-repeat fixed;
 }
 
-// .text__container_6 {
-// 	@include fontType("AdventPro Thin", 24px, 1.2, gray);
-// 	padding: 50px;
-// }
+.foto__container_four {
+	background:
+		url("/images/home/background/bg-4.jpg") center / auto 100% no-repeat fixed,
+		url("/images/home/background/bg-4.jpg") center / auto no-repeat fixed;
+}
 
-// .foto__container_four {
-// 	background: url("/images/home/background/bg-4.jpg") 0 0 / cover no-repeat fixed;
-// }
+.foto__container_five {
+	background: url("/images/home/background/bg-5.jpg") 0 0 / cover no-repeat fixed;
+}

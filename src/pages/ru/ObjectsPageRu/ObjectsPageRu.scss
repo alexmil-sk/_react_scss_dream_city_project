@@ -9,7 +9,7 @@
 	&_wrapper {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 100px 0px 20px;
+		padding: 71px 0px 20px;
 		line-height: 1.5;
 		font-size: 25px;
 		background-color: #fefefe;
@@ -20,6 +20,12 @@
 		}
 	}
 	&_search {
+		padding-bottom: 10px;
+		background-color: #ededed;
+		position: sticky;
+		top: 71px;
+		border-bottom: 1px solid #bababa;
+		z-index: 10;
 	}
 	&_container {
 	}

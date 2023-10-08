@@ -54,6 +54,9 @@
 
 .mySwiperMain .swiper-button-prev,
 .mySwiperMain .swiper-button-next {
+	position: absolute;
+	top: 40% !important;
+
 	margin: 50px !important;
 	background-color: transparent;
 	padding: 50px !important;

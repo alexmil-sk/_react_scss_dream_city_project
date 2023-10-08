@@ -6,7 +6,6 @@
 	align-items: center;
 	margin: 20px 0;
 	padding: 0 20px;
-
 	.search__wrapper {
 		width: 100%;
 		display: flex;
@@ -39,23 +38,40 @@
 			letter-spacing: 0.2rem;
 			border-radius: 5px;
 			font-size: 1.2rem;
-
 			cursor: pointer;
-			&:hover {
-				opacity: 0.5;
-			}
+			transition: 300ms ease-in-out 0s;
 		}
 
 		input[name="clear"] {
 			background-color: crimson;
 			color: #fff;
+			&:hover {
+				background-color: #fff;
+				color: crimson;
+				outline: 1px solid crimson;
+			}
+			&:active {
+				box-shadow:
+					inset 8px 8px 29px crimson,
+					inset -8px -8px 29px #ffffff;
+			}
 		}
 
 		input[name="submit"] {
 			margin-left: 20px;
-			background-color: blue;
+			background-color: #2441b2;
 			color: #fff;
 			width: 200px;
+			&:hover {
+				background-color: #fff;
+				color: #2441b2;
+				outline: 1px solid #2441b2;
+			}
+			&:active {
+				box-shadow:
+					inset 8px 8px 29px #2441b2,
+					inset -8px -8px 29px #ffffff;
+			}
 		}
 
 		.btn-block {
