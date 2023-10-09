@@ -8,10 +8,8 @@ function NavigationRu({ isActiveHeader, resetHeaderMenu }) {
 
 	const menuLinks = [
 		{ link: "/ru/home", value: 'Домашняя' },
-		{ link: "/ru/sort", value: 'Сортировка' },
-		{ link: "/ru/blocks", value: 'Блоки' },
-		{ link: "/ru/contacts", value: 'Контакты' },
-		{ link: "/ru/objects", value: 'Объекты' }]
+		{ link: "/ru/objects", value: 'Объекты' },
+		{ link: "/ru/contacts", value: 'Контакты' }]
 
 	return (
 		<div className={`wrapper__header ${isActiveHeader ? "loaded" : ""}`}>

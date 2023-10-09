@@ -6,12 +6,10 @@ import NotFoundPage from "/src/pages/NotFoundPage/NotFoundPage.jsx";
 import {
 	LayoutRu,
 	HomePageRu,
-	ObjectPageSliderComponentRu,
 	ContactsPageRu,
 	ObjectsPageRu,
 	OurTeamRu,
 	OurFotosRu,
-	SortPageRu,
 	ObjectCardItemPageRu,
 } from "./router-ru.jsx";
 
@@ -47,10 +45,6 @@ const router = createBrowserRouter([
 				errorElement: <ErrorBoundary />,
 			},
 			{
-				path: "blocks",
-				element: <ObjectPageSliderComponentRu />,
-			},
-			{
 				path: "contacts",
 				element: <ContactsPageRu />,
 				children: [
@@ -75,10 +69,6 @@ const router = createBrowserRouter([
 				element: <ObjectCardItemPageRu />,
 				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,
-			},
-			{
-				path: "sort",
-				element: <SortPageRu />,
 			},
 		],
 	},
