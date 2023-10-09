@@ -102,12 +102,7 @@ function ObjectsPageRu() {
 	//url.ru/posts?post=abc&data=...&latest
 
 	return (
-		<motion.div
-			className="objects__list"
-			initial={"hidden"}
-			animate={"visible"}
-			variants={framerFallingDown}
-		>
+		<motion.div className="objects__list" initial={"hidden"} animate={"visible"} variants={framerFallingDown}>
 			<div className="objects__list_wrapper">
 				<div className="objects__list_search">
 					<h1>Перечень объектов недвижимости</h1>
@@ -115,6 +110,11 @@ function ObjectsPageRu() {
 					<SearchComponentRu titleQuery={titleQuery} objLocationQuery={objLocationQuery} />
 					{/* </ SEARCH BLOK> =============================== */}
 				</div>
+				{/* ========Автофокусировка при загрузке страницы===================================== */}
+
+				<input type="text" autoFocus style={{width: '0' }} />
+
+				{/* ============================================= */}
 				<div className="objects__list_container">
 					<ul className="objects__list_cards">
 						<Suspense
@@ -143,7 +143,7 @@ function ObjectsPageRu() {
 async function getAllObjects() {
 	//const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 	//const res = await fetch('/src/db/ru/dbObjectCard.js');
-	const res = await fetch("/src/db/ru/dbObjectCard.json");
+	const res = await fetch("/db/ru/dbObjectCard.json");
 
 	if (!res.ok) {
 		throw new Response("Not Found", { status: res.status, statusText: res.statusText });
@@ -166,7 +166,7 @@ export const loaderPosts = async () => {
 	//return { posts };
 	//======================================================
 
-	return { allObjects: getAllObjects() };
+	return { allObjects: await getAllObjects() };
 };
 
 export default ObjectsPageRu;

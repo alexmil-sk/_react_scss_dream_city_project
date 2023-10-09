@@ -23,7 +23,7 @@ function NavigationRu({ isActiveHeader, resetHeaderMenu }) {
 						</NavLink>
 					))}
 					<NavLink to="/" className="menu__link_lang">
-						<img src="/icons/language.svg" alt="language" className="material-symbols-outlined" />
+						<img src="/svg/language.svg" alt="language" />
 					</NavLink>
 				</div>
 			</nav>

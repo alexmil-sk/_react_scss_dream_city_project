@@ -5,7 +5,9 @@ import "./HomePageRu.scss";
 import { motion } from "framer-motion";
 import { framerOpacity } from "/src/js/animationFramerSettings.js";
 import ObjectHomeCard from "/src/components/ru/ObjectHomeCard/ObjectHomeCard";
-import dbObjectCard from "/src/db/ru/dbObjectCard.json";
+import { useLoaderData } from "react-router-dom";
+import arrow_upward from "/svg/arrow_upward.svg";
+import logo_dcg from "/svg/logo_dcg.png";
 
 const location = [
 	{ name: "братислава", link: "#bratislava" },
@@ -23,20 +25,23 @@ function MyObjectLink() {
 			</Link>
 		</div>
 	);
-};
+}
 
 function HomePageRu() {
+	const {objects}  = useLoaderData();
+
+
 	return (
 		<motion.div className="wrapper" initial={"hidden"} animate={"visible"} variants={framerOpacity}>
 			<a href="#" className="up-to-title">
-				<img src="/icons/arrow_upward.svg" />
+				<img src={arrow_upward} alt="arrow_upward" />
 			</a>
 			{/* =========================== BLOCK-1 ================================= */}
 
 			<div className="fullscreen foto__container_title">
 				<div className="title__row">
 					<div className="logo__item">
-						<img src="/icons/logo_dcg.png" alt="logo_dcg" />
+						<img src={logo_dcg} alt="logo_dcg" />
 					</div>
 					<h1>Элегантная городская жизнь</h1>
 					<div className="undertitle">
@@ -62,7 +67,7 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{dbObjectCard
+							{objects
 								.filter((i) => i.location.includes("Братислава"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
@@ -87,7 +92,7 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{dbObjectCard
+							{objects
 								.filter((i) => i.location.includes("Словакия"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
@@ -114,7 +119,7 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{dbObjectCard
+							{objects
 								.filter((i) => i.location.includes("Испания"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
@@ -141,7 +146,7 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{dbObjectCard
+							{objects
 								.filter((i) => i.location.includes("Дубаи"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
@@ -168,7 +173,7 @@ function HomePageRu() {
 
 					<div className="objects">
 						<div className="objects__row">
-							{dbObjectCard
+							{objects
 								.filter((i) => i.location.includes("Турция"))
 								.map((obj) => (
 									<Link key={obj.id} to={`/ru/objects/${obj.id}`}>

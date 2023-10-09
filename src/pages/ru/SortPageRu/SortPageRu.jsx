@@ -3,7 +3,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import ButtonCategory from "/src/UI/ButtonCategory/ButtonCategory.jsx";
 import CardsCategory from "/src/UI/CardsCategory/CardsCategory.jsx";
-import { db_sort } from "/src/db/ru/db_sort.js";
+import { db_sort } from "./db_sort.js";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
 
 

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import SliderObjectCardItemComponent from "/src/components/SliderObjectCardItemComponent/SliderObjectCardItemComponent.jsx";
-import { getObjectsArray } from "/src/js/getObjectsArray.js";
+//import { getObjectsArray } from "/src/js/getObjectsArray.js";
 import { Suspense } from "react";
 import "./ObjectCardItemPageRu.scss";
 import { Link, useLoaderData, Await } from "react-router-dom";
@@ -17,10 +17,10 @@ function ObjectCardItemPageRu() {
 
 				<div className="card__buttons">
 					<Link to="/ru/home">
-						<img src="/icons/home.svg" />
+						<img src="/svg/home.svg" />
 					</Link>
 					<Link to="/ru/objects">
-						<img src="/icons/list.svg" />
+						<img src="/svg/list.svg" />
 					</Link>
 				</div>
 
@@ -125,11 +125,5 @@ function ObjectItemData() {
 }
 
 //============================================================
-
-export const loaderPostItem = async ({ params }) => {
-	const id = params.id;
-
-	return { objects: await getObjectsArray(), id };
-};
 
 export default ObjectCardItemPageRu;

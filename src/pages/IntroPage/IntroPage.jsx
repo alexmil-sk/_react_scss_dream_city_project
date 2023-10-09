@@ -47,7 +47,7 @@ export default function IntroComponent() {
 				}
 			</div>
 			<div className="video__container">
-				<img src="/public/images/intro/intro.jpg" alt="intro"/>
+				<img src="/images/intro/intro.jpg" alt="intro"/>
 			</div>
 			<div className="text__container">
 				<motion.h1

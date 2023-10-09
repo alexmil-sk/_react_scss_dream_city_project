@@ -22,7 +22,7 @@ import {
 
 
 import { loaderPosts } from "/src/pages/ru/ObjectsPageRu/ObjectsPageRu.jsx";
-import { loaderPostItem } from "/src/pages/ru/ObjectCardItemPageRu/ObjectCardItemPageRu.jsx";
+import { loaderPostItem } from "/src/js/loaderPostItem.js";
 
 import ErrorBoundary from "../UI/ErrorBoundary/ErrorBoundary.jsx";
 
@@ -43,6 +43,8 @@ const router = createBrowserRouter([
 			{
 				path: "home",
 				element: <HomePageRu />,
+				loader: loaderPostItem,
+				errorElement: <ErrorBoundary />,
 			},
 			{
 				path: "blocks",

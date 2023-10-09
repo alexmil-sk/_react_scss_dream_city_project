@@ -10,12 +10,12 @@
 		"address": "MARINA STAR, 14, AL SEBA STREET, DUBAI",
 		"conditions": "СРОК СДАЧИ: СЕНТЯБРЬ 2023 ГОДА",
 		"foto": [
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png"
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -31,12 +31,12 @@
 		"address": "DUBAI JUMEIRAH VILLAGE CIRCLE DUBAI",
 		"conditions": "СРОК СДАЧИ: 2025 ГОД",
 		"foto": [
-			"/public/images/objects/dubai/jvc-concept.png",
-			"/public/images/objects/dubai/jvc-concept.png",
-			"/public/images/objects/dubai/jvc-concept.png",
-			"/public/images/objects/dubai/jvc-concept.png",
-			"/public/images/objects/dubai/jvc-concept.png",
-			"/public/images/objects/dubai/jvc-concept.png"
+			"/images/objects/dubai/jvc-concept.png",
+			"/images/objects/dubai/jvc-concept.png",
+			"/images/objects/dubai/jvc-concept.png",
+			"/images/objects/dubai/jvc-concept.png",
+			"/images/objects/dubai/jvc-concept.png",
+			"/images/objects/dubai/jvc-concept.png"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -52,17 +52,17 @@
 		"address": "Дубравка, Братислава",
 		"conditions": "СРОК СДАЧИ: 2025 ГОД",
 		"foto": [
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_1.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_2.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_3.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_4.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_5.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_6.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_7.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_8.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_9.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_10.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_1.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_2.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_3.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_4.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_5.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_6.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_7.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_8.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_9.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_10.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -78,24 +78,24 @@
 			"address": "Милославов (часть Алжбетин двор), Братислава (15 мин на автомобиле)",
 			"conditions": "Новостройка. Готовность 100%",
 			"foto": [
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_1.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_2.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_3.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_4.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_5.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_6.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_7.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_8.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_9.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_10.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_11.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_12.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_13.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_14.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_15.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_16.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_17.jpeg",
-				"/public/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_18.jpeg"
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_1.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_2.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_3.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_4.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_5.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_6.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_7.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_8.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_9.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_10.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_11.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_12.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_13.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_14.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_15.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_16.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_17.jpeg",
+				"/images/objects/bs/byt_83_terrasa_miloslavov/byt_83_terrasa_miloslavov_18.jpeg"
 			],
 			"operation_type": "Продажа",
 			"price": "236 000 EUR (тип 'Стандарт')"
@@ -111,17 +111,17 @@
 		"address": "Трнава",
 		"conditions": "СРОК СДАЧИ: 2025 ГОД",
 		"foto": [
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_1.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_2.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_3.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_4.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_5.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_6.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_7.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_8.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_9.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_10.jpeg",
-			"/public/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_1.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_2.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_3.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_4.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_5.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_6.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_7.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_8.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_9.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_10.jpeg",
+			"/images/objects/bs/duplex_50_2terrasy_dubravka/duplex_50_2terrasy_dubravka_11.jpeg"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -137,12 +137,12 @@
 		"address": "Spain",
 		"conditions": "СРОК СДАЧИ: СЕНТЯБРЬ 2023 ГОДА",
 		"foto": [
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png"
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -158,12 +158,12 @@
 		"address": "ОАЭ, Дубаи",
 		"conditions": "СРОК СДАЧИ: СЕНТЯБРЬ 2023 ГОДА",
 		"foto": [
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png"
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"
@@ -179,12 +179,12 @@
 		"address": "Турция",
 		"conditions": "СРОК СДАЧИ: СЕНТЯБРЬ 2023 ГОДА",
 		"foto": [
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png",
-			"/public/images/objects/dubai/condor-marina-star.png"
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png",
+			"/images/objects/dubai/condor-marina-star.png"
 		],
 		"operation_type": "Продажа",
 		"price": "300 000 EUR (Черновик)"

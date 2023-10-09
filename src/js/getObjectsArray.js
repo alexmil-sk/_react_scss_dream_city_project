@@ -12,10 +12,12 @@
 
 
 export async function getObjectsArray() {
-	const res = await fetch(`/src/db/ru/dbObjectCard.json`);
+	//const res = await fetch(`/src/db/ru/dbObjectCard.json`);
+	const res = await fetch(`/db/ru/dbObjectCard.json`);
 
 	if (!res.ok) {
 		throw new Response('', { status: res.status, statusText: res.statusText })
 	}
+
 	return res.json();
 }
