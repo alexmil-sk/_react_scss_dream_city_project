@@ -1,17 +1,30 @@
 /* eslint-disable react/prop-types */
+import { useEffect } from "react";
+
 import SliderObjectCardItemComponent from "/src/components/SliderObjectCardItemComponent/SliderObjectCardItemComponent.jsx";
-//import { getObjectsArray } from "/src/js/getObjectsArray.js";
 import { Suspense } from "react";
 import "./ObjectCardItemPageRu.scss";
 import { Link, useLoaderData, Await } from "react-router-dom";
 import { motion } from "framer-motion";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
+import { loaderPostItem } from "/src/js/loaderPostItem.js";
+import double_arrow from "/svg/double_arrow.svg";
 
 function ObjectCardItemPageRu() {
 	const { objects, id } = useLoaderData();
 
+	useEffect(() => {
+		loaderPostItem();
+	}, []);
+
 	return (
-		<motion.div className="card" initial={"hidden"} animate={"visible"} variants={framerFallingDown} id="top">
+		<motion.div
+			className="ObjectCardItemPageRu"
+			initial={"hidden"}
+			animate={"visible"}
+			variants={framerFallingDown}
+			id="top"
+		>
 			<div className="card__wrapper">
 				{/* ============================================= */}
 
@@ -30,7 +43,7 @@ function ObjectCardItemPageRu() {
 
 				{/* ========Автофокусировка при загрузке страницы===================================== */}
 
-				<input type="text" autoFocus style={{ height: "6px" }} />
+				{/* <input type="text" autoFocus style={{ height: "6px" }} /> */}
 
 				{/* ============================================= */}
 
@@ -50,13 +63,24 @@ function ObjectCardItemPageRu() {
 							</Await>
 						</Suspense>
 					</div>
-					<div className="card__foto">
-						{
-							objects[id-1].foto.map((item, idx) => (
-								<img src={item} key={ idx} />
-							))
-						}
-					</div>
+					<Link to={`/ru/objects/${id}/fotos`}>
+						<div className="card__foto">
+							<div className="card__foto_item">
+								{objects[id - 1].foto
+									.filter((_, idx) => idx < 5)
+									.map((item, idx) => (
+										<img src={item} key={idx} />
+									))}
+							</div>
+							<div className="card__foto_button">
+								<span>
+									Все фото&nbsp;
+									<img src={double_arrow} />
+								</span>
+							</div>
+						</div>
+					</Link>
+
 					<div className="card__additions">
 						<div className="card__additions_item">
 							<h2>описание</h2>
@@ -88,7 +112,8 @@ function ObjectCardItemPageRu() {
 function ObjectItemData() {
 	const { objects, id } = useLoaderData();
 
-	const { location, rooms, square, title, description_full, address, conditions, foto, operation_type, price } = objects[id - 1];
+	const { location, rooms, square, title, description_full, address, conditions, foto, operation_type, price } =
+		objects[id - 1];
 
 	return (
 		<div className="card__item_data">

@@ -12,13 +12,16 @@ function SliderObjectCardItemComponent({ fotos }) {
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay],
 		spaceBetween: 10,
-		speed: 1000,
+		speed: 2000,
 		direction: "horizontal",
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
 		loop: true,
+		autoplay: {
+			delay: 2000,
+		},
 	};
 
 	return (

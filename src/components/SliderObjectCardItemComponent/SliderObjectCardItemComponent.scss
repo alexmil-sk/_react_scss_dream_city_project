@@ -1,14 +1,15 @@
-
-
 .mySwiperCardItem {
 	position: relative;
 	display: flex;
 	align-items: center;
-	background-color: #c6c6c6!important;
+	background-color: #c6c6c6 !important;
+	width: 100%;
+	height: 72vh !important
 }
 
 .mySwiperCardItem .swiper-slide {
-	
+	display: flex;
+	justify-content: center !important;
 }
 
 .mySwiperCardItem .swiper-slide-active {
@@ -18,6 +19,7 @@
 }
 
 .mySwiperCardItem .swiper-slide img {
+	height: 72h !important;
 }
 
 .mySwiperCardItem .swiper-button-prev,

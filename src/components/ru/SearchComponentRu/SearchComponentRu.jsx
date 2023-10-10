@@ -45,7 +45,7 @@ function SearchComponentRu({ titleQuery, objLocationQuery }) {
 						name="search_title"
 						value={searchTitleValue}
 						onChange={(e) => setSearchTitleValue(e.target.value)}
-						placeholder="объект"
+						placeholder="название"
 					/>
 					<input
 						type="search"
