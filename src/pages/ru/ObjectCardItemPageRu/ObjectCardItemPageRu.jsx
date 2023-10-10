@@ -1,5 +1,4 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
 
 import SliderObjectCardItemComponent from "/src/components/SliderObjectCardItemComponent/SliderObjectCardItemComponent.jsx";
 import { Suspense } from "react";
@@ -7,15 +6,11 @@ import "./ObjectCardItemPageRu.scss";
 import { Link, useLoaderData, Await } from "react-router-dom";
 import { motion } from "framer-motion";
 import { framerFallingDown } from "/src/js/animationFramerSettings.js";
-import { loaderPostItem } from "/src/js/loaderPostItem.js";
 import double_arrow from "/svg/double_arrow.svg";
 
 function ObjectCardItemPageRu() {
 	const { objects, id } = useLoaderData();
 
-	useEffect(() => {
-		loaderPostItem();
-	}, []);
 
 	return (
 		<motion.div
@@ -43,7 +38,7 @@ function ObjectCardItemPageRu() {
 
 				{/* ========Автофокусировка при загрузке страницы===================================== */}
 
-				{/* <input type="text" autoFocus style={{ height: "6px" }} /> */}
+				<input type="text" autoFocus style={{ height: "6px" }} />
 
 				{/* ============================================= */}
 
@@ -63,7 +58,7 @@ function ObjectCardItemPageRu() {
 							</Await>
 						</Suspense>
 					</div>
-					<Link to={`/ru/objects/${id}/fotos`}>
+					<Link to={`/ru/objects/${id}/fotos`} state={{objects: objects,  id: id}}>
 						<div className="card__foto">
 							<div className="card__foto_item">
 								{objects[id - 1].foto

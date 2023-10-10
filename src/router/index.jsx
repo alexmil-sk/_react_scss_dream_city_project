@@ -11,6 +11,7 @@ import {
 	OurTeamRu,
 	OurFotosRu,
 	ObjectCardItemPageRu,
+	FotosCardItemPage
 } from "./router-ru.jsx";
 
 import {
@@ -67,6 +68,12 @@ const router = createBrowserRouter([
 			{
 				path: "objects/:id",
 				element: <ObjectCardItemPageRu />,
+				loader: loaderPostItem,
+				errorElement: <ErrorBoundary />,
+			},
+			{
+				path: "objects/:id/fotos",
+				element: <FotosCardItemPage />,
 				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,
 			},

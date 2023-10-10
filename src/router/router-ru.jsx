@@ -7,6 +7,7 @@ const ObjectsPageRu = lazy(() => import("/src/pages/ru/ObjectsPageRu/ObjectsPage
 const OurTeamRu = lazy(() => import("/src/pages/ru/ContactsPageRu/OurTeamRu/OurTeamRu.jsx"));
 const OurFotosRu = lazy(() => import("/src/pages/ru/ContactsPageRu/OurFotosRu/OurFotosRu.jsx"));
 const ObjectCardItemPageRu = lazy(() => import("/src/pages/ru/ObjectCardItemPageRu/ObjectCardItemPageRu.jsx"));
+const FotosCardItemPage = lazy(() => import("/src/pages/FotosCardItemPage/FotosCardItemPage.jsx"));
 
 export {
 	LayoutRu,
@@ -16,4 +17,5 @@ export {
 	OurTeamRu,
 	OurFotosRu,
 	ObjectCardItemPageRu,
+	FotosCardItemPage
 };

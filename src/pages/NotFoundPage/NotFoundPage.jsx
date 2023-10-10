@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NotFoundPage.scss";
 
 function NotFoundPage() {
+	const navigate = useNavigate();
+
 	return (
 		<>
 			<div className="notfound__wrapper">
@@ -9,9 +11,9 @@ function NotFoundPage() {
 					<h1>Not Found Page</h1>
 				</div>
 			</div>
-			<Link to="/home">Home</Link>
+			<button onClick={() => navigate(-1)}>НАЗАД</button>
 		</>
-	)
+	);
 }
 
-export default NotFoundPage
+export default NotFoundPage;
