@@ -1,0 +1,131 @@
+@import "/src/styles/index.scss";
+
+.fotos__button_back {
+  position: fixed;
+  top: 100px;
+  left: 50px;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+
+  a {
+    margin: 10px;
+
+    img {
+      width: 50px;
+      padding: 5px;
+      border: 1px solid $menu-bg-color;
+      border-radius: 150px;
+      background: #e0e0e0;
+      box-shadow: 8px 8px 29px $menu-bg-color,
+      -8px -8px 29px #ffffff;
+    }
+
+    &:hover {
+      border-radius: 150px;
+      background: linear-gradient(145deg, #cacaca, #f0f0f0);
+      box-shadow: 6px 6px 19px $menu-bg-color,
+      -8px -8px 29px #ffffff;
+
+      img {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      border-radius: 150px;
+      background: #e0e0e0;
+      box-shadow: inset 8px 8px 29px $menu-bg-color,
+      inset -8px -8px 29px #ffffff;
+
+      img {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+.swiper {
+}
+
+.mySwiperMain {
+  height: 90vh;
+  //width: auto;
+  background-color: #011628;
+}
+
+.mySwiperThumb {
+  height: 90px;
+  width: 100%;
+  background-color: #011628;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  //display: block;
+  //width: 100%;
+  //height: 100%;
+  //object-fit: cover;
+}
+
+.mySwiperMain .swiper-slide img {
+  padding: 10px 0 0;
+  width: auto !important;
+  height: 100% !important;
+}
+
+.mySwiperThumb .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.mySwiperThumb .swiper-slide {
+  //width: 10%;
+  height: 100%;
+  opacity: 0.6;
+  padding: 10px 0 10px;
+}
+
+.mySwiperThumb .swiper-slide-thumb-active {
+  opacity: 1;
+  border: none;
+}
+
+.mySwiperMain .swiper-button-prev,
+.mySwiperMain .swiper-button-next {
+  position: absolute;
+  top: 40% !important;
+
+  margin: 50px !important;
+  background-color: transparent;
+  padding: 50px !important;
+  border: 1px solid #fff;
+  border-radius: 100%;
+  box-shadow: 0 0 15px 1px white;
+  transition: all 0.5s ease 0s;
+
+  &::after {
+    color: white;
+    opacity: 0.5;
+    font-size: 3rem !important;
+  }
+
+  &:hover {
+    box-shadow: 0 0 20px 5px white;
+
+    &::after {
+      opacity: 0.9;
+    }
+  }
+}
+

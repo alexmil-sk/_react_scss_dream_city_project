@@ -1,71 +1,16 @@
 import "./ContactsPageRu.scss";
 import CastomLink from "/src/UI/CastomLinkUI/CastomLinkUI.jsx";
 import { Link, Outlet } from "react-router-dom";
-import { motion } from "framer-motion"
-import { framerFallingDown } from "/src/js/animationFramerSettings.js";
+import {motion} from "framer-motion"
+import {
+	framerFallingDown,
+	hrMotionSettings,
+	textMotionSettings,
+	titleMotionSettings, ulMotionSettings
+} from "/src/js/animationFramerSettings.js";
 
 
 function ContactsPageRu() {
-
-	const titleMotionSettings = {
-		hidden: {
-			y: -500
-		},
-		visible: {
-			y: 0,
-			transition: {
-				delay: 0.5,
-				duration: 1.5,
-				type: 'just',
-				ease: 'linear'
-			}
-		}
-	}
-
-	const textMotionSettings = {
-		hidden: {
-			x: -2000
-		},
-		visible: {
-			x: 0,
-			transition: {
-				delay: 2,
-				duration: 1,
-				type: 'just',
-				ease: 'linear'
-			}
-		}
-	}
-
-	const hrMotionSettings = {
-		hidden: {
-			x: -2000
-		},
-		visible: {
-			x: 0,
-			transition: {
-				delay: 3.5,
-				duration: 1,
-				type: 'just',
-				ease: 'linear'
-			}
-		}
-	}
-
-	const ulMotionSettings = {
-		hidden: {
-			x: -1000
-		},
-		visible: {
-			x: 0,
-			transition: {
-				delay: 4,
-				duration: 1.5,
-				type: 'just',
-				ease: 'linear'
-			}
-		}
-	}
 
 	return (
 		<motion.div

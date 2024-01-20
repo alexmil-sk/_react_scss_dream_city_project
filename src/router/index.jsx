@@ -11,7 +11,8 @@ import {
 	OurTeamRu,
 	OurFotosRu,
 	ObjectCardItemPageRu,
-	FotosCardItemPage
+	FotosCardItemPage,
+	SliderCardItemFotosComponent
 } from "./router-ru.jsx";
 
 import {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
 		element: <NotFoundPage />,
 	},
 	{
+		path: "objects/:id/fotos/slider",
+		element: <SliderCardItemFotosComponent />,
+		errorElement: <ErrorBoundary />,
+	},
+	{
 		path: "/ru",
 		element: <LayoutRu />,
 		children: [
@@ -47,14 +53,18 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "contacts",
+				loader: loaderPosts,
+				errorElement: <ErrorBoundary />,
 				element: <ContactsPageRu />,
 				children: [
 					{
 						path: "fotos",
+						loader: loaderPosts,
 						element: <OurFotosRu />,
 					},
 					{
 						path: "team",
+						loader: loaderPosts,
 						element: <OurTeamRu />,
 					},
 				],
@@ -74,7 +84,6 @@ const router = createBrowserRouter([
 			{
 				path: "objects/:id/fotos",
 				element: <FotosCardItemPage />,
-				loader: loaderPostItem,
 				errorElement: <ErrorBoundary />,
 			},
 		],

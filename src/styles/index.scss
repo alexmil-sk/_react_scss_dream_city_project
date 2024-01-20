@@ -47,7 +47,7 @@
 
 @font-face {
 	font-family: "AdventPro Regular";
-	src: url("/fonts/AdventPro/Regular/AdventPro-Regular.woff2") format("woff2"),
+	src: url('/fonts/AdventPro/Regular/AdventPro-Regular.woff2') format("woff2"),
 		url("/fonts/AdventPro/Regular/AdventPro-Regular.woff") format("woff"),
 		url("/fonts/AdventPro/Regular/AdventPro-Regular.ttf") format("truetype");
 	font-weight: 400;
@@ -132,9 +132,9 @@ $main-bg-color: #011628;
 $menu-bg-color: #0e113e;
 
 //Templates
-%myborder {
-	//	@extend %myborder;
-	border: 1px solid red;
+%yellow-border-2 {
+	//	@extend %yellowborder;
+	outline: 2px solid yellow;
 }
 
 //Mixins

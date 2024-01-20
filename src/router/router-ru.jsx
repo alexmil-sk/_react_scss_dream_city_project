@@ -1,6 +1,9 @@
 import { lazy } from "react";
 
 const LayoutRu = lazy(() => import("/src/components/ru/LayoutRu/LayoutRu.jsx"));
+const SliderCardItemFotosComponent = lazy(() =>
+	import("/src/components/SliderCardItemFotosComponent/SliderCardItemFotosComponent.jsx"),
+);
 const HomePageRu = lazy(() => import("/src/pages/ru/HomePageRu/HomePageRu.jsx"));
 const ContactsPageRu = lazy(() => import("/src/pages/ru/ContactsPageRu/ContactsPageRu.jsx"));
 const ObjectsPageRu = lazy(() => import("/src/pages/ru/ObjectsPageRu/ObjectsPageRu.jsx"));
@@ -17,5 +20,6 @@ export {
 	OurTeamRu,
 	OurFotosRu,
 	ObjectCardItemPageRu,
-	FotosCardItemPage
+	FotosCardItemPage,
+	SliderCardItemFotosComponent
 };

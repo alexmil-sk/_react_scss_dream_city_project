@@ -5,11 +5,12 @@
 	background: #dddddd;
 	min-height: 100vh;
 	border-bottom: 1px solid #000;
+	padding-bottom: 90px;
 
 	&_wrapper {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 71px 0px 20px;
+		padding: 71px 0 20px;
 		line-height: 1.5;
 		font-size: 25px;
 		background-color: #fefefe;
@@ -28,6 +29,7 @@
 		z-index: 10;
 	}
 	&_container {
+
 	}
 	&_cards {
 		display: flex;
@@ -39,17 +41,17 @@
 
 .object-link {
 	background-color: #fefefe;
-	width: 340px;
-	height: 480px;
+
 	&__item {
 		display: flex;
 		flex-direction: column;
-		height: 100%;
+		justify-content: space-between;
+		width: 340px;
+		height: 510px;
 		border: 1px solid #dedede;
-		padding: 0px;
+		padding: 0;
 		margin: 20px 0;
-
-		border-radius: 0px;
+		border-radius: 0;
 		background: #fefefe;
 		box-shadow:
 			5px 5px 5px #dedede,
@@ -63,36 +65,36 @@
 			height: 100%;
 			flex-direction: column;
 			justify-content: space-between;
+			.content__text {
+				padding: 15px;
+
+				.title {
+					height: 65px;
+					@include fontType("AdventPro Bold", 1.5rem, 1.2, #474a4d);
+					border-bottom: 1px solid #dddddd;
+					margin-bottom: 5px;
+				}
+				.price {
+					@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+					span {
+						color: #d70427;
+					}
+				}
+				.location {
+					@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+					span {
+						color: #d70427;
+					}
+				}
+				.address {
+					@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
+					span {
+						color: #d70427;
+					}
+				}
+			}
 		}
 
-		&_text {
-			padding: 15px;
-
-			.title {
-				height: 65px;
-				@include fontType("AdventPro Bold", 1.5rem, 1.2, #474a4d);
-				border-bottom: 1px solid #dddddd;
-				margin-bottom: 5px;
-			}
-			.price {
-				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
-				span {
-					color: #d70427;
-				}
-			}
-			.location {
-				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
-				span {
-					color: #d70427;
-				}
-			}
-			.address {
-				@include fontType("AdventPro Regular", 1.3rem, 1.2, gray);
-				span {
-					color: #d70427;
-				}
-			}
-		}
 		&_btn {
 			display: flex;
 			justify-content: end;

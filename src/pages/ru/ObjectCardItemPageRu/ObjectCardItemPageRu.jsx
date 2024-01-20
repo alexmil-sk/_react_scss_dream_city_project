@@ -25,10 +25,10 @@ function ObjectCardItemPageRu() {
 
 				<div className="card__buttons">
 					<Link to="/ru/home">
-						<img src="/svg/home.svg" />
+						<img src="/svg/home.svg" alt="/svg/home.svg"/>
 					</Link>
 					<Link to="/ru/objects">
-						<img src="/svg/list.svg" />
+						<img src="/svg/list.svg" alt="/svg/list.svg"/>
 					</Link>
 				</div>
 
@@ -58,19 +58,21 @@ function ObjectCardItemPageRu() {
 							</Await>
 						</Suspense>
 					</div>
-					<Link to={`/ru/objects/${id}/fotos`} state={{objects: objects,  id: id}}>
+					<Link
+						to={`/ru/objects/${id}/fotos`}
+						state={{objects: objects,  id: id}}>
 						<div className="card__foto">
 							<div className="card__foto_item">
 								{objects[id - 1].foto
 									.filter((_, idx) => idx < 5)
 									.map((item, idx) => (
-										<img src={item} key={idx} />
+										<img src={item} key={idx} alt={item}/>
 									))}
 							</div>
 							<div className="card__foto_button">
 								<span>
 									Все фото&nbsp;
-									<img src={double_arrow} />
+									<img src={double_arrow} alt="double_arrow"/>
 								</span>
 							</div>
 						</div>
@@ -80,22 +82,6 @@ function ObjectCardItemPageRu() {
 						<div className="card__additions_item">
 							<h2>описание</h2>
 							<p>{objects[id - 1].description_full}</p>
-						</div>
-						<div className="card__additions_item">
-							<h2>описание</h2>
-							<p>
-								This sunny apartment consists of entrance hall, open-plan living room and kitchen with a view of Bratislava
-								castle, a bedroom and two other separate bedrooms, bathroom with bath, shower and toilet, separate toilet and
-								terrace with an area of 12 m2.
-							</p>
-						</div>
-						<div className="card__additions_item">
-							<h2>описание</h2>
-							<p>
-								This sunny apartment consists of entrance hall, open-plan living room and kitchen with a view of Bratislava
-								castle, a bedroom and two other separate bedrooms, bathroom with bath, shower and toilet, separate toilet and
-								terrace with an area of 12 m2.
-							</p>
 						</div>
 					</div>
 				</div>

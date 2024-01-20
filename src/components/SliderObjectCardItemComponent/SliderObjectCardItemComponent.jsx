@@ -26,11 +26,15 @@ function SliderObjectCardItemComponent({ fotos }) {
 
 	return (
 		<>
-			<Swiper style={{ "--swiper-navigation-color": "#fff" }} {...main_params} className="mySwiperCardItem">
+			<Swiper
+				style={{ "--swiper-navigation-color": "#fff" }}
+				{...main_params}
+				className="mySwiperCardItem"
+			>
 				{fotos.map((item, idx) => (
 					<SwiperSlide style={{ "marginRight": "0" }} key={idx}>
 						<Link to={item} target="_blank" key={idx} rel="noreferrer">
-							<img src={item} />
+							<img src={item} alt={item}/>
 						</Link>
 					</SwiperSlide>
 				))}

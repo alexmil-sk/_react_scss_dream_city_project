@@ -21,18 +21,24 @@ function FotosCardItemPage() {
 			<div className="fotos__wrapper">
 				<div className="fotos__button">
 					<Link to={`/ru/objects/${id}`}>
-						<img src={undo_arrow} />
+						<img src={undo_arrow} alt="undo_arrow"/>
 					</Link>
 					<Link to="/ru/objects">
-						<img src={list} />
+						<img src={list} alt="list"/>
 					</Link>
 				</div>
 
 				<div className="fotos__container">
 					{objects[id - 1].foto.map((item, idx) => (
-						<div className="foto__item" key={idx}>
-							<img src={item} />
-						</div>
+						<Link
+							// to={`/ru/objects/${id}/fotos/slider`}
+							to={`/objects/${id}/fotos/slider`}
+							className="foto__item"
+							key={idx}
+							state={{ objects: objects[id-1].foto, id }}
+						>
+							<img src={item} alt={item}/>
+						</Link>
 					))}
 				</div>
 			</div>
