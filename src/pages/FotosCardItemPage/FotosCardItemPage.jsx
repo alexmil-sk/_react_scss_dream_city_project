@@ -1,23 +1,22 @@
-import { Link, useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 import "./FotosCardItemPage.scss";
-import { motion } from "framer-motion";
-import { framerOpacityObjects } from "/src/js/animationFramerSettings.js";
-
+import {motion} from "framer-motion";
+import {framerOpacityObjects} from "/src/js/animationFramerSettings.js";
 import undo_arrow from "/svg/undo_arrow.svg";
 import list from "/svg/list.svg";
 
 function FotosCardItemPage() {
-	const { state } = useLocation();
-	const { objects, id } = state;
+	const {state} = useLocation();
+	const {objects, id} = state;
 
 	return (
-		<motion.div className="FotosCardItemPage" initial={"hidden"} animate={"visible"} variants={framerOpacityObjects}>
+		<motion.div className="FotosCardItemPage" initial={"hidden"}
+		            animate={"visible"} variants={framerOpacityObjects}>
 			{/* ========Автофокусировка при загрузке страницы===================================== */}
 
-			<input type="text" autoFocus style={{ height: "6px" }} />
+			<input type="text" autoFocus style={{height: "6px"}}/>
 
 			{/* ============================================= */}
-
 			<div className="fotos__wrapper">
 				<div className="fotos__button">
 					<Link to={`/ru/objects/${id}`}>
@@ -35,7 +34,7 @@ function FotosCardItemPage() {
 							to={`/objects/${id}/fotos/slider`}
 							className="foto__item"
 							key={idx}
-							state={{ objects: objects[id-1].foto, id }}
+							state={{objects: objects[id - 1].foto, id}}
 						>
 							<img src={item} alt={item}/>
 						</Link>
@@ -43,7 +42,8 @@ function FotosCardItemPage() {
 				</div>
 			</div>
 		</motion.div>
-	);
+	)
+
 }
 
 export default FotosCardItemPage;

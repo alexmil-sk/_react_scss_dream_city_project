@@ -123,10 +123,12 @@ function HomePageRu() {
 					<div className="objects">
 						<div className="objects__row">
 							{objects
-								.filter((i) => i.location.includes("Испания"))
-								.map((obj) => (<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
-									<ObjectHomeCard object={obj}/>
-								</Link>))}
+											.filter((i) => i.location.includes("Испания"))
+											.splice(0, 3)
+											.map((obj) => (
+															<Link key={obj.id} to={`/ru/objects/${obj.id}`}>
+																<ObjectHomeCard object={obj}/>
+															</Link>))}
 						</div>
 					</div>
 					<MyObjectLink/>

@@ -13,7 +13,7 @@ function ObjectHomeCard({ object }) {
 			}}
 		>
 			<div className="object__item_header">
-				<p>{title}</p>
+				<p>{title.split('(').splice(0, 1)}</p>
 				<p>{description_short}</p>
 			</div>
 			<div className="object__item_footer">

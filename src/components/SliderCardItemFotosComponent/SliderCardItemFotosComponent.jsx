@@ -1,14 +1,16 @@
-import { useState } from "react";
+import {useState} from "react";
 import {Link, useLocation} from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
+import {Swiper, SwiperSlide} from "swiper/react";
 import "./SliderCardItemFotosComponent.scss";
-import { Navigation, FreeMode, Thumbs } from "swiper/modules";
+import {Navigation, FreeMode, Thumbs} from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import undo_arrow from "../../../public/svg/undo_arrow.svg";
+import {framerOpacityObjects} from "../../js/animationFramerSettings.js";
+import {motion} from "framer-motion";
 
 
 function SliderCardItemFotosComponent() {
@@ -41,20 +43,24 @@ function SliderCardItemFotosComponent() {
 	};
 
 	return (
-		<>
+		<motion.div
+			initial={"hidden"}
+			animate={"visible"}
+			variants={framerOpacityObjects}
+		>
 			<div className="fotos__button_back">
 				<Link to={`/ru/objects/${id}`}>
 					<img src={undo_arrow} alt="undo_arrow"/>
 				</Link>
 			</div>
-			
+
 			<Swiper
-				style={{ "--swiper-navigation-color": "#fff" }}
+				style={{"--swiper-navigation-color": "#fff"}}
 				{...main_params}
 				className="mySwiperMain">
 				{objects.map((item, idx) => (
 					<SwiperSlide key={idx}>
-						<img src={item} alt={item} />
+						<img src={item} alt={item}/>
 					</SwiperSlide>
 				))}
 
@@ -64,12 +70,12 @@ function SliderCardItemFotosComponent() {
 
 			<Swiper {...thumbs_params} className="mySwiperThumb">
 				{objects.map((item, idx) => (
-					<SwiperSlide key={idx} >
-						<img src={item} alt={item} />
+					<SwiperSlide key={idx}>
+						<img src={item} alt={item}/>
 					</SwiperSlide>
 				))}
 			</Swiper>
-		</>
+		</motion.div>
 	);
 }
 

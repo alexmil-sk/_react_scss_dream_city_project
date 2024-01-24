@@ -1,16 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import SliderObjectCardItemComponent from "/src/components/SliderObjectCardItemComponent/SliderObjectCardItemComponent.jsx";
-import { Suspense } from "react";
+import SliderObjectCardItemComponent
+	from "/src/components/SliderObjectCardItemComponent/SliderObjectCardItemComponent.jsx";
+import {Suspense} from "react";
 import "./ObjectCardItemPageRu.scss";
-import { Link, useLoaderData, Await } from "react-router-dom";
-import { motion } from "framer-motion";
-import { framerFallingDown } from "/src/js/animationFramerSettings.js";
+import {Link, useLoaderData, Await} from "react-router-dom";
+import {motion} from "framer-motion";
+import {framerFallingDown} from "/src/js/animationFramerSettings.js";
 import double_arrow from "/svg/double_arrow.svg";
 
 function ObjectCardItemPageRu() {
-	const { objects, id } = useLoaderData();
-
+	const {objects, id} = useLoaderData();
 
 	return (
 		<motion.div
@@ -48,7 +48,7 @@ function ObjectCardItemPageRu() {
 					</div>
 
 					<div className="card__price">
-						<p>{objects[id - 1].price}</p>
+						<p>{objects[id - 1]['price']}</p>
 					</div>
 
 					<div className="card__item">
@@ -60,7 +60,7 @@ function ObjectCardItemPageRu() {
 					</div>
 					<Link
 						to={`/ru/objects/${id}/fotos`}
-						state={{objects: objects,  id: id}}>
+						state={{objects,  id}}>
 						<div className="card__foto">
 							<div className="card__foto_item">
 								{objects[id - 1].foto
@@ -77,11 +77,33 @@ function ObjectCardItemPageRu() {
 							</div>
 						</div>
 					</Link>
-
 					<div className="card__additions">
 						<div className="card__additions_item">
 							<h2>описание</h2>
-							<p>{objects[id - 1].description_full}</p>
+							<p>{objects[id - 1]['description_full']}</p>
+						</div>
+					</div>
+					<div className="card__video_container">
+						<h2>{objects[id - 1].video ? 'видео' : ''}</h2>
+						<div className="card__video_row">
+							{
+								objects[id - 1].video && objects[id - 1].video
+									.map((item, idx) => (
+										<div className="video__item">
+											<div className="video_element">
+												<video
+													width="320"
+													height="181"
+													controls
+													preload="metadata"
+													poster={item.poster}
+												>
+													<source src={item['movie']} type="video/mp4"/>
+												</video>
+											</div>
+										</div>
+									))
+							}
 						</div>
 					</div>
 				</div>

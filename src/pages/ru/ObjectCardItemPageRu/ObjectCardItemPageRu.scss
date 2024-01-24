@@ -96,15 +96,19 @@
 				height: auto;
 				border: 1px solid #c6c6c6;
 				border-radius: 5px;
+				margin-top: 20px;
 				padding: 10px;
 				transition: all 600ms ease-in-out 0s;
+
 				&:hover {
 					border: 1px solid #000;
 					background-color: #e4e4e4;
+
 					.card__foto_button {
 						background-color: #000;
 					}
 				}
+
 				&_item {
 					display: flex;
 					flex-wrap: wrap;
@@ -146,9 +150,42 @@
 					h2 {
 						@include fontType("AdventPro Regular", 20px, 1.2, crimson);
 						text-transform: uppercase;
+						margin: 10px 0;
 					}
+
 					p {
 						@include fontType("AdventPro Regular", 20px, 1.2, #000);
+					}
+				}
+			}
+
+			.card__video_container {
+				margin-top: 40px;
+
+				h2 {
+					@include fontType("AdventPro Regular", 20px, 1.2, crimson);
+					text-transform: uppercase;
+					margin: 10px 0;
+				}
+
+				.card__video_row {
+					display: flex;
+					justify-content: space-between;
+					flex-wrap: wrap;
+					gap: 20px;
+					@media(width < 1110px) {
+						justify-content: center;
+					}
+					.video__item {
+						display: flex;
+						border: 1px solid #c6c6c6;
+						border-radius: 5px;
+						padding: 10px;
+						.video_element {
+							padding: 0;
+							height: 181px;
+							width: 320px;
+						}
 					}
 				}
 			}
