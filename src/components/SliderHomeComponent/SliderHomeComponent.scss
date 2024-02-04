@@ -41,7 +41,6 @@
 }
 
 .mySwiperThumb .swiper-slide {
-	//width: 10%;
 	height: 100%;
 	opacity: 0.6;
 	padding: 10px 0 10px;
@@ -65,15 +64,40 @@
 	box-shadow: 0 0 15px 1px white;
 	transition: all 0.5s ease 0s;
 
+	@media (max-width: 600px) {
+		//transform: rotate(90deg);
+	}
+
 	&::after {
 		color: white;
 		opacity: 0.5;
 		font-size: 3rem !important;
+		@media(max-width: 600px) {
+			font-size: 2rem !important;
+		}
 	}
+
 	&:hover {
 		box-shadow: 0 0 20px 5px white;
+
 		&::after {
 			opacity: 0.9;
 		}
+	}
+}
+
+
+@media (max-width: 600px) {
+	.mySwiperMain .swiper-button-prev {
+		//top: 10% !important;
+		//left: 50% !important;
+		padding: 30px !important;
+	}
+}
+
+.mySwiperMain .swiper-button-next {
+	@media (max-width: 600px) {
+		//left: 50% !important;
+		padding: 30px !important;
 	}
 }

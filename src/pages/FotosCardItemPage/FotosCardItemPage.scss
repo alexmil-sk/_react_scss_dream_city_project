@@ -1,13 +1,15 @@
-@import "/src/styles/index.scss";
+@import "../../styles/main";
 .FotosCardItemPage {
 	background-color: #fafafa;
-	padding: 71px 0px 250px;
+	padding: 71px 0 250px;
+
 	.fotos__wrapper {
 		position: relative;
 		max-width: 1200px;
 		margin: 0 auto;
 		background-color: #fff;
 		min-height: 100vh;
+
 		.fotos__button {
 			position: fixed;
 			top: 100px;
@@ -53,20 +55,32 @@
 			display: flex;
 			justify-content: space-between;
 			row-gap: 10px;
-			column-gap: 5px;
+			column-gap: 10px;
 			flex-wrap: wrap;
 			border: 1px solid #c6c6c6;
 			border-radius: 5px;
-			padding: 10px;
+			padding: 20px;
 			background-color: $main-bg-color;
 
+			@media (max-width: 1200px) {
+				justify-content: center;
+				background-size: cover;
+
+			}
 
 
 			.foto__item {
-				height: 330px;
+				height: 320px;
 				display: flex;
+
 				& img {
 					border: 1px solid #fff;
+
+					@media(max-width: 797px) {
+						background-size: cover;
+						max-width: 100%;
+					}
+
 					&:hover {
 						transform: scale(1.01);
 						@extend %yellow-border-2;

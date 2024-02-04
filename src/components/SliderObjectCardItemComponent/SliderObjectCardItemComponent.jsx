@@ -9,10 +9,15 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 
 function SliderObjectCardItemComponent({ fotos }) {
+
+	//const clientWidth = document.documentElement.clientWidth;
+
+
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay],
 		spaceBetween: 10,
 		speed: 2000,
+		//direction: clientWidth > 600 ? "horizontal" : "vertical",
 		direction: "horizontal",
 		navigation: {
 			nextEl: ".swiper-button-next",

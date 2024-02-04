@@ -1,4 +1,4 @@
-@import "/src/styles/index.scss";
+@import "../../../styles/main";
 
 .footer {
 	position: fixed;
@@ -24,12 +24,19 @@
 				justify-content: space-between;
 				align-items: center;
 				margin: 0 100px;
+
+				@media (max-width: 767px) {
+					justify-content: center;
+				}
 				span:nth-child(1) {
 					@include fontType("AdventPro Bold", 2rem, 1.2, lightblue);
 				}
 				span:nth-child(2) {
 					width: 380px;
 					@include fontType("AdventPro Regular", 1.2rem, 1.2, #efc3e6);
+					@media (max-width: 767px) {
+						display: none;
+					}
 				}
 			}
 		}

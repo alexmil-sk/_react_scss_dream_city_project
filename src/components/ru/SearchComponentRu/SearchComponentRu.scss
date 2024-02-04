@@ -1,4 +1,4 @@
-@import "./src/styles/index.scss";
+@import "../../../styles/main";
 
 .search {
 	display: flex;
@@ -76,6 +76,17 @@
 
 		.btn-block {
 			margin-left: 10px;
+		}
+		@media(max-width: 415px) {
+			input[name="submit"] {
+				margin: 10px 0;
+			}
+			.btn-block {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+			}
+
 		}
 
 		// label {

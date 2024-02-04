@@ -26,16 +26,20 @@ function ContactsPageRu() {
 					animate='visible'
 					variants={titleMotionSettings}
 				>
-					Contacts
+					Контакты
 				</motion.div>
 
 				<motion.div
 					className="text"
-					initial='hidden'
-					animate='visible'
+					initial="hidden"
+					animate="visible"
 					variants={textMotionSettings}
 				>
-					<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore ipsa hic, expedita doloribus amet nesciunt debitis ad soluta earum corporis quam nihil illum voluptates tenetur possimus nulla culpa repellendus suscipit non quod! Quos assumenda asperiores quas exercitationem vel animi nesciunt, ducimus eum. Veniam magnam aperiam aliquam impedit! Molestiae vero dignissimos quia. Ipsam fuga voluptatum ducimus, sed facere error itaque nulla totam quo soluta officiis quam natus expedita dicta et eius numquam doloremque. Perferendis nam fugit neque dolorem commodi enim. Tenetur suscipit asperiores incidunt tempora maxime, quis, voluptatum sed fugit ad nihil nulla voluptas ex vel, error laudantium et voluptatem modi.</p>
+					<h1>Телефоны:</h1>
+					<h1>+380501063191</h1>
+					<h1>+421950429286</h1>
+					<h1>+421910513298</h1>
+
 				</motion.div>
 
 				<motion.hr

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import "/src/styles/index.scss";
+import "/src/styles/main.scss";
 
 
 // eslint-disable-next-line react/prop-types

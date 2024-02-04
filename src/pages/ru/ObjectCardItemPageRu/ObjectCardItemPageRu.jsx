@@ -98,7 +98,7 @@ function ObjectCardItemPageRu() {
 													preload="metadata"
 													poster={item.poster}
 												>
-													<source src={item['movie']} type="video/mp4"/>
+													<source src={item['movie']} type="video/mp4" key={idx}/>
 												</video>
 											</div>
 										</div>

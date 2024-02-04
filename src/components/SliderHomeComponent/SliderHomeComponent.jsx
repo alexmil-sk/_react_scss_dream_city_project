@@ -34,10 +34,19 @@ const sliderLinksHomePage = [
 function SliderHomeComponent() {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+	//const clientWidth = document.documentElement.clientWidth;
+
+	//console.log('availWidth: ', window.screen.availWidth);
+	//console.log('width: ', window.screen.width);
+	//console.log('outerWidth: ', window.outerWidth );
+	//console.log('innerWidth: ', window.innerWidth );
+	//console.log('clientWidth: ', document.documentElement.clientWidth );
+
 	const main_params = {
 		modules: [Navigation, FreeMode, Autoplay, Thumbs],
 		spaceBetween: 10,
 		speed: 1000,
+		//direction: clientWidth > 600 ? "horizontal" : "vertical",
 		direction: "horizontal",
 		navigation: {
 			nextEl: ".swiper-button-next",

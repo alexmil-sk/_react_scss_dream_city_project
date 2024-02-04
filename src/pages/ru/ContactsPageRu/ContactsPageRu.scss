@@ -1,4 +1,4 @@
-@import "/src/styles/index.scss";
+@import "../../../styles/main";
 
 .contacts {
 	min-height: 100vh;
@@ -14,7 +14,15 @@
 			text-align: center;
 		}
 		.text {
-			@include fontType("AdventPro Thin", 25px, 1.3, #000);
+			@include fontType("AdventPro Regular", 25px, 1.3, #000);
+
+			h1:first-child {
+				display: flex;
+				justify-content: space-evenly;
+				color: blue;
+				font-weight: 900;
+				margin: 20px 0;
+			}
 		}
 		ul {
 			margin: 20px;

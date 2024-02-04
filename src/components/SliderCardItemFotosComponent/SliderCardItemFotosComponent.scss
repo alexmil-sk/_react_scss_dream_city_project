@@ -1,4 +1,4 @@
-@import "/src/styles/index.scss";
+@import "../../styles/main";
 
 .fotos__button_back {
   position: fixed;
@@ -49,8 +49,8 @@
 }
 
 .mySwiperMain {
+  position: relative;
   height: 90vh;
-  //width: auto;
   background-color: #011628;
 }
 
@@ -60,19 +60,14 @@
   background-color: #011628;
 }
 
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.mySwiperMain .swiper-slide {
+  //text-align: center;
+  //font-size: 18px;
+  //display: flex;
+  //justify-content: center;
+  //align-items: center;
 
-.swiper-slide img {
-  //display: block;
-  //width: 100%;
-  //height: 100%;
-  //object-fit: cover;
+
 }
 
 .mySwiperMain .swiper-slide img {
@@ -81,19 +76,34 @@
   height: 100% !important;
 }
 
+@media(max-width: 797px) {
+  .mySwiperMain .swiper-slide img {
+    width: 100vw !important;
+    height: auto!important;
+  }
+}
+
+.mySwiperThumb .swiper-wrapper {
+  width: 100%;
+
+  @media(max-width: 797px) {
+      visibility: hidden;
+  }
+}
+
+.mySwiperThumb .swiper-slide {
+  height: 100%;
+  opacity: 0.6;
+  padding: 10px 0 10px;
+}
+
 .mySwiperThumb .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border: 3px solid white;
-}
 
-.mySwiperThumb .swiper-slide {
-  //width: 10%;
-  height: 100%;
-  opacity: 0.6;
-  padding: 10px 0 10px;
 }
 
 .mySwiperThumb .swiper-slide-thumb-active {
@@ -114,10 +124,18 @@
   box-shadow: 0 0 15px 1px white;
   transition: all 0.5s ease 0s;
 
+  //@media (max-width: 600px) {
+  //  transform: rotate(90deg);
+  //}
+
   &::after {
     color: white;
     opacity: 0.5;
     font-size: 3rem !important;
+
+    @media(max-width: 600px) {
+      font-size: 2rem !important;
+    }
   }
 
   &:hover {
@@ -126,6 +144,18 @@
     &::after {
       opacity: 0.9;
     }
+  }
+}
+
+@media (max-width: 600px) {
+  .mySwiperMain .swiper-button-next {
+    //left: 50% !important;
+    padding: 30px !important;
+  }
+  .mySwiperMain .swiper-button-prev {
+    //top: 10% !important;
+    //left: 50% !important;
+    padding: 30px !important;
   }
 }
 

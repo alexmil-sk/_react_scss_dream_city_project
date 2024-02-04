@@ -1,0 +1,175 @@
+//@charset "UTF-8";
+@import "./null.scss";
+
+//== <> =======================================================
+
+@font-face {
+	font-family: "Montserrat Bold";
+	src: url("/fonts/Montserrat/Bold/Montserrat-Bold.woff2") format("woff2"),
+		url("/fonts/Montserrat/Bold/Montserrat-Bold.woff") format("woff"),
+		url("/fonts/Montserrat/Bold/Montserrat-Bold.ttf") format("truetype");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat SemiBold";
+	src: url("/fonts/Montserrat/SemiBold/Montserrat-SemiBold.woff2") format("woff2"),
+		url("/fonts/Montserrat/SemiBold/Montserrat-SemiBold.woff") format("woff"),
+		url("/fonts/Montserrat/SemiBold/Montserrat-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Montserrat Medium";
+	src: url("/fonts/Montserrat/Medium/Montserrat-Medium.woff2") format("woff2"),
+		url("/fonts/Montserrat/Medium/Montserrat-Medium.woff") format("woff"),
+		url("/fonts/Montserrat/Medium/Montserrat-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+
+@font-face {
+	font-family: "AdventPro Thin";
+	src: url("/fonts/AdventPro/Thin/AdventPro-Thin.woff2") format("woff2"),
+		url("/fonts/AdventPro/Thin/AdventPro-Thin.woff") format("woff"),
+		url("/fonts/AdventPro/Thin/AdventPro-Thin.ttf") format("truetype");
+	font-weight: 100;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "AdventPro Regular";
+	src: url('/fonts/AdventPro/Regular/AdventPro-Regular.woff2') format("woff2"),
+		url("/fonts/AdventPro/Regular/AdventPro-Regular.woff") format("woff"),
+		url("/fonts/AdventPro/Regular/AdventPro-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "AdventPro Bold";
+	src: url("/fonts/AdventPro/Bold/AdventPro-Bold.woff2") format("woff2"),
+		url("/fonts/AdventPro/Bold/AdventPro-Bold.woff") format("woff"),
+		url("/fonts/AdventPro/Bold/AdventPro-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Lobster";
+	src: url("/fonts/Lobster/Regular/Lobster-Regular.woff2") format("woff2"),
+		url("/fonts/Lobster/Regular/Lobster-Regular.woff") format("woff"),
+		url("/fonts/Lobster/Regular/Lobster-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Bebas Neue Regular";
+	src: url("/fonts/BebasNeue/Regular/BebasNeue-Regular.woff2") format("woff2"),
+		url("/fonts/BebasNeue/Regular/BebasNeue-Regular.woff") format("woff"),
+		url("/fonts/BebasNeue/Regular/BebasNeue-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Oswald Bold";
+	src: url("/fonts/Oswald/Bold/Oswald-Bold.woff2") format("woff2"),
+		url("/fonts/Oswald/Bold/Oswald-Bold.woff") format("woff"),
+		url("/fonts/Oswald/Bold/Oswald-Bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Oswald SemiBold";
+	src: url("/fonts/Oswald/SemiBold/Oswald-SemiBold.woff2") format("woff2"),
+		url("/fonts/Oswald/SemiBold/Oswald-SemiBold.woff") format("woff"),
+		url("/fonts/Oswald/SemiBold/Oswald-SemiBold.ttf") format("truetype");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Oswald Medium";
+	src: url("/fonts/Oswald/Medium/Oswald-Medium.woff2") format("woff2"),
+		url("/fonts/Oswald/Medium/Oswald-Medium.woff") format("woff"),
+		url("/fonts/Oswald/Medium/Oswald-Medium.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Oswald Regular";
+	src: url("/fonts/Oswald/Regular/Oswald-Regular.woff2") format("woff2"),
+		url("/fonts/Oswald/Regular/Oswald-Regular.woff") format("woff"),
+		url("/fonts/Oswald/Regular/Oswald-Regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+
+//== </ FONTS> =======================================================
+
+/*Variables*/
+$main-bg-color: #011628;
+$menu-bg-color: #0e113e;
+
+//Templates
+%yellow-border-2 {
+	//	@extend %yellowborder;
+	outline: 2px solid yellow;
+}
+
+//Mixins
+@mixin fontType($family, $fz, $lh, $color) {
+	//@include fontType($family, $fz, $lh, $color)
+	font-family: $family;
+	font-size: $fz;
+	line-height: $lh;
+	color: $color;
+}
+
+@mixin adaptive-font($deskFontSize, $mobileFontSize, $maxWidth, $minWidth) {
+	$addDeskFontSize: $deskFontSize - $mobileFontSize;
+	$addMobileFontSize: $deskFontSize * 0.7;
+
+	@media(min-width: 767px) {
+		font-size: calc(#{ $mobileFontSize + px	} + #{$addDeskFontSize} * (100vw / #{$maxWidth}));
+	}
+
+	@media(max-width: 767px) {
+		font-size: calc(#{$mobileFontSize + px} + #{$addMobileFontSize} * (100vw - #{$minWidth + px}) / #{$maxWidth});
+	}
+}
+
+@mixin adaptive-margin-top($deskMarginSize, $mobileMarginSize, $maxWidth, $minWidth) {
+	$addDeskMarginSize: $deskMarginSize - $mobileMarginSize;
+	$addMobileMarginSize: $deskMarginSize * 0.2;
+
+	@media(min-width: 767px) {
+		margin-top: calc(#{ $mobileMarginSize + px	} + #{$addDeskMarginSize} * (100vh / #{$maxWidth}));
+	}
+
+	@media(max-width: 767px) {
+		margin-top: calc(#{$mobileMarginSize + px} + #{$addMobileMarginSize} * (100vh - #{$minWidth + px}) / #{$maxWidth});
+	}
+
+
+}

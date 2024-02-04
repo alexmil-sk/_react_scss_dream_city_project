@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import "./SearchComponentRu.scss";
 
 function SearchComponentRu({ titleQuery, objLocationQuery }) {
+
 	const [searchTitleValue, setSearchTitleValue] = useState(titleQuery);
 	const [searchLocationValue, setSearchLocationValue] = useState(objLocationQuery);
 

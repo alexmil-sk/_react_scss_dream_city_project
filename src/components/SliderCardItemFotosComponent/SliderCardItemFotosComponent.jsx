@@ -15,17 +15,18 @@ import {motion} from "framer-motion";
 
 function SliderCardItemFotosComponent() {
 	const [thumbsSwiper, setThumbsSwiper] = useState(null);
-	const { state } = useLocation();
-	const { objects, id} = state;
-	
+	const {state} = useLocation();
+	const {objects, id} = state;
+
+
 	const main_params = {
 		modules: [Navigation, FreeMode, Thumbs],
 		spaceBetween: 10,
 		speed: 1000,
 		direction: "horizontal",
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
 		},
 		loop: true,
 		thumbs: {

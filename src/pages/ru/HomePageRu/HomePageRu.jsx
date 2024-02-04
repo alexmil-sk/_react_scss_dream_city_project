@@ -69,7 +69,8 @@ function HomePageRu() {
 			<div id="bratislava" className="fullscreen text__container_projects bratislava">
 				<div className="projects__content">
 					<h1>
-						Предлагаем вам к покупке недвижимость от застройщика <span>в братиславе</span>:
+						Предлагаем вам к покупке недвижимость от застройщика<br/>
+						<span>в братиславе</span>:
 					</h1>
 
 					<div className="objects">
@@ -92,7 +93,8 @@ function HomePageRu() {
 			<div id="slovakia" className="fullscreen text__container_projects slovakia">
 				<div className="projects__content">
 					<h1>
-						Предлагаем вам к покупке недвижимость от застройщика <span>на всей территории Словакии</span>:
+						Предлагаем вам к покупке недвижимость от застройщика <br />
+						<span>на всей территории Словакии</span>:
 					</h1>
 
 					<div className="objects">
@@ -117,7 +119,8 @@ function HomePageRu() {
 			<div id="spain" className="fullscreen text__container_projects spain">
 				<div className="projects__content">
 					<h1>
-						Предлагаем вам к покупке недвижимость от застройщика <span>в испании</span>:
+						Предлагаем вам к покупке недвижимость от застройщика<br/>
+						<span>в испании</span>:
 					</h1>
 
 					<div className="objects">
@@ -144,7 +147,8 @@ function HomePageRu() {
 			<div id="emirates" className="fullscreen text__container_projects emirates">
 				<div className="projects__content">
 					<h1>
-						Предлагаем вам к покупке недвижимость от застройщика <span>в ОАЭ (Дубаи)</span>:
+						Предлагаем вам к покупке недвижимость от застройщика<br/>
+						<span>в ОАЭ (Дубаи)</span>:
 					</h1>
 
 					<div className="objects">
