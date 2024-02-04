@@ -11,7 +11,7 @@
 .up-to-title {
 	position: fixed;
 	top: 100px;
-	left: calc(#{20px} + #{24px * (100vw / 1200px)});;
+	left: calc(#{20px} + #{24px} * (100vw / #{1200px}));;
 	display: flex;
 	padding: 5px;
 	border: 1px solid $menu-bg-color;
