@@ -47,7 +47,7 @@ export default function IntroComponent() {
 				}
 			</div>
 			<div className="video__container">
-				<img src="/images/intro/intro.jpg" alt="intro"/>
+				{/*<img src="/images/intro/intro.jpg" alt="intro"/>*/}
 			</div>
 			<div className="text__container">
 				<motion.h1
@@ -77,7 +77,7 @@ export default function IntroComponent() {
 						delay: 1
 					}}
 				>
-					<Link to="/sk/home" onClick={soundHandlerOff}><span>SK</span></Link>
+					<Link to="/sk/home" onClick={(e) => {soundHandlerOff(); e.preventDefault()}}><span>SK</span></Link>
 				</motion.div>
 			</div>
 		</motion.div>

@@ -1,13 +1,12 @@
 @import "../../styles/main";
 
 .media__container {
+	position: relative;
 	min-height: 100vh;
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	background: $main-bg-color;
-	background: url("/images/intro/intro.jpg") 0 0 / cover no-repeat fixed;
-
+	background: url("/images/intro/intro.jpg") center /cover no-repeat;
 	@media(max-width: 1100px) {
 
 	}
@@ -17,6 +16,11 @@
 		top: 10px;
 		right: 10px;
 		z-index: 10;
+
+		@media(max-width: 767px) {
+			transform: scale(0.8);
+		}
+
 		& button {
 			width: 50px;
 			border-radius: 50%;
@@ -41,15 +45,19 @@
 	}
 
 	.video__container {
-		//width: 100%;
-		//height: 100%;
+		border-right: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		width: 800px;
+		min-height: 100vh;
+		background: url("/images/intro/intro.jpg") center / cover no-repeat;
+		box-shadow: 0 0 100px 5px rgba(255, 255, 255, 0.9);
+
 		& video {
-			height: 99vh;
+			//height: 99vh;
 			//height: 100vh;
 		}
+
 		& img {
-			//height: 100%;
-			//height: 100vh;
 		}
 	}
 	.text__container {
@@ -58,12 +66,17 @@
 		text-transform: uppercase;
 		opacity: 0.9;
 		@include fontType("Lobster", 5rem, 1.2, #ffe066);
+
+		@media(max-width: 797px) {
+			@include adaptive-font(60, 28, 797, 320);
+		}
+
 		h1 {
 			letter-spacing: 4px;
 			text-shadow: -0 -1px 5px #ff140c, 0 -1px 5px #ff140c, -0 1px 5px #ff140c, 0 1px 5px #ff140c, -1px -0 5px #ff140c,
-				1px -0 5px #ff140c, -1px 0 5px #ff140c, 1px 0 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c,
-				-1px 1px 5px #ff140c, 1px 1px 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c, -1px 1px 5px #ff140c,
-				1px 1px 5px #ff140c;
+			1px -0 5px #ff140c, -1px 0 5px #ff140c, 1px 0 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c,
+			-1px 1px 5px #ff140c, 1px 1px 5px #ff140c, -1px -1px 5px #ff140c, 1px -1px 5px #ff140c, -1px 1px 5px #ff140c,
+			1px 1px 5px #ff140c;
 		}
 	}
 	.button__container {
@@ -82,12 +95,20 @@
 			box-shadow: 3px 4px 7px 0px rgba(52, 73, 68, 0.8);
 			background: rgba(189, 187, 187, 0.64);
 			border-radius: 50%;
+
+			@media(max-width: 767px) {
+				width: calc(#{40 + px} + #{49} * (100vw - #{320 + px}) / #{797});
+				height: calc(#{40 + px} + #{49} * (100vw - #{320 + px}) / #{797});
+			}
 			&:hover {
 				background: rgba(189, 187, 187, 0.99);
 			}
 			span {
 				@include fontType("Bebas Neue Regular", 4rem, 1.2, #fffbf5);
 				text-shadow: #e6e7e8 1px 2px 5px, #000 0px 1px 3px;
+				@media(max-width: 797px) {
+					@include adaptive-font(60, 28, 797, 320);
+				}
 			}
 		}
 	}
