@@ -2,7 +2,7 @@ import {Link, useLocation} from "react-router-dom";
 import "./FotosCardItemPage.scss";
 import {motion} from "framer-motion";
 import {framerOpacityObjects} from "/src/js/animationFramerSettings.js";
-import undo_arrow from "/svg/undo_arrow.svg";
+import undo_arrow from "/src/svg/undo_arrow.svg";
 import list from "/svg/list.svg";
 
 function FotosCardItemPage() {

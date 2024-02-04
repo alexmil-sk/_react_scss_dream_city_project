@@ -8,7 +8,7 @@ import "swiper/css";
 import "swiper/css/thumbs";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
-import undo_arrow from "../../../public/svg/undo_arrow.svg";
+import undo_arrow from "../../svg/undo_arrow.svg";
 import {framerOpacityObjects} from "../../js/animationFramerSettings.js";
 import {motion} from "framer-motion";
 
