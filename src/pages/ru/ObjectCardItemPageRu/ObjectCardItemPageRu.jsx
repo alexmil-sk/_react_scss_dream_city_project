@@ -43,44 +43,52 @@ function ObjectCardItemPageRu() {
 				{/* ============================================= */}
 
 				<div className="card__content">
-					<div className="card__title">
-						<h1>{objects[id - 1].title}</h1>
-					</div>
+					<div className="card__content_text">
 
-					<div className="card__price">
-						<p>{objects[id - 1]['price']}</p>
-					</div>
+						<div className="card__title">
+							<h1>{objects[ id - 1 ].title}</h1>
+						</div>
 
-					<div className="card__item">
-						<Suspense fallback={<h1 style={{ backgroundColor: "yellow" }}>...Карточка объекта загружается</h1>}>
-							<Await resolve={objects}>
-								<ObjectItemData />
-							</Await>
-						</Suspense>
+						<div className="card__price">
+							<p>{objects[ id - 1 ][ 'price' ]}</p>
+						</div>
+
+						<div className="card__item">
+							<Suspense fallback={<h1
+								style={{backgroundColor: 'yellow'}}>...Карточка
+								объекта загружается</h1>}>
+								<Await resolve={objects}>
+									<ObjectItemData/>
+								</Await>
+							</Suspense>
+						</div>
 					</div>
-					<Link
-						to={`/ru/objects/${id}/fotos`}
-						state={{objects,  id}}>
-						<div className="card__foto">
-							<div className="card__foto_item">
-								{objects[id - 1].foto
+					<div className="card__foto_container">
+						<Link
+							to={`/ru/objects/${id}/fotos`}
+							state={{objects, id}}
+						>
+							<div className="card__foto">
+								<div className="card__foto_item">
+									{objects[ id - 1 ].foto
 									.filter((_, idx) => idx < 5)
 									.map((item, idx) => (
 										<img src={item} key={idx} alt={item}/>
 									))}
-							</div>
-							<div className="card__foto_button">
+								</div>
+								<div className="card__foto_button">
 								<span>
 									Все фото&nbsp;
 									<img src={double_arrow} alt="double_arrow"/>
 								</span>
+								</div>
 							</div>
-						</div>
-					</Link>
+						</Link>
+					</div>
 					<div className="card__additions">
 						<div className="card__additions_item">
 							<h2>описание</h2>
-							<p>{objects[id - 1]['description_full']}</p>
+							<p>{objects[ id - 1 ][ 'description_full' ]}</p>
 						</div>
 					</div>
 					<div className="card__video_container">
